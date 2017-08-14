@@ -1,0 +1,42 @@
+.docs.example {
+  border: 1px solid $docs-gray-color-light;
+  border-radius: $docs-radius-size;
+}
+
+.docs.example__card {
+  padding: 1rem;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.docs.example__code {
+  position: relative;
+}
+
+.docs.example__button {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  padding: 6px 8px;
+  background-color: $docs-paper;
+  border: 1px solid $docs-gray-color-light;
+  border-bottom-left-radius: $docs-radius-size;
+  font-size: $docs-text-size-smaller;
+  &:hover {
+    animation: fadeInColor 0.25s;
+    background-color: $docs-brand-color;
+    color: white;
+    cursor: pointer;
+  }
+  @keyframes fadeInColor {
+    0% {background-color: inherit; color: inherit;}
+    100% {background-color: $docs-brand-color; color: $docs-paper;}
+  }
+}
+
+.docs.example__code-block {
+  margin-bottom: 0;
+  padding: 1rem;
+  background-color: $docs-silk;
+  color: docs-gray-color-dark;
+}

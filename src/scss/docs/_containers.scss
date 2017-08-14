@@ -1,0 +1,19 @@
+.container,
+.container-fluid {
+  margin: 0 auto;
+  width: $docs-container-width-small;
+}
+
+/*********************************************
+  MEDIA QUERIES
+ *********************************************/
+
+@include media-query-at($docs-breakpoint-desktop) {
+  .container-fluid {
+    width: $docs-container-width-large;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+}
