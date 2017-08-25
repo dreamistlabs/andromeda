@@ -11,7 +11,6 @@ class App extends Component {
       <div className="App">
         <BaselinePage />
 
-
         <footer className="docs footer">
           <div className="container-fluid">
             <p className="docs footer__text">
