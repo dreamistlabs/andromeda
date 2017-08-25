@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 
+import BaselinePage from '../pages/baseline';
 import GridSystemPage from '../pages/grid-system';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <GridSystemPage />
+        <BaselinePage />
+
 
         <footer className="docs footer">
           <div className="container-fluid">
