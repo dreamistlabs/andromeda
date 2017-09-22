@@ -39,6 +39,9 @@ $docs-breakpoint-laptop:           900px;
 $docs-breakpoint-desktop:          1200px;
 $docs-breakpoint-desktop-hd:       1800px;
 
+$docs-sidebar-width:         250px;
+$docs-banner-height:         175px;
+
 
 /*********************************************
   MIXINS
@@ -75,6 +78,39 @@ p {
 .docs.section {
   margin-bottom: $docs-spacing-unit;
 }
+.docs.banner-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: $docs-spacing-unit;
+  width: 100%;
+  height: $docs-banner-height;
+}
+.docs.main-section {
+  position: relative;
+  top: $docs-banner-height;
+  width: 100%;
+  height: 100%;
+}
+.docs.sidebar {
+  position: fixed;
+  top: $docs-banner-height;
+  left: 0;
+  width: $docs-sidebar-width;
+  min-width: $docs-sidebar-width;
+  max-width: $docs-sidebar-width;
+  height: calc(100vh - #{$docs-banner-height});
+  border-right: 1px solid $docs-gray-color;
+  overflow-y: scroll;
+}
+.docs.content-section {
+  position: relative;
+  left: $docs-sidebar-width;
+  width: calc(100vw - #{$docs-sidebar-width});
+}
 
 .docs.footer {
   padding: $docs-spacing-unit-small 0;
@@ -86,4 +122,3 @@ p {
   font-size: $docs-text-size-small;
   color: $docs-text-color-light;
 }
-

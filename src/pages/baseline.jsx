@@ -22,7 +22,7 @@ export default class BaselinePage extends Component {
 
   render() {
     return(
-      <div className="container-fluid">
+      <div className="container">
         <h1 className="docs heading">Baseline</h1>
         <p>
           Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged decaffeinated espresso. Americano filter coffee blue mountain, extraction, roast, acerbic filter milk skinny doppio. Mocha pumpkin spice percolator, filter carajillo, black sugar cortado caramelization so instant.
