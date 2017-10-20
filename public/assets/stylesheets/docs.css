@@ -88,3 +88,8 @@ p {
 .docs.footer__text {
   font-size: 0.875rem;
   color: #F4F4F4; }
+
+.playground {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 80%; }

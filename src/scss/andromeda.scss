@@ -17,17 +17,16 @@ $base-line-height:      1.5;
 $small-font-size:       0.75rem;
 $big-font-size:         1.375rem;
 
-$white:                 #FAFAFA;
+$white:                 #ffffff;
+$black:                 #000000;
+$alabaster:             #FAFAFA;
+$mine-shaft:            #313131;
 
 $illuminating-emerald:  #32936F;
 $lapis-lazuli:          #2274A5;
 $fluorescent-orange:    #FFBF00;
 $paradise-pink:         #E83F6F;
-
-$success-color:         $illuminating-emerald;
-$info-color:            $lapis-lazuli;
-$warning-color:         $fluorescent-orange;
-$danger-color:          $paradise-pink;
+$violet-eggplant:       #930B92;
 
 $text-color:            #313131;
 $text-color-light:      $white;
@@ -122,3 +121,5 @@ $col-12:          $col-width * 12;
 .m31.col-10 { width: $col-10; }
 .m31.col-11 { width: $col-11; }
 .m31.col-12 { width: $col-12; }
+
+@import 'andromeda/_buttons';
