@@ -1,6 +1,8 @@
 /**********************************
   VARIABLES
  **********************************/
+/* Grid System */
+/* Media Queries */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -403,7 +405,7 @@ html {
   font-size: 16px; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5; }
@@ -414,7 +416,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-weight: 600; }
+  font-family: "Raleway", sans-serif;
+  font-weight: 300; }
 
 h1 {
   font-size: 2.875rem; }
@@ -485,10 +488,10 @@ fieldset {
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: "Anonymous Pro", monospace; }
+  font-family: monospace; }
 
 code {
-  font-family: "Anonymous Pro", monospace; }
+  font-family: monospace; }
 
 table {
   border-spacing: 0; }
@@ -609,3 +612,15 @@ hr {
     font-size: 1rem; }
   .m31.btn.btn-lg {
     font-size: 1.125rem; }
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 18px; } }
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 20px; } }
+
+@media screen and (min-width: 1800px) {
+  html {
+    font-size: 22px; } }

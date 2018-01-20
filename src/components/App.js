@@ -30,6 +30,7 @@ class App extends Component {
         </div>
 
         <BaselinePage />
+        <GridSystemPage />
 
         <footer className="docs footer">
           <div className="container-fluid">
