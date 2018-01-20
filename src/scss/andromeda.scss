@@ -2,10 +2,11 @@
   VARIABLES
  **********************************/
 
-$archivo-font-family:     'Archivo', sans-serif;
-$open-sans-font-family:   'Open Sans', sans-serif;
-$monospace-font-family:   'Anonymous Pro', monospace;
+$raleway-font-family:     'Raleway', sans-serif;
+$open-sans-font-family:   'Open Sans', Arial, sans-serif;
+$monospace-font-family:   monospace;
 
+$light-weight:          300;
 $normal-weight:         400;
 $bold-weight:           600;
 
@@ -14,8 +15,15 @@ $base-font-size:        1rem;
 $base-font-weight:      $normal-weight;
 $base-line-height:      1.5;
 
+$heading-font-family:   $raleway-font-family;
+
 $small-font-size:       0.75rem;
 $big-font-size:         1.375rem;
+
+$mobile-font-size:      16px;
+$tablet-font-size:      18px;
+$desktop-font-size:     20px;
+$big-desktop-font-size: 22px;
 
 $white:                 #FAFAFA;
 
@@ -49,6 +57,7 @@ $margin-sm:       0.75rem;
 $margin-reg:      1rem;
 $margin-lg:       1.5rem;
 
+/* Grid System */
 $col-width:       8.33333%;
 $col-padding:     $padding-reg;
 $col-1:           $col-width;
@@ -63,6 +72,29 @@ $col-9:           $col-width * 9;
 $col-10:          $col-width * 10;
 $col-11:          $col-width * 11;
 $col-12:          $col-width * 12;
+
+/* Media Queries */
+$mobile: 600px;
+$tablet: 900px;
+$desktop: 1200px;
+$hd-desktop: 1800px;
+
+
+@mixin for-mobile-only {
+  @media screen and (max-width: $mobile - 1) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media screen and (min-width: $mobile) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media screen and (min-width: $tablet) { @content; }
+}
+@mixin for-desktop-up {
+  @media screen and (min-width: $desktop) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media screen and (min-width: $hd-desktop) { @content; }
+}
 
 @import 'vendors/_normalize';
 @import 'base/_baseline';
@@ -122,3 +154,23 @@ $col-12:          $col-width * 12;
 .m31.col-10 { width: $col-10; }
 .m31.col-11 { width: $col-11; }
 .m31.col-12 { width: $col-12; }
+
+
+@import 'partials/media-queries';
+
+@include for-tablet-portrait-up {
+  html {
+    font-size: $tablet-font-size;
+  }
+}
+
+@include for-desktop-up {
+  html {
+    font-size: $desktop-font-size;
+  }
+}
+@include for-big-desktop-up {
+  html {
+    font-size: $big-desktop-font-size;
+  }
+}

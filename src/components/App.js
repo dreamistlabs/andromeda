@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <BaselinePage />
+        <GridSystemPage />
 
         <footer className="docs footer">
           <div className="container-fluid">
