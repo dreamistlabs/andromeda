@@ -594,23 +594,22 @@ hr {
 .m31.col-12 {
   width: 99.99996%; }
 
-.m31.btn {
+.btn {
   display: inline-block;
   margin: 0;
-  padding: 0.33em 0.75em;
+  padding: 0.6em 1em;
   background-color: transparent;
   border: 1px solid #313131;
   border-radius: 0;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
   color: #313131;
   line-height: 1.5;
   vertical-align: middle;
   cursor: pointer; }
-  .m31.btn.btn-sm {
+  .btn.btn--sm {
     font-size: 0.875rem; }
-  .m31.btn.btn-md {
-    font-size: 1rem; }
-  .m31.btn.btn-lg {
+  .btn.btn--lg {
     font-size: 1.125rem; }
 
 @media screen and (min-width: 600px) {

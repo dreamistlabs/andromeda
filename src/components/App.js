@@ -11,9 +11,9 @@ class App extends Component {
       <div className="App">
         <div className="playground">
           <div>
-            <button className="m31 btn btn-lg">Read more</button>
-            <div className="m31 btn btn-lg">Read more</div>
-            <input className="m31 btn btn-lg" type="submit" value="Read more"/>
+            <button className="m31 btn btn--lg">Read more</button>
+            <div className="m31 btn btn--lg">Read more</div>
+            <input className="m31 btn btn--lg" type="submit" value="Read more"/>
           </div>
           &nbsp;
           <div>
@@ -23,9 +23,9 @@ class App extends Component {
           </div>
           &nbsp;
           <div>
-            <button className="m31 btn btn-sm">Read more</button>
-            <div className="m31 btn btn-sm">Read more</div>
-            <input className="m31 btn btn-sm" type="submit" value="Read more"/>
+            <button className="m31 btn btn--sm">Read more</button>
+            <div className="m31 btn btn--sm">Read more</div>
+            <input className="m31 btn btn--sm" type="submit" value="Read more"/>
           </div>
         </div>
 

@@ -156,7 +156,7 @@ $hd-desktop: 1800px;
 .m31.col-12 { width: $col-12; }
 
 @import 'andromeda/_buttons';
-@import 'partials/media-queries';
+@import 'andromeda/_media-queries';
 
 @include for-tablet-portrait-up {
   html {
