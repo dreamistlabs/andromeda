@@ -1,14 +1,10 @@
-.docs.example {
-  border: 1px solid $docs-gray-color-light;
-  border-radius: $docs-radius-size;
-}
-
-.docs.example__card {
+.docs.card {
   padding: 1rem;
   width: 100%;
   overflow-x: scroll;
+  border: 1px solid $docs-gray-color-light;
+  border-radius: $docs-radius-size;
 }
-
 .docs.example__code {
   position: relative;
 }

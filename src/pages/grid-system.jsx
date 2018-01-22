@@ -18,7 +18,7 @@ export default class GridSystemPage extends Component {
                 </p>
             </header>
             <div className="docs example">
-                <div className="docs example__card">
+                <div className="docs card">
                     <div className="m31 container-fluid">
                         <div className="m31 row">
                             <div className="m31 col-1">.m31.col-1</div>
@@ -75,7 +75,7 @@ export default class GridSystemPage extends Component {
                 </p>
             </header>
             <div className="docs example">
-                <div className="docs example__card">
+                <div className="docs card">
                     <div className="m31 container-fluid">
                         <div className="m31 row">
                             <div className="m31 col-12">.m31.col-12</div>
@@ -97,7 +97,7 @@ export default class GridSystemPage extends Component {
                 </p>
             </header>
             <div className="docs example">
-                <div className="docs example__card">
+                <div className="docs card">
                     <div className="m31 container-fluid">
                         <div className="m31 row">
                             <div className="m31 col-12">

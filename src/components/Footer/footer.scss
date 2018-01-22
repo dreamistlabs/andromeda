@@ -1,0 +1,12 @@
+@import '../../scss/docs/variables';
+
+.docs.footer {
+  padding: $docs-spacing-unit-small 0;
+  width: 100%;
+  background-color: $docs-charcoal;
+}
+
+.docs.footer__text {
+  font-size: $docs-text-size-small;
+  color: $docs-text-color-light;
+}

@@ -37,10 +37,8 @@ export default class ExampleCard extends Component {
 
   render() {
     return (
-      <div className="docs example">
-        <div className="docs example__card">
-          {this.renderExample()}
-        </div>
+      <div className="docs card">
+        {this.renderExample()}
       </div>
     );
   }
