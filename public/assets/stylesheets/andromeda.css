@@ -402,7 +402,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 16px; }
+  font-size: 10px; }
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
@@ -416,7 +416,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 300; }
 
 h1 {
@@ -550,13 +550,11 @@ hr {
   display: flex;
   flex-flow: row wrap;
   margin-left: -1rem;
-  margin-right: -1rem;
-  border: 1px solid #969696; }
+  margin-right: -1rem; }
 
 [class^="m31 col-"] {
   padding: 0 1rem;
-  overflow: hidden;
-  border: 1px solid blue; }
+  overflow: hidden; }
 
 .m31.col-1 {
   width: 8.33333%; }
@@ -612,14 +610,47 @@ hr {
   .btn.btn--lg {
     font-size: 1.125rem; }
 
+/* thematic/defining variables */
+/* referential variables */
+.card {
+  width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid #a7a7a7; }
+
+.card.card--default {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 0.8em; }
+  .card.card--default p {
+    margin-bottom: 0; }
+  .card.card--default .card__title {
+    margin-bottom: 0; }
+  .card.card--default .card__header,
+  .card.card--default .card__content {
+    margin-bottom: 0.65em; }
+  .card.card--default .card__footer {
+    font-size: 0.75em;
+    color: #a7a7a7; }
+
+.card.card--vertical-split {
+  display: flex;
+  flex-flow: row nowrap; }
+  .card.card--vertical-split [class*="card__col-"] {
+    padding: 0.8em;
+    width: 50%; }
+  .card.card--vertical-split .card__col-left--fill,
+  .card.card--vertical-split .card__col-right--fill {
+    background-color: #a7a7a7; }
+
 @media screen and (min-width: 600px) {
   html {
-    font-size: 18px; } }
+    font-size: 10px; } }
 
 @media screen and (min-width: 1200px) {
   html {
-    font-size: 20px; } }
+    font-size: 10px; } }
 
 @media screen and (min-width: 1800px) {
   html {
-    font-size: 22px; } }
+    font-size: 10px; } }

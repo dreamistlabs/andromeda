@@ -1,4 +1,4 @@
-$( document ).ready(() => {
+$(document).ready(() => {
     console.log('// dev - andromeda.js working');
 
     // TODO: check for rows with row--card class, then execute the following:
@@ -9,5 +9,4 @@ $( document ).ready(() => {
         // get largest value from heights collection and apply it to each card node's height style
         $('.row.row--card').find('.card').each((idx, card) => card.style.height = Math.max(...heights) + "px");
     })();
-
 });

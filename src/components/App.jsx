@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import LoremIpsum from 'lorem-ipsum';
 import logo from '../logo.svg';
 
 import BaselinePage from '../pages/baseline';
 import GridSystemPage from '../pages/grid-system';
+import './app.css';
 
 import Footer from './Footer/Footer';
 
@@ -11,7 +13,43 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <section className="docs section">
+          <div className="container">
+            <div className="m31 row row--card">
+                <div className="m31 col-3">
 
+                  <span> Card - Default </span>
+                  <div className="card card--default">
+                    <div className="card__header">
+                      <h3 className="card__title">Card Title</h3>
+                    </div>
+                    <div className="card__content">
+                      <p>{LoremIpsum({count: 1, units: 'sentences', sentenceLowerBound: 15, sentenceUpperBound: 20})}</p>
+                    </div>
+                    <div className="card__footer">
+                      <p>{LoremIpsum({count: 1, units: 'sentences', sentenceLowerBound: 8, sentenceUpperBound: 10})}</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div className="m31 col-3">
+
+                  <span> Card - Vertical Split </span>
+                  <div className="card card--vertical-split">
+                    <div className="card__col-left">
+                    left
+                    </div>
+                    <div className="card__col-right--fill">
+                    right
+                    </div>
+                  </div>
+
+                </div>
+                <div className="m31 col-3">.m31.col-3</div>
+                <div className="m31 col-3">.m31.col-3</div>
+            </div>
+          </div>
+        </section>
         <section className="docs section">
           <div className="container">
             <div className="section__header">

@@ -2,7 +2,7 @@
   VARIABLES
  **********************************/
 
-$raleway-font-family:     'Raleway', sans-serif;
+$karla-font-family:       'Karla', sans-serif;
 $open-sans-font-family:   'Open Sans', Arial, sans-serif;
 $monospace-font-family:   monospace;
 
@@ -15,7 +15,7 @@ $base-font-size:        1rem;
 $base-font-weight:      $normal-weight;
 $base-line-height:      1.5;
 
-$heading-font-family:   $raleway-font-family;
+$heading-font-family:   $karla-font-family;
 
 $small-font-size:       0.75rem;
 $big-font-size:         1.375rem;
@@ -26,10 +26,10 @@ $black:                 #000000;
 $alabaster:             #FAFAFA;
 $mine-shaft:            #313131;
 
-$mobile-font-size:      16px;
-$tablet-font-size:      18px;
-$desktop-font-size:     20px;
-$big-desktop-font-size: 22px;
+$mobile-font-size:      10px;
+$tablet-font-size:      10px;
+$desktop-font-size:     10px;
+$big-desktop-font-size: 10px;
 
 $illuminating-emerald:  #32936F;
 $lapis-lazuli:          #2274A5;
@@ -131,13 +131,13 @@ $hd-desktop: 1800px;
   flex-flow: row wrap;
   margin-left: -$horizontal-spacing;
   margin-right: -$horizontal-spacing;
-  @include test-border($gray-color);
+  // @include test-border($gray-color);
 }
 
 %column {
   padding: 0 $margin-reg;
   overflow: hidden;
-  @include test-border(blue);
+  // @include test-border(blue);
 }
 
 [class^="m31 col-"] { @extend %column; }
@@ -155,7 +155,8 @@ $hd-desktop: 1800px;
 .m31.col-11 { width: $col-11; }
 .m31.col-12 { width: $col-12; }
 
-@import 'andromeda/_buttons';
+@import 'andromeda/_button';
+@import 'andromeda/_card';
 @import 'andromeda/_media-queries';
 
 @include for-tablet-portrait-up {
