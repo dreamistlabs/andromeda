@@ -1,25 +1,25 @@
-@import './_variables';
+@import './variables';
 
 /* thematic/defining variables */
-
 $default-border-size: 		1px;
 $default-gray:			 	#a7a7a7;
 $default-gray-dark:			darken($default-gray, 20);
 $default-gray-light:		lighten($default-gray, 20);
 
 // spacing
+$default-margin:			1.6em;
 $default-padding:			0.8em;
 
 /* referential variables */
 $card-border-size: 			$default-border-size;
 $card-border-color: 		$default-gray;
-$card-fill-color:			$default-gray;
+$card-fill-color:				$default-gray;
+$card-margin-size:			$default-margin;
 $card-padding-size:			$default-padding;
 
 
 .card {
 	width: 100%;
-	// height: 100%;
 	font-size: 1.6rem;
 	border: $card-border-size solid $card-border-color;
 }
@@ -28,7 +28,8 @@ $card-padding-size:			$default-padding;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
-	padding: $default-padding;
+	margin-bottom: $card-margin-size;
+	padding: $card-padding-size;
 	p {
 		margin-bottom: 0;
 	}
@@ -38,6 +39,9 @@ $card-padding-size:			$default-padding;
 	.card__header,
 	.card__content {
 		margin-bottom: 0.65em;
+	}
+	.card__content {
+		flex-grow: 1;
 	}
 	.card__footer {
 		font-size: 0.75em;
@@ -49,7 +53,7 @@ $card-padding-size:			$default-padding;
 	display: flex;
 	flex-flow: row nowrap;
 	[class*="card__col-"] {
-		padding: $default-padding;
+		padding: $card-padding-size;
 		width: 50%;
 	}
 	.card__col-left--fill,

@@ -532,64 +532,64 @@ hr {
 /**********************************
   CONTAINERS (WIP)
  **********************************/
-.m31.container, .m31.container-fluid {
+.container, .container-fluid {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem; }
 
-.m31.container {
-  max-width: 1200px; }
+.container {
+  max-width: 1400px; }
 
-.m31.container-fluid {
+.container-fluid {
   max-width: 98%; }
 
 /**********************************
   GRID SYSTEM (WIP)
  **********************************/
-.m31.row {
+.row {
   display: flex;
   flex-flow: row wrap;
   margin-left: -1rem;
   margin-right: -1rem; }
 
-[class^="m31 col-"] {
+[class^="col-"] {
   padding: 0 1rem;
   overflow: hidden; }
 
-.m31.col-1 {
+.col-1 {
   width: 8.33333%; }
 
-.m31.col-2 {
+.col-2 {
   width: 16.66666%; }
 
-.m31.col-3 {
+.col-3 {
   width: 24.99999%; }
 
-.m31.col-4 {
+.col-4 {
   width: 33.33332%; }
 
-.m31.col-5 {
+.col-5 {
   width: 41.66665%; }
 
-.m31.col-6 {
+.col-6 {
   width: 49.99998%; }
 
-.m31.col-7 {
+.col-7 {
   width: 58.33331%; }
 
-.m31.col-8 {
+.col-8 {
   width: 66.66664%; }
 
-.m31.col-9 {
+.col-9 {
   width: 74.99997%; }
 
-.m31.col-10 {
+.col-10 {
   width: 83.3333%; }
 
-.m31.col-11 {
+.col-11 {
   width: 91.66663%; }
 
-.m31.col-12 {
+.col-12 {
   width: 99.99996%; }
 
 .btn {
@@ -621,6 +621,7 @@ hr {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  margin-bottom: 1.6em;
   padding: 0.8em; }
   .card.card--default p {
     margin-bottom: 0; }
@@ -629,6 +630,8 @@ hr {
   .card.card--default .card__header,
   .card.card--default .card__content {
     margin-bottom: 0.65em; }
+  .card.card--default .card__content {
+    flex-grow: 1; }
   .card.card--default .card__footer {
     font-size: 0.75em;
     color: #a7a7a7; }

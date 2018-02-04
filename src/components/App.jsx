@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import LoremIpsum from 'lorem-ipsum';
-import logo from '../logo.svg';
+// import LoremIpsum from 'lorem-ipsum';
+// import logo from '../logo.svg';
 
-import BaselinePage from '../pages/baseline';
-import GridSystemPage from '../pages/grid-system';
+import Dashboard from '../components/Dashboard/Dashboard';
+// import BaselinePage from '../pages/baseline';
+// import GridSystemPage from '../pages/grid-system';
 import './app.css';
 
 import Footer from './Footer/Footer';
@@ -13,7 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <section className="docs section">
+        <div className="container">
+          <Dashboard component="Buttons" />
+        </div>
+
+       {/*<section className="docs section">
           <div className="container">
             <div className="m31 row row--card-has-same-height">
                 <div className="m31 col-3">
@@ -99,10 +104,10 @@ class App extends Component {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
 
-        <BaselinePage />
-        <GridSystemPage />
+        {/*<BaselinePage />*/}
+        {/*<GridSystemPage />*/}
 
         <Footer />
       </div>

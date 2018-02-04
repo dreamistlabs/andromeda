@@ -20,22 +20,7 @@ body {
   color: #373737; }
 
 p {
-  line-height: 1.4rem; }
-
-.container,
-.container-fluid {
-  margin: 0 auto;
-  width: 95%;
-  max-width: 1400px; }
-
-/*********************************************
-  MEDIA QUERIES
- *********************************************/
-@media screen and (min-width: 1200px) {
-  .container-fluid {
-    width: 93%; }
-  .container {
-    max-width: 1200px; } }
+  line-height: 1.6; }
 
 .docs.card {
   padding: 1rem;

@@ -1,0 +1,13 @@
+{
+  "Buttons": {
+    "description": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute.",
+    "accessibility": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute.",
+    "acceptableElements": ["a", "button", "div", "input"],
+    "variations": ["Default"]
+  },
+  "Notbuttons": {
+    "description": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute.",
+    "acceptableElements": ["A", "BUTTON", "DIV", "INPUT"],
+    "accessibility": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute."
+  }
+}

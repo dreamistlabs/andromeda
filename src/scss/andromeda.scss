@@ -112,12 +112,12 @@ $hd-desktop: 1800px;
   padding-right: $horizontal-spacing;
 }
 
-.m31.container {
+.container {
   @extend %container;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
-.m31.container-fluid {
+.container-fluid {
   @extend %container;
   max-width: 98%;
 }
@@ -126,7 +126,7 @@ $hd-desktop: 1800px;
   GRID SYSTEM (WIP)
  **********************************/
 
-.m31.row {
+.row {
   display: flex;
   flex-flow: row wrap;
   margin-left: -$horizontal-spacing;
@@ -140,20 +140,20 @@ $hd-desktop: 1800px;
   // @include test-border(blue);
 }
 
-[class^="m31 col-"] { @extend %column; }
+[class^="col-"] { @extend %column; }
 
-.m31.col-1 { width: $col-1; }
-.m31.col-2 { width: $col-2; }
-.m31.col-3 { width: $col-3; }
-.m31.col-4 { width: $col-4; }
-.m31.col-5 { width: $col-5; }
-.m31.col-6 { width: $col-6; }
-.m31.col-7 { width: $col-7; }
-.m31.col-8 { width: $col-8; }
-.m31.col-9 { width: $col-9; }
-.m31.col-10 { width: $col-10; }
-.m31.col-11 { width: $col-11; }
-.m31.col-12 { width: $col-12; }
+.col-1 { width: $col-1; }
+.col-2 { width: $col-2; }
+.col-3 { width: $col-3; }
+.col-4 { width: $col-4; }
+.col-5 { width: $col-5; }
+.col-6 { width: $col-6; }
+.col-7 { width: $col-7; }
+.col-8 { width: $col-8; }
+.col-9 { width: $col-9; }
+.col-10 { width: $col-10; }
+.col-11 { width: $col-11; }
+.col-12 { width: $col-12; }
 
 @import 'andromeda/button';
 @import 'andromeda/card';
