@@ -96,8 +96,8 @@ $hd-desktop: 1800px;
   @media screen and (min-width: $hd-desktop) { @content; }
 }
 
-@import 'vendors/_normalize';
-@import 'base/_baseline';
+@import 'vendors/normalize';
+@import 'base/baseline';
 
 @mixin test-border($color){
   border: 1px solid $color;
@@ -155,9 +155,9 @@ $hd-desktop: 1800px;
 .m31.col-11 { width: $col-11; }
 .m31.col-12 { width: $col-12; }
 
-@import 'andromeda/_button';
-@import 'andromeda/_card';
-@import 'andromeda/_media-queries';
+@import 'andromeda/button';
+@import 'andromeda/card';
+@import 'andromeda/media-queries';
 
 @include for-tablet-portrait-up {
   html {

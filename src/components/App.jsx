@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <section className="docs section">
           <div className="container">
-            <div className="m31 row row--card">
+            <div className="m31 row row--card-has-same-height">
                 <div className="m31 col-3">
 
                   <span> Card - Default </span>
