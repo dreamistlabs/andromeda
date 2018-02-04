@@ -1,0 +1,33 @@
+{
+  "name": "andromeda",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "lorem-ipsum": "^1.0.4",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "build-andromeda-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/",
+    "watch-andromeda-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/ --watch --recursive",
+    "build-andromeda-js": "npx babel ./src/js/andromeda.js --out-file ./public/assets/js/andromeda.js --source-maps",
+    "watch-andromeda-js": "npx babel ./src/js/andromeda.js --out-file ./public/assets/js/andromeda.js --watch",
+    "build-andromeda-all": "npm-run-all -p build-andromeda-js build-andromeda-css",
+    "watch-andromeda-all": "npm-run-all -p watch-andromeda-js watch-andromeda-css",
+    "build-docs-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/",
+    "watch-docs-css": "node-sass-chokidar src/components/ -o src/components/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "build": "npm run build-all",
+    "start": "npm run watch-all",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-all": "npm-run-all -p build-andromeda-all build-docs-css react-scripts build",
+    "watch-all": "npm-run-all -p watch-andromeda-all watch-docs-css start-js"
+  }
+}

@@ -1,0 +1,25 @@
+@import './_variables';
+
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0.6em 1em;
+  background-color: transparent;
+  border: 1px solid $border-dark;
+  border-radius: 0;
+  font-family: $base-font-family;
+  font-size: 1rem;
+  color: $text-dark;
+  line-height: 1.5;
+  vertical-align: middle;
+  cursor: pointer;
+  &:hover {
+
+  }
+  &.btn--sm {
+    font-size: 0.875rem;
+  }
+  &.btn--lg {
+    font-size: 1.125rem;
+  }
+}

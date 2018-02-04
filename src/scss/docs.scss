@@ -1,0 +1,60 @@
+/**
+ * Andromeda Documentation
+ * Copyright 2017 Dreamist Labs
+ */
+
+@import 'docs/variables';
+
+
+/*********************************************
+  MIXINS
+ *********************************************/
+
+@mixin media-query-at($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/*********************************************
+  STYLES
+ *********************************************/
+
+
+/**
+  Global Styles
+  -- incl. only styles that differ from Andromeda's baseline CSS
+ */
+body {
+  background-color: $docs-background-color;
+  color: $docs-text-color;
+}
+
+p {
+  line-height: $docs-base-line-height;
+}
+
+@import 'docs/containers';
+@import 'docs/examples';
+
+
+.docs.section {
+  margin-bottom: $docs-spacing-unit;
+  width: 100%;
+
+  .section__flex__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .section__flex__child {
+    width: 33%;
+  }
+}
+.playground {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 80%;
+}

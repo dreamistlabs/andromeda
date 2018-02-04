@@ -1,0 +1,35 @@
+/**
+  VARIABLES
+ */
+
+$docs-text-size:             1rem;
+$docs-text-size-small:       0.875rem;
+$docs-text-size-smaller:     0.75rem;
+$docs-base-line-height:      1.4rem;
+
+$docs-pale-gold:             #C0B283;
+$docs-silk:                  #DCD0C0;
+$docs-paper:                 #F4F4F4;
+$docs-charcoal:              #373737;
+
+$docs-gray-color:            #9B9B9B;
+$docs-gray-color-dark:       #6E6E6E;
+$docs-gray-color-light:      #CBCACA;
+
+$docs-background-color:      $docs-paper;
+$docs-background-color-dark: $docs-charcoal;
+$docs-text-color:            $docs-charcoal;
+$docs-text-color-light:      $docs-paper;
+$docs-brand-color:           $docs-pale-gold;
+
+$docs-spacing-unit:          1.5rem;
+$docs-spacing-unit-small:    1rem;
+$docs-radius-size:           5px;
+
+$docs-container-width-small: 95%;
+$docs-container-width-large: 93%;
+
+$docs-breakpoint-tablet:           600px;
+$docs-breakpoint-laptop:           900px;
+$docs-breakpoint-desktop:          1200px;
+$docs-breakpoint-desktop-hd:       1800px;

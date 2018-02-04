@@ -1,0 +1,11 @@
+/**
+  VARIABLES
+ */
+.docs.footer {
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #373737; }
+
+.docs.footer__text {
+  font-size: 0.875rem;
+  color: #F4F4F4; }
