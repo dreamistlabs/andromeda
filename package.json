@@ -2,6 +2,7 @@
   "name": "andromeda",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://dreamistlabs.github.io/andromeda",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
@@ -23,11 +24,11 @@
     "build-docs-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/",
     "watch-docs-css": "node-sass-chokidar src/components/ -o src/components/ --watch --recursive",
     "start-js": "react-scripts start",
-    "build": "npm run build-all",
+    "build": "react-scripts build",
     "start": "npm run watch-all",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-all": "npm-run-all -p build-andromeda-all build-docs-css react-scripts build",
+    "build-all": "npm-run-all -p build-andromeda-all build-docs-css",
     "watch-all": "npm-run-all -p watch-andromeda-all watch-docs-css start-js"
   }
 }
