@@ -40,7 +40,7 @@ p {
   background-color: #F4F4F4;
   border: 1px solid #CBCACA;
   border-bottom-left-radius: 5px;
-  font-size: 0.75rem; }
+  font-size: 0.75em; }
   .docs.example__button:hover {
     animation: fadeInColor 0.25s;
     background-color: #C0B283;
