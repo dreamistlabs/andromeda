@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from '../Card/Card';
 import ComponentData from '../../data/components.data';
 import ComponentExampleData from '../../data/component-examples.data';
+import ExampleCard from '../ExampleCard/ExampleCard';
 
 import './dashboard.css';
 
@@ -29,7 +30,16 @@ class Dashboard extends Component {
           return (<li key={`${idx}--${element}-element`}>{element}</li>);
         })}
       </ul>
-    );
+    ); // EoR
+  }
+  renderExamples() {
+    return (
+      Object.keys(this.componentVariations).map((variation, idx) => {
+        return <ExampleCard example={this.componentVariations[variation]}
+                            cardClass="dashboard__example"
+                            key={`${idx}--${variation}-variation`} />
+      })
+    ); // EoR
   }
 
 	render() {
@@ -55,18 +65,14 @@ class Dashboard extends Component {
               <Card title="Modifiers" content="" />
             </div>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <Card title="Cool, a Subsection - Examples and Code" content="">
-                <div className="docs card">
-                  <pre>{this.componentVariations["Default"]}</pre>
-                </div>
-                <div className="docs card">
-                  <pre>{this.componentVariations["Default"]}</pre>
-                </div>
-              </Card>
+          <section className="docs dashboard__examples">
+            <div className="row">
+              <div className="col-12">
+                <h2>Cool, a Subsection - Examples and Code</h2>
+                {this.renderExamples()}
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
 		);

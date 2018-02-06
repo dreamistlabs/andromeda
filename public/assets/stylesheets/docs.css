@@ -76,3 +76,6 @@ p {
   margin: 0 auto;
   padding: 1em;
   max-width: 80%; }
+
+.docs.dashboard__example {
+  margin-bottom: 2rem; }
