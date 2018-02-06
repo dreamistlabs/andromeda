@@ -2,12 +2,11 @@
   "Buttons": {
     "description": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute.",
     "accessibility": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute.",
-    "acceptableElements": ["a", "button", "div", "input"],
-    "variations": ["Default"]
+    "acceptableElements": ["a", "button", "div", "input"]
   },
-  "Notbuttons": {
+  "Cards": {
     "description": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute.",
-    "acceptableElements": ["A", "BUTTON", "DIV", "INPUT"],
+    "acceptableElements": ["div"],
     "accessibility": "Anim ullamco est consequat ullamco elit cillum aliqua commodo est minim ullamco ullamco cupidatat nulla adipisicing aliqua fugiat laborum. Velit consectetur eu officia proident anim consectetur pariatur consectetur officia reprehenderit nisi sit deserunt occaecat sint aute."
   }
 }

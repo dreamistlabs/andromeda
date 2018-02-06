@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          <Dashboard component="Buttons" />
+          <Dashboard component="Cards" />
         </div>
 
        {/*<section className="docs section">

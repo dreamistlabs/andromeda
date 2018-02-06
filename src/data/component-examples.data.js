@@ -1,11 +1,11 @@
-import ButtonDefault from './component-examples/button.default';
-import ButtonVerticalSplit from './component-examples/button.vertical-split';
+import CardDefault from './component-examples/card.default';
+import CardVerticalSplit from './component-examples/card.vertical-split';
 
 const ComponentExampleData = {
-  Buttons: {
+  Cards: {
     variations: {
-      "Default": ButtonDefault,
-      "Vertical Split": ButtonVerticalSplit
+      "Default": CardDefault,
+      "Vertical Split": CardVerticalSplit
     }
   }
 }
