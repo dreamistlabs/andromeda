@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import logo from '../logo.svg';
 
 import Dashboard from '../components/Dashboard/Dashboard';
-// import BaselinePage from '../pages/baseline';
+import BaselinePage from '../pages/baseline';
 // import GridSystemPage from '../pages/grid-system';
 import './app.css';
 
@@ -106,7 +106,7 @@ class App extends Component {
           </div>
         </section>*/}
 
-        {/*<BaselinePage />*/}
+        <BaselinePage />
         {/*<GridSystemPage />*/}
 
         <Footer />

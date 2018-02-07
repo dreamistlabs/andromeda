@@ -47,27 +47,27 @@ class Dashboard extends Component {
 			<section id="" className="docs dashboard">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12">
+            <div className="col-md-12">
               <h1>Yay, Big Title - {this.componentName}</h1>
               {this.renderDescription()}
             </div>
           </div>
           <div className="row row--card-has-same-height">
-            <div className="col-6">
+            <div className="col-md-6">
               <Card title="Accessibility" content={this.renderAccessibility()} />
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
               <Card title="Applicable Elements" content={this.renderAcceptibleElements()} />
             </div>
           </div>
           <div className="row">
-            <div className="col-6">
+            <div className="col-md-6">
               <Card title="Modifiers" content="" />
             </div>
           </div>
           <section className="docs dashboard__examples">
             <div className="row">
-              <div className="col-12">
+              <div className="col-md-12">
                 <h2>Cool, a Subsection - Examples and Code</h2>
                 {this.renderExamples()}
               </div>
