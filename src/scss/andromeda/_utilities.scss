@@ -1,0 +1,19 @@
+/**********************************
+  UTILITIES (WIP)
+ **********************************/
+
+$types : margin padding;
+$sides : top right bottom left;
+
+@each $type in $types {
+  @each $side in $sides {
+    @for $i from 1 through 20 {
+      $value: $i * 5;
+      $t: str-slice($type, 1, 1);
+      $s: str-slice($side, 1, 1);
+
+      // creates a class, ie. .mr-30 { margin-right: 30px }
+      .#{$t}#{$s}-#{$value} { #{$type}-#{$side}: #{$value}px; }
+    }
+  }
+}

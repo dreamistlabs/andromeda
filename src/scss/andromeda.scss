@@ -110,47 +110,6 @@ $hd-desktop:      1800px;
   max-width: 98%;
 }
 
-/**********************************
-  GRID SYSTEM (WIP)
- **********************************/
-%column {
-  padding: 0 $margin-reg;
-  overflow: hidden;
-  // @include test-border(blue);
-}
-
-$col-xs: col-xs;
-$col-sm: col-sm;
-$col-md: col-md;
-$col-lg: col-lg;
-$col-padding:     $padding-reg;
-$col-width:       8.3333333%;
-
-// array of different column sizes
-$col-sizes: $col-xs $col-sm $col-md $col-lg;
-
-// iterate through each size and create column classes, ie. col-md-1.
-@each $size in $col-sizes {
-  // ie, col-md-1 {width: $col-1}
-  @for $i from 1 through 12 {
-    $width: $col-width * $i;
-
-    .#{$size}-#{$i} {
-      @extend %column;
-      width: $width;
-    }
-  }
-}
-
-// iterate through each size and create column offset classes, ie. col-md-offset-2.
-@each $size in $col-sizes {
-  @for $i from 1 through 11 {
-    $width: $col-width * $i;
-
-    .#{$size}-offset-#{$i} { margin-left: $width; }
-  }
-}
-
 .row {
   display: flex;
   flex-flow: row wrap;
@@ -159,29 +118,11 @@ $col-sizes: $col-xs $col-sm $col-md $col-lg;
   // @include test-border($gray-color);
 }
 
-/**********************************
-  UTILITIES (WIP)
- **********************************/
-
-$types : margin padding;
-$sides : top right bottom left;
-
-@each $type in $types {
-  @each $side in $sides {
-    @for $i from 1 through 20 {
-      $value: $i * 5;
-      $t: str-slice($type, 1, 1);
-      $s: str-slice($side, 1, 1);
-
-      // creates a class, ie. .mr-30 { margin-right: 30px }
-      .#{$t}#{$s}-#{$value} { #{$type}-#{$side}: #{$value}px; }
-    }
-  }
-}
-
+@import 'andromeda/grid';
+@import 'andromeda/utilities';
 @import 'andromeda/button';
 @import 'andromeda/card';
-@import 'andromeda/media-queries';
+@import 'andromeda/media';
 
 @include for-tablet-portrait-up {
   html {

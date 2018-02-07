@@ -542,6 +542,12 @@ hr {
 .container-fluid {
   max-width: 98%; }
 
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
 /**********************************
   GRID SYSTEM (WIP)
  **********************************/
@@ -824,12 +830,6 @@ hr {
 
 .col-lg-offset-11 {
   margin-left: 91.66667%; }
-
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  margin-left: -1rem;
-  margin-right: -1rem; }
 
 /**********************************
   UTILITIES (WIP)
