@@ -1,25 +1,106 @@
-@import './_variables';
+@import './variables';
+
+/* thematic/defining variables */
+$default-border-size:       1px;
+$default-border-style:      solid;
+
+$default-pill-radius:       100px;
+$default-round-radius:      5px;
+$default-square-radius:     0;
+
+// soacing
+$default-padding:           0.6em;
+
+$default-primary-color:     $violet-eggplant;
+$default-color:             $text-dark;
+$default-success-color:     $illuminating-emerald;
+$default-info-color:        $lapis-lazuli;
+$default-warning-color:     $fluorescent-orange;
+$default-error-color:       $paradise-pink;
+
+
+/* referential variables */
+$button-border-size:        $default-border-size;
+$button-border-style:       $default-border-style;
+$button-padding-size:       $default-padding;
+
+$button-default-color:      $default-color;
+$button-primary-color:      $default-primary-color;
+$button-success-color:      $default-success-color;
+$button-secondary-color:    $default-color;
+$button-info-color:         $default-info-color;
+$button-warning-color:      $default-warning-color;
+$button-error-color:      $default-error-color;
+
+$button-pill-radius:        $default-pill-radius;
+$button-round-radius:       $default-round-radius;
+$button-square-radius:      $default-square-radius;
+
 
 .btn {
   display: inline-block;
   margin: 0;
-  padding: 0.6em 1em;
+  padding: $button-padding-size $button-padding-size * 1.3;
   background-color: transparent;
-  border: 1px solid $border-dark;
-  border-radius: 0;
+  border: $button-border-size $default-border-style $button-default-color;
+  border-radius: $button-square-radius;
   font-family: $base-font-family;
-  font-size: 1rem;
-  color: $text-dark;
-  line-height: 1.5;
+  font-size: 1em;
+  color: $button-default-color;
+  line-height: $base-line-height;
+  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   &:hover {
 
   }
+  /* button sizes */
   &.btn--sm {
-    font-size: 0.875rem;
+    font-size: 0.875em;
+  }
+  &.btn--md {
+    font-size: 1em;
   }
   &.btn--lg {
-    font-size: 1.125rem;
+    font-size: 1.125em;
+  }
+  /* button variations */
+  &.btn--default {
+    border-color: $button-default-color;
+    color: $button-default-color;
+  }
+  &.btn--primary {
+    border-color: $button-primary-color;
+    color: $button-primary-color;
+  }
+  &.btn--success {
+    border-color: $button-success-color;
+    color: $button-success-color;
+  }
+  &.btn--secondary {
+    border-color: $button-secondary-color;
+    color: $button-secondary-color;
+  }
+  &.btn--info {
+    border-color: $button-info-color;
+    color: $button-info-color;
+  }
+  &.btn--warning {
+    border-color: $button-warning-color;
+    color: $button-warning-color;
+  }
+  &.btn--error {
+    border-color: $button-error-color;
+    color: $button-error-color;
+  }
+  /* button styles */
+  &.btn--pill {
+    border-radius: $button-pill-radius;
+  }
+  &.btn--round {
+    border-radius: $button-round-radius;
+  }
+  &.btn--square {
+    border-radius: $button-square-radius;
   }
 }

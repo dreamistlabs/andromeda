@@ -407,7 +407,7 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.6; }
 
 /**
   Headings
@@ -1314,23 +1314,58 @@ hr {
 .pl-100 {
   padding-left: 100px; }
 
+/* thematic/defining variables */
+/* referential variables */
 .btn {
   display: inline-block;
   margin: 0;
-  padding: 0.6em 1em;
+  padding: 0.6em 0.78em;
   background-color: transparent;
   border: 1px solid #313131;
   border-radius: 0;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   color: #313131;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-decoration: none;
   vertical-align: middle;
-  cursor: pointer; }
+  cursor: pointer;
+  /* button sizes */
+  /* button variations */
+  /* button styles */ }
   .btn.btn--sm {
-    font-size: 0.875rem; }
+    font-size: 0.875em; }
+  .btn.btn--md {
+    font-size: 1em; }
   .btn.btn--lg {
-    font-size: 1.125rem; }
+    font-size: 1.125em; }
+  .btn.btn--default {
+    border-color: #313131;
+    color: #313131; }
+  .btn.btn--primary {
+    border-color: #930B92;
+    color: #930B92; }
+  .btn.btn--success {
+    border-color: #32936F;
+    color: #32936F; }
+  .btn.btn--secondary {
+    border-color: #313131;
+    color: #313131; }
+  .btn.btn--info {
+    border-color: #2274A5;
+    color: #2274A5; }
+  .btn.btn--warning {
+    border-color: #FFBF00;
+    color: #FFBF00; }
+  .btn.btn--error {
+    border-color: #E83F6F;
+    color: #E83F6F; }
+  .btn.btn--pill {
+    border-radius: 100px; }
+  .btn.btn--round {
+    border-radius: 5px; }
+  .btn.btn--square {
+    border-radius: 0; }
 
 /* thematic/defining variables */
 /* referential variables */

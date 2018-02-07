@@ -2,13 +2,13 @@
 
 /* thematic/defining variables */
 $default-border-size: 		1px;
-$default-gray:			 	#a7a7a7;
-$default-gray-dark:			darken($default-gray, 20);
-$default-gray-light:		lighten($default-gray, 20);
+$default-gray:			 			#a7a7a7;
+$default-gray-dark:				darken($default-gray, 20);
+$default-gray-light:			lighten($default-gray, 20);
 
 // spacing
-$default-margin:			1.6em;
-$default-padding:			0.8em;
+$default-margin:					1.6em;
+$default-padding:					0.8em;
 
 /* referential variables */
 $card-border-size: 			$default-border-size;
