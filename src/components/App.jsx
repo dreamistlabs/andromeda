@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import Dashboard from '../components/Dashboard/Dashboard';
 import BaselinePage from '../pages/baseline';
-// import GridSystemPage from '../pages/grid-system';
+import GridSystemPage from '../pages/grid-system';
 import './app.css';
 
 import Footer from './Footer/Footer';
@@ -63,7 +63,7 @@ class App extends Component {
         </section>
 
         {/*<BaselinePage />*/}
-        {/*<GridSystemPage />*/}
+        <GridSystemPage />
 
         <Footer />
       </div>

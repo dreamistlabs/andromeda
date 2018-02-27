@@ -19,46 +19,72 @@ export default class GridSystemPage extends Component {
             </header>
             <div className="docs example">
                 <div className="docs card">
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
-                            <div className="m31 col-1">.m31.col-1</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
+                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
                         </div>
                     </div>
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-3">.m31.col-3</div>
-                            <div className="m31 col-3">.m31.col-3</div>
-                            <div className="m31 col-3">.m31.col-3</div>
-                            <div className="m31 col-3">.m31.col-3</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-3">.col-sm-3</div>
+                            <div className="col-sm-3">.col-sm-3</div>
+                            <div className="col-sm-3">.col-sm-3</div>
+                            <div className="col-sm-3">.col-sm-3</div>
                         </div>
                     </div>
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-4">.m31.col-4</div>
-                            <div className="m31 col-6">.m31.col-6</div>
-                            <div className="m31 col-2">.m31.col-2</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-4">.col-sm-4</div>
+                            <div className="col-sm-6">.col-sm-6</div>
+                            <div className="col-sm-2">.col-sm-2</div>
                         </div>
                     </div>
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-2">.m31.col-2</div>
-                            <div className="m31 col-10">.m31.col-10</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-2">.col-sm-2</div>
+                            <div className="col-sm-10">.col-sm-10</div>
                         </div>
                     </div>
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-12">.m31.col-12</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-12">.col-sm-12</div>
+                        </div>
+                    </div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-md-6 col-xs-12">.col-md-6 col-xs-12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className="docs section" name="column-wrapping">
+            <header className="docs section__header">
+                <h2 className="docs section__title">
+                    Column Offset
+                </h2>
+                <p className="docs section__description">
+                    Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged decaffeinated espresso. Americano filter coffee blue mountain, extraction, roast, acerbic filter milk skinny doppio.
+                </p>
+            </header>
+            <div className="docs example">
+                <div className="docs card">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-xs-4 col-md-3 col-md-offset-2">.col-md-2 .col-md-offset-2</div>
+                            <div className="col-xs-4 col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
                         </div>
                     </div>
                 </div>
@@ -76,11 +102,11 @@ export default class GridSystemPage extends Component {
             </header>
             <div className="docs example">
                 <div className="docs card">
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-12">.m31.col-12</div>
-                            <div className="m31 col-3">.m31.col-3</div>
-                            <div className="m31 col-10">.m31.col-10</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-12">.col-sm-12</div>
+                            <div className="col-sm-3">.col-sm-3</div>
+                            <div className="col-sm-10">.col-sm-10</div>
                         </div>
                     </div>
                 </div>
@@ -98,13 +124,13 @@ export default class GridSystemPage extends Component {
             </header>
             <div className="docs example">
                 <div className="docs card">
-                    <div className="m31 container-fluid">
-                        <div className="m31 row">
-                            <div className="m31 col-12">
-                                .m31.col-12
-                                <div className="m31 row">
-                                    <div className="m31 col-4">.m31.col-4</div>
-                                    <div className="m31 col-8">.m31.col-8</div>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                .col-sm-12
+                                <div className="row">
+                                    <div className="col-sm-4">.col-sm-4</div>
+                                    <div className="col-sm-8">.col-sm-8</div>
                                 </div>
                             </div>
 

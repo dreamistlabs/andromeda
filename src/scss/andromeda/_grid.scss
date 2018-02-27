@@ -1,32 +1,65 @@
 /**********************************
   GRID SYSTEM (WIP)
  **********************************/
-%column {
-  padding: 0 $margin-reg;
-  overflow: hidden;
-  // @include test-border(blue);
-}
+/*
+ * Andromeda's Grid System is based off of a 12-column structure.
+ */
 
-$col-xs: col-xs;
-$col-sm: col-sm;
-$col-md: col-md;
-$col-lg: col-lg;
-$col-padding:     $padding-reg;
-$col-width:       8.3333333%;
+/* thematic/defining variables */
+
+/* referential variables */
+$column-padding:            $default-padding;
+
+$col-xs:      col-xs;
+$col-sm:      col-sm;
+$col-md:      col-md;
+$col-lg:      col-lg;
+$col-width:   8.3333333%;
 
 // array of different column sizes
 $col-sizes: $col-xs $col-sm $col-md $col-lg;
 
+@mixin build-column($s, $i, $w) {
+  .#{$s}-#{$i} { width: $w; }
+}
+
+[class^="col-"] {
+  position: relative;
+  padding: 0 $column-padding;
+  width: 100%;
+  min-height: 1px;
+  overflow: hidden;
+  @include test-border(blue);
+}
 // iterate through each size and create column classes, ie. col-md-1.
 @each $size in $col-sizes {
-  // ie, col-md-1 {width: $col-1}
   @for $i from 1 through 12 {
     $width: $col-width * $i;
-
-    .#{$size}-#{$i} {
-      @extend %column;
-      width: $width;
-    }
+    @include build-column($size, $i, $width);
+  }
+}
+@include for-desktop-only { 
+  @for $i from 1 through 12 {
+    $width: $col-width * $i;
+    @include build-column($col-lg, $i, $width);
+  }
+}
+@include for-tablet-landscape-only { 
+  @for $i from 1 through 12 {
+    $width: $col-width * $i;
+    @include build-column($col-md, $i, $width);
+  }
+}
+@include for-tablet-portrait-only { 
+  @for $i from 1 through 12 {
+    $width: $col-width * $i;
+    @include build-column($col-sm, $i, $width);
+  }
+}
+@include for-mobile-only { 
+  @for $i from 1 through 12 {
+    $width: $col-width * $i;
+    @include build-column($col-xs, $i, $width);
   }
 }
 
@@ -34,7 +67,6 @@ $col-sizes: $col-xs $col-sm $col-md $col-lg;
 @each $size in $col-sizes {
   @for $i from 1 through 11 {
     $width: $col-width * $i;
-
     .#{$size}-offset-#{$i} { margin-left: $width; }
   }
 }

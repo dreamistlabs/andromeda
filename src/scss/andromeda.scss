@@ -47,10 +47,21 @@ $gray-color-darker:     #7d7d7d;
 
 
 // spacing
+$default-margin:      1.5rem;
+$default-padding:     1.5rem;
 $spacing-unit:        1rem;
+
+
+$default-container-max-width:       1400px;
+$default-container-fluid-max-width: 97%;
 
 $horizontal-spacing:  $spacing-unit;
 $vertical-spacing:    $spacing-unit * 1.5;
+
+/* container */
+$container-padding:         $default-padding;
+$container-max-width:       $default-container-max-width;
+$container-fluid-max-width: $default-container-fluid-max-width;
 
 $padding-sm:      0.75rem;
 $padding-reg:     1rem;
@@ -69,16 +80,34 @@ $hd-desktop:      1800px;
 
 
 @mixin for-mobile-only {
-  @media screen and (max-width: $mobile - 1) { @content; }
+  @media screen and (max-width: $mobile) { @content; }
 }
 @mixin for-tablet-portrait-up {
   @media screen and (min-width: $mobile) { @content; }
 }
+@mixin for-tablet-portrait-only {
+  @media screen and (min-width: $mobile) and (max-width: $tablet) { @content; }
+}
+@mixin for-up-to-tablet-landscape {
+  @media screen and (max-width: $tablet) { @content; }
+}
 @mixin for-tablet-landscape-up {
   @media screen and (min-width: $tablet) { @content; }
 }
+@mixin for-tablet-landscape-only {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) { @content; }
+}
+@mixin for-up-to-desktop {
+  @media screen and (max-width: $desktop) { @content; }
+}
 @mixin for-desktop-up {
   @media screen and (min-width: $desktop) { @content; }
+}
+@mixin for-desktop-only {
+  @media screen and (min-width: $desktop) and (max-width: $hd-desktop) { @content; }
+}
+@mixin for-up-to-big-desktop {
+  @media screen and (max-width: $hd-desktop) { @content; }
 }
 @mixin for-big-desktop-up {
   @media screen and (min-width: $hd-desktop) { @content; }
@@ -96,26 +125,23 @@ $hd-desktop:      1800px;
  **********************************/
 %container {
   margin: 0 auto;
-  padding-left: $horizontal-spacing;
-  padding-right: $horizontal-spacing;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
 }
 
+.container, .container-fluid { @extend %container; }
 .container {
-  @extend %container;
-  max-width: 1400px;
+  max-width: $container-max-width;
 }
-
 .container-fluid {
-  @extend %container;
-  max-width: 98%;
+  max-width: $container-fluid-max-width;
 }
-
 .row {
   display: flex;
   flex-flow: row wrap;
-  margin-left: -$horizontal-spacing;
-  margin-right: -$horizontal-spacing;
-  // @include test-border($gray-color);
+  margin-left: -$container-padding;
+  margin-right: -$container-padding;
+  @include test-border($gray-color);
 }
 
 @import 'andromeda/grid';
