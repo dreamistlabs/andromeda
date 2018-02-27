@@ -15,6 +15,71 @@ class App extends Component {
     return (
       <div className="App">
         <div className="navbar">
+          <span> Default </span>
+          <nav className="navbar__nav">
+            <ul className="nav__navlist">
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="navbar">
+          <span> Underline Hover State </span>
+          <nav className="navbar__nav">
+            <ul className="nav__navlist navlist--hover-1">
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="navbar navbar--dark">
+          <span> Dark Theme </span>
           <nav className="navbar__nav">
             <ul className="nav__navlist">
               <li className="navlist__item">

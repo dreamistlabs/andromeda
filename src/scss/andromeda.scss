@@ -30,7 +30,7 @@ $big-desktop-font-size: 10px;
 
 // colors
 $white:                 #FAFAFA;
-$black:                 #000000;
+$black:                 #111111;
 $alabaster:             #FAFAFA;
 $mine-shaft:            #515151;
 
@@ -69,9 +69,10 @@ $spacing-unit:        1rem;
 
 /* typography */
 $default-link-color:                $text-color;
-$default-link-hover-color:          $text-dark;
+$default-link-hover-color:          $text-info;
 
 // navbar specific?
+$default-navbar-dark-background-color: $black;
 $default-link-underline-color:      $text-light;
 
 $default-container-max-width:       1400px;
@@ -169,14 +170,15 @@ $container-fluid-max-width: $default-container-fluid-max-width;
 @import 'andromeda/media';
 
 
-$nav-link-color:            $default-link-color;
-$nav-link-hover-color:      $default-link-hover-color;
-$nav-link-underline-color:  $default-link-underline-color;
+$navbar-dark-background-color:     $default-navbar-dark-background-color;
+$nav-link-color:                  $default-link-color;
+$nav-link-hover-color:            $default-link-hover-color;
+$nav-link-underline-color:        $default-link-underline-color;
 
 .navbar {
   position: relative;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: $base-font-size;
   @include test-border(green);
 }
 .nav__navlist {
@@ -195,21 +197,42 @@ $nav-link-underline-color:  $default-link-underline-color;
     padding: 0.5em;
     text-decoration: none;
     color: $nav-link-color;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: 0.5em;
-      transform: translateX(-50%);
-      width: 0%;
-      border-bottom: 2px solid $nav-link-underline-color;
-      transition: width 0.2s ease-out;
-    }
     &:hover,
     &:focus {
       color: $nav-link-hover-color;
+    }
+  }
+}
+
+/* modifier classes */
+.navbar {
+  &.navbar--dark {
+    background-color: $navbar-dark-background-color;
+    .navlist__link:not(:hover):not(:focus) {
+      color: $text-light;
+    }
+  }
+}
+
+.nav__navlist {
+  &.navlist--hover-1 {
+    .navlist__link {
       &:before {
-        width: 100%;
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0.5em;
+        transform: translateX(-50%);
+        width: 0%;
+        border-bottom: 2px solid $nav-link-underline-color;
+        transition: width 0.2s ease-out;
+      }
+      &:hover,
+      &:focus {
+        color: $nav-link-color;
+        &:before {
+          width: 100%;
+        }
       }
     }
   }
