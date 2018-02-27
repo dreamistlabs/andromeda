@@ -14,6 +14,37 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="navbar">
+          <nav className="navbar__nav">
+            <ul className="nav__navlist">
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+              <li className="navlist__item">
+                <a className="navlist__link" href="">
+                  Nav Item
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div className="container">
           {/*<Dashboard component="Cards" />*/}
         </div>
@@ -63,7 +94,7 @@ class App extends Component {
         </section>
 
         {/*<BaselinePage />*/}
-        <GridSystemPage />
+        {/*<GridSystemPage />*/}
 
         <Footer />
       </div>

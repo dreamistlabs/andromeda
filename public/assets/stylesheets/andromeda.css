@@ -1,8 +1,17 @@
 /**********************************
   VARIABLES
  **********************************/
-/* container */
+/* Theme-specific Variables 
+ * Use this section to declare style properties that are specific to your theme.
+ */
+/* typography */
 /* Media Queries */
+/* Referential Variables
+ * The variables in this section are used throughout the Andromeda framework.
+ * DO NOT CHANGE the variable names; doing so will likely break things.
+ * Instead, just change the values that are assigned to these variables.
+ */
+/* container */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -406,7 +415,7 @@ html {
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6; }
 
@@ -1446,11 +1455,11 @@ hr {
   margin: 0;
   padding: 0.6em 0.78em;
   background-color: transparent;
-  border: 1px solid #313131;
+  border: 1px solid #050505;
   border-radius: 0;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1em;
-  color: #313131;
+  color: #050505;
   line-height: 1.6;
   text-decoration: none;
   vertical-align: middle;
@@ -1465,8 +1474,8 @@ hr {
   .btn.btn--lg {
     font-size: 1.125em; }
   .btn.btn--default {
-    border-color: #313131;
-    color: #313131; }
+    border-color: #050505;
+    color: #050505; }
   .btn.btn--primary {
     border-color: #930B92;
     color: #930B92; }
@@ -1474,8 +1483,8 @@ hr {
     border-color: #32936F;
     color: #32936F; }
   .btn.btn--secondary {
-    border-color: #313131;
-    color: #313131; }
+    border-color: #050505;
+    color: #050505; }
   .btn.btn--info {
     border-color: #2274A5;
     color: #2274A5; }
@@ -1528,14 +1537,36 @@ hr {
   .card.card--vertical-split .card__col-right--fill {
     background-color: #a7a7a7; }
 
-@media screen and (min-width: 600px) {
-  html {
-    font-size: 10px; } }
+.navbar {
+  position: relative;
+  width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid green; }
 
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 10px; } }
-
-@media screen and (min-width: 1800px) {
-  html {
-    font-size: 10px; } }
+.nav__navlist {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+  .nav__navlist .navlist__item {
+    margin-left: 0.5em;
+    margin-right: 0.5em; }
+  .nav__navlist .navlist__link {
+    position: relative;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: #515151; }
+    .nav__navlist .navlist__link:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0.5em;
+      transform: translateX(-50%);
+      width: 0%;
+      border-bottom: 2px solid #d1d1d1;
+      transition: width 0.2s ease-out; }
+    .nav__navlist .navlist__link:hover, .nav__navlist .navlist__link:focus {
+      color: #050505; }
+      .nav__navlist .navlist__link:hover:before, .nav__navlist .navlist__link:focus:before {
+        width: 100%; }

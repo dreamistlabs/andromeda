@@ -2,7 +2,9 @@
   VARIABLES
  **********************************/
 
-// typography
+/* Theme-specific Variables 
+ * Use this section to declare style properties that are specific to your theme.
+ */
 $karla-font-family:       'Karla', sans-serif;
 $open-sans-font-family:   'Open Sans', Arial, sans-serif;
 $monospace-font-family:   monospace;
@@ -12,7 +14,7 @@ $normal-weight:         400;
 $bold-weight:           600;
 
 $base-font-family:      $open-sans-font-family;
-$base-font-size:        1rem;
+$base-font-size:        1.6rem;
 $base-font-weight:      $normal-weight;
 $base-line-height:      1.6;
 
@@ -30,7 +32,7 @@ $big-desktop-font-size: 10px;
 $white:                 #FAFAFA;
 $black:                 #000000;
 $alabaster:             #FAFAFA;
-$mine-shaft:            #313131;
+$mine-shaft:            #515151;
 
 $illuminating-emerald:  #32936F;
 $lapis-lazuli:          #2274A5;
@@ -38,22 +40,54 @@ $fluorescent-orange:    #FFBF00;
 $paradise-pink:         #E83F6F;
 $violet-eggplant:       #930B92;
 
-$text-color:            #313131;
-$text-color-light:      $white;
-
 $gray-color-lighter:    #AFAFAF;
 $gray-color:            #969696;
 $gray-color-darker:     #7d7d7d;
 
+// @import './andromeda/variables';
+// Colors
+$primary-color:         $violet-eggplant;
+$success-color:         $illuminating-emerald;
+$info-color:            $lapis-lazuli;
+$warning-color:         $fluorescent-orange;
+$danger-color:          $paradise-pink;
+
+$text-color:            $mine-shaft;
+$text-dark:             darken($text-color, 30%);
+$text-light:            lighten($text-color, 50%);
+$text-primary:          $primary-color;
+$text-success:          $success-color;
+$text-info:             $info-color;
+$text-warning:          $warning-color;
+$text-danger:           $danger-color;
+$border-dark:           $mine-shaft;
 
 // spacing
 $default-margin:      1.5rem;
 $default-padding:     1.5rem;
 $spacing-unit:        1rem;
 
+/* typography */
+$default-link-color:                $text-color;
+$default-link-hover-color:          $text-dark;
+
+// navbar specific?
+$default-link-underline-color:      $text-light;
 
 $default-container-max-width:       1400px;
 $default-container-fluid-max-width: 97%;
+
+/* Media Queries */
+$mobile:          600px;
+$tablet:          900px;
+$desktop:         1200px;
+$hd-desktop:      1800px;
+
+/* Referential Variables
+ * The variables in this section are used throughout the Andromeda framework.
+ * DO NOT CHANGE the variable names; doing so will likely break things.
+ * Instead, just change the values that are assigned to these variables.
+ */
 
 $horizontal-spacing:  $spacing-unit;
 $vertical-spacing:    $spacing-unit * 1.5;
@@ -62,22 +96,6 @@ $vertical-spacing:    $spacing-unit * 1.5;
 $container-padding:         $default-padding;
 $container-max-width:       $default-container-max-width;
 $container-fluid-max-width: $default-container-fluid-max-width;
-
-$padding-sm:      0.75rem;
-$padding-reg:     1rem;
-$padding-lg:      1.5rem;
-
-$margin-sm:       0.75rem;
-$margin-reg:      1rem;
-$margin-lg:       1.5rem;
-
-
-/* Media Queries */
-$mobile:          600px;
-$tablet:          900px;
-$desktop:         1200px;
-$hd-desktop:      1800px;
-
 
 @mixin for-mobile-only {
   @media screen and (max-width: $mobile) { @content; }
@@ -150,19 +168,49 @@ $hd-desktop:      1800px;
 @import 'andromeda/card';
 @import 'andromeda/media';
 
-@include for-tablet-portrait-up {
-  html {
-    font-size: $tablet-font-size;
-  }
-}
 
-@include for-desktop-up {
-  html {
-    font-size: $desktop-font-size;
-  }
+$nav-link-color:            $default-link-color;
+$nav-link-hover-color:      $default-link-hover-color;
+$nav-link-underline-color:  $default-link-underline-color;
+
+.navbar {
+  position: relative;
+  width: 100%;
+  font-size: 1.6rem;
+  @include test-border(green);
 }
-@include for-big-desktop-up {
-  html {
-    font-size: $big-desktop-font-size;
+.nav__navlist {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  .navlist__item {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  .navlist__link {
+    position: relative;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: $nav-link-color;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0.5em;
+      transform: translateX(-50%);
+      width: 0%;
+      border-bottom: 2px solid $nav-link-underline-color;
+      transition: width 0.2s ease-out;
+    }
+    &:hover,
+    &:focus {
+      color: $nav-link-hover-color;
+      &:before {
+        width: 100%;
+      }
+    }
   }
 }
