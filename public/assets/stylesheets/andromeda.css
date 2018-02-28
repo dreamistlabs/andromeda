@@ -1,7 +1,17 @@
 /**********************************
   VARIABLES
  **********************************/
+/* Theme-specific Variables
+ * Use this section to declare style properties that are specific to your theme.
+ */
+/* typography */
 /* Media Queries */
+/* Referential Variables
+ * The variables in this section are used throughout the Andromeda framework.
+ * DO NOT CHANGE the variable names; doing so will likely break things.
+ * Instead, just change the values that are assigned to these variables.
+ */
+/* container */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -405,7 +415,7 @@ html {
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6; }
 
@@ -533,27 +543,39 @@ hr {
  **********************************/
 .container, .container-fluid {
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
 
 .container {
   max-width: 1400px; }
 
 .container-fluid {
-  max-width: 98%; }
+  max-width: 97%; }
 
 .row {
   display: flex;
   flex-flow: row wrap;
-  margin-left: -1rem;
-  margin-right: -1rem; }
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  border: 1px solid #969696; }
 
 /**********************************
   GRID SYSTEM (WIP)
  **********************************/
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-  padding: 0 1rem;
-  overflow: hidden; }
+/*
+ * Andromeda's Grid System is based off of a 12-column structure.
+ * TODO:
+ *    * Figure out how to implement offset classes consistently and based on breakpoints
+ */
+/* thematic/defining variables */
+/* referential variables */
+[class^="col-"] {
+  position: relative;
+  padding: 0 1.5rem;
+  width: 100%;
+  min-height: 1px;
+  overflow: hidden;
+  border: 1px solid blue; }
 
 .col-xs-1 {
   width: 8.33333%; }
@@ -699,6 +721,110 @@ hr {
 .col-lg-12 {
   width: 100.0%; }
 
+@media screen and (min-width: 1200px) and (max-width: 1800px) {
+  .col-lg-1 {
+    width: 8.33333%; }
+  .col-lg-2 {
+    width: 16.66667%; }
+  .col-lg-3 {
+    width: 25.0%; }
+  .col-lg-4 {
+    width: 33.33333%; }
+  .col-lg-5 {
+    width: 41.66667%; }
+  .col-lg-6 {
+    width: 50.0%; }
+  .col-lg-7 {
+    width: 58.33333%; }
+  .col-lg-8 {
+    width: 66.66667%; }
+  .col-lg-9 {
+    width: 75.0%; }
+  .col-lg-10 {
+    width: 83.33333%; }
+  .col-lg-11 {
+    width: 91.66667%; }
+  .col-lg-12 {
+    width: 100.0%; } }
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .col-md-1 {
+    width: 8.33333%; }
+  .col-md-2 {
+    width: 16.66667%; }
+  .col-md-3 {
+    width: 25.0%; }
+  .col-md-4 {
+    width: 33.33333%; }
+  .col-md-5 {
+    width: 41.66667%; }
+  .col-md-6 {
+    width: 50.0%; }
+  .col-md-7 {
+    width: 58.33333%; }
+  .col-md-8 {
+    width: 66.66667%; }
+  .col-md-9 {
+    width: 75.0%; }
+  .col-md-10 {
+    width: 83.33333%; }
+  .col-md-11 {
+    width: 91.66667%; }
+  .col-md-12 {
+    width: 100.0%; } }
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .col-sm-1 {
+    width: 8.33333%; }
+  .col-sm-2 {
+    width: 16.66667%; }
+  .col-sm-3 {
+    width: 25.0%; }
+  .col-sm-4 {
+    width: 33.33333%; }
+  .col-sm-5 {
+    width: 41.66667%; }
+  .col-sm-6 {
+    width: 50.0%; }
+  .col-sm-7 {
+    width: 58.33333%; }
+  .col-sm-8 {
+    width: 66.66667%; }
+  .col-sm-9 {
+    width: 75.0%; }
+  .col-sm-10 {
+    width: 83.33333%; }
+  .col-sm-11 {
+    width: 91.66667%; }
+  .col-sm-12 {
+    width: 100.0%; } }
+
+@media screen and (max-width: 600px) {
+  .col-xs-1 {
+    width: 8.33333%; }
+  .col-xs-2 {
+    width: 16.66667%; }
+  .col-xs-3 {
+    width: 25.0%; }
+  .col-xs-4 {
+    width: 33.33333%; }
+  .col-xs-5 {
+    width: 41.66667%; }
+  .col-xs-6 {
+    width: 50.0%; }
+  .col-xs-7 {
+    width: 58.33333%; }
+  .col-xs-8 {
+    width: 66.66667%; }
+  .col-xs-9 {
+    width: 75.0%; }
+  .col-xs-10 {
+    width: 83.33333%; }
+  .col-xs-11 {
+    width: 91.66667%; }
+  .col-xs-12 {
+    width: 100.0%; } }
+
 .col-xs-offset-1 {
   margin-left: 8.33333%; }
 
@@ -834,6 +960,14 @@ hr {
 /**********************************
   UTILITIES (WIP)
  **********************************/
+/* Padding and Margin Classes
+ * The following creates classes that increase the padding or margin
+ * of an element in increments of 5px. Each class is named based on 
+ * the property (ie. padding or margin) and side (ie. top, right, bottom,
+ * or left) it's targeting. For example, to add 35px of padding on the 
+ * left of an element, the class to use would be .pl-35. The max increment 
+ * available is 100px.
+ */
 .mt-5 {
   margin-top: 5px; }
 
@@ -1321,11 +1455,11 @@ hr {
   margin: 0;
   padding: 0.6em 0.78em;
   background-color: transparent;
-  border: 1px solid #313131;
+  border: 1px solid #050505;
   border-radius: 0;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1em;
-  color: #313131;
+  color: #050505;
   line-height: 1.6;
   text-decoration: none;
   vertical-align: middle;
@@ -1340,8 +1474,8 @@ hr {
   .btn.btn--lg {
     font-size: 1.125em; }
   .btn.btn--default {
-    border-color: #313131;
-    color: #313131; }
+    border-color: #050505;
+    color: #050505; }
   .btn.btn--primary {
     border-color: #930B92;
     color: #930B92; }
@@ -1349,8 +1483,8 @@ hr {
     border-color: #32936F;
     color: #32936F; }
   .btn.btn--secondary {
-    border-color: #313131;
-    color: #313131; }
+    border-color: #050505;
+    color: #050505; }
   .btn.btn--info {
     border-color: #2274A5;
     color: #2274A5; }
@@ -1421,14 +1555,46 @@ hr {
     height: 16.66667%;
     border: 1px solid #a7a7a7; }
 
-@media screen and (min-width: 600px) {
-  html {
-    font-size: 10px; } }
+.navbar {
+  position: relative;
+  width: 100%;
+  font-size: 1.6rem;
+  border: 1px solid green; }
 
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 10px; } }
+.nav__navlist {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+  .nav__navlist .navlist__item {
+    margin-left: 0.5em;
+    margin-right: 0.5em; }
+  .nav__navlist .navlist__link {
+    position: relative;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: #515151; }
+    .nav__navlist .navlist__link:hover, .nav__navlist .navlist__link:focus {
+      color: #2274A5; }
 
-@media screen and (min-width: 1800px) {
-  html {
-    font-size: 10px; } }
+/* modifier classes */
+.navbar.navbar--dark {
+  background-color: #111111; }
+  .navbar.navbar--dark .navlist__link:not(:hover):not(:focus) {
+    color: #d1d1d1; }
+
+.nav__navlist.navlist--hover-1 .navlist__link:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.5em;
+  transform: translateX(-50%);
+  width: 0%;
+  border-bottom: 2px solid #d1d1d1;
+  transition: width 0.2s ease-out; }
+
+.nav__navlist.navlist--hover-1 .navlist__link:hover, .nav__navlist.navlist--hover-1 .navlist__link:focus {
+  color: #515151; }
+  .nav__navlist.navlist--hover-1 .navlist__link:hover:before, .nav__navlist.navlist--hover-1 .navlist__link:focus:before {
+    width: 100%; }

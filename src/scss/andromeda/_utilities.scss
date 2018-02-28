@@ -2,9 +2,16 @@
   UTILITIES (WIP)
  **********************************/
 
+/* Padding and Margin Classes
+ * The following creates classes that increase the padding or margin
+ * of an element in increments of 5px. Each class is named based on 
+ * the property (ie. padding or margin) and side (ie. top, right, bottom,
+ * or left) it's targeting. For example, to add 35px of padding on the 
+ * left of an element, the class to use would be .pl-35. The max increment 
+ * available is 100px.
+ */
 $types : margin padding;
 $sides : top right bottom left;
-
 @each $type in $types {
   @each $side in $sides {
     @for $i from 1 through 20 {
