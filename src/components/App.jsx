@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import Dashboard from '../components/Dashboard/Dashboard';
 import BaselinePage from '../pages/baseline';
+import TempButtonCode from '../pages/buttons-temp';
 // import GridSystemPage from '../pages/grid-system';
 import './app.css';
 
@@ -15,53 +16,49 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          {/*<Dashboard component="Cards" />*/}
+        <div className="row">
+          <div className="col-lg-12">
+          <p> sometihng</p>
+          </div>
         </div>
 
-        <section className="docs section">
-          <div className="container">
-            <div className="section__header">
-              <h2 className="section__heading">Buttons</h2>
-              <p className="section__description"> Lorem ipsum</p>
+          {/*<Dashboard component="Cards" />*/}
+          {/*<Dashboard component="Buttons" />*/}
+
+          <div className="tileset">
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
             </div>
-            <div className="docs card">
-              <div>
-                <button className="m31 btn btn--lg">Read more</button>
-                <div className="m31 btn btn--lg">Read more</div>
-                <input className="m31 btn btn--lg" type="submit" value="Read more"/>
-                <a href="" className="m31 btn btn--lg">Read more</a>
-              </div>
-              &nbsp;
-              <div className="section__example">
-                <button className="m31 btn">Read more</button>
-                <div className="m31 btn">Read more</div>
-                <input className="m31 btn" type="submit" value="Read more"/>
-              </div>
-              &nbsp;
-              <div>
-                <button className="m31 btn btn--sm">Read more</button>
-                <div className="m31 btn btn--sm">Read more</div>
-                <input className="m31 btn btn--sm" type="submit" value="Read more"/>
-              </div>
-              &nbsp;
-              <div>
-                <button className="m31 btn btn--round">Read more</button>
-                <div className="m31 btn btn--pill">Read more</div>
-                <input className="m31 btn btn--square" type="submit" value="Read more"/>
-              </div>
-              &nbsp;
-              <div>
-                <button className="m31 btn btn--primary">Primary</button>
-                <button className="m31 btn btn--secondary">Secondary</button>
-                <button className="m31 btn btn--success">Success</button>
-                <button className="m31 btn btn--info">Info</button>
-                <button className="m31 btn btn--warning">Warning</button>
-                <button className="m31 btn btn--error">Error</button>
-              </div>
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
+            </div>
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
+            </div>
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
+            </div>
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
+            </div>
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
+            </div>
+            <div className="tileset__tile">
+              <span>icon</span>
+              <span>Dashboard</span>
             </div>
           </div>
-        </section>
+        </div>
 
+
+        {/*<TempButtonCode />*/}
         {/*<BaselinePage />*/}
         {/*<GridSystemPage />*/}
 

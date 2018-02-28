@@ -1403,6 +1403,24 @@ hr {
   .card.card--vertical-split .card__col-right--fill {
     background-color: #a7a7a7; }
 
+/* thematic/defining variables */
+/* referential variables */
+.tileset {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  font-size: 1.6rem; }
+  .tileset .tileset__tile {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0.8em;
+    width: 16.66667%;
+    height: 16.66667%;
+    border: 1px solid #a7a7a7; }
+
 @media screen and (min-width: 600px) {
   html {
     font-size: 10px; } }

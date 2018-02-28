@@ -1,0 +1,40 @@
+@import './variables';
+
+/* thematic/defining variables */
+$default-border-size:     1px;
+$default-border-style:    solid;
+
+$default-gray:            #a7a7a7;
+$default-gray-dark:       darken($default-gray, 20);
+$default-gray-light:      lighten($default-gray, 20);
+
+// spacing
+$default-margin:          1rem;
+$default-padding:         0.8em;
+
+/* referential variables */
+$tile-border-size:      $default-border-size;
+$tile-border-style:     $default-border-style;
+$tile-border-color:     $default-gray;
+$tile-fill-color:       $default-gray;
+$tile-margin-size:      $default-margin;
+$tile-padding-size:     $default-padding;
+
+.tileset {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  font-size: 1.6rem;
+
+  .tileset__tile {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: $tile-margin-size;
+    padding: $tile-padding-size;
+    width: 16.66667%;
+    height: 16.66667%;
+    border: $tile-border-size $tile-border-style $tile-border-color;
+  }
+}
