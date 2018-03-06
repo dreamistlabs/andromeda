@@ -131,21 +131,21 @@ export default class GridSystemPage extends Component {
                             </div>
                         </div>
                         <div className="grid">
-                            <div className="grid__col--3">
+                            <div className="grid__col-3 grid__col-sm-4 grid__col-sm-offset-2">
+                                .grid__col-3 .grid__col-sm-4 .grid__col-sm-offset-2
+                            </div>
+                        </div>
+                        <div className="grid">
+                            <div className="grid__col-9">
+                                .grid__col-9
+                            </div>
+                            <div className="grid__col-3">
                                 .grid__col--3
                             </div>
                         </div>
                         <div className="grid">
-                            <div className="grid__col--9">
-                                .grid__col--9
-                            </div>
-                            <div className="grid__col--3">
-                                .grid__col--3
-                            </div>
-                        </div>
-                        <div className="grid">
-                            <div className="grid__col--4">
-                                .grid__col--4
+                            <div className="grid__col-4">
+                                .grid__col-4
                             </div>
                             <div className="grid__col">
                                 .grid__col

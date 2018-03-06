@@ -4,7 +4,6 @@
 /*
  * Andromeda's Grid System is based off of a 12-column structure.
  * TODO:
- *    * Figure out how to implement offset classes consistently and based on breakpoints
  */
 
 /* thematic/defining variables */
@@ -19,8 +18,11 @@ $col-lg:            grid__col-lg;
 $col-xl:            grid__col-xl;
 $col-width:         8.3333333%;
 
-@mixin build-column($s, $i, $w) {
-  .#{$s}--#{$i} { flex: 0 0 $w; }
+@mixin build-column-and-offset($s, $i, $w) {
+  .#{$s}-#{$i} { flex: 0 0 $w; }
+  @if $i < 12 {
+    .#{$s}-offset-#{$i} { margin-left: $w; }
+  }
 }
 
 /* Grids are expected to live inside a container */
@@ -37,25 +39,30 @@ $col-width:         8.3333333%;
 }
 /* Base grid column classes applied to all media sizes */
 @for $i from 1 through 12 {
-  @include build-column($col, $i, $col-width * $i);
+  $width: $col-width * $i;
+  @include build-column-and-offset($col, $i, $width);
 }
 @include for-tablet-portrait-up { 
   @for $i from 1 through 12 {
-    @include build-column($col-sm, $i, $col-width * $i);
+    $width: $col-width * $i;
+    @include build-column-and-offset($col-sm, $i, $width);
   }
 }
 @include for-tablet-landscape-up { 
   @for $i from 1 through 12 {
-    @include build-column($col-md, $i, $col-width * $i);
+    $width: $col-width * $i;
+    @include build-column-and-offset($col-md, $i, $width);
   }
 }
 @include for-desktop-up { 
   @for $i from 1 through 12 {
-    @include build-column($col-lg, $i, $col-width * $i);
+    $width: $col-width * $i;
+    @include build-column-and-offset($col-lg, $i, $width);
   }
 }
 @include for-big-desktop-up { 
   @for $i from 1 through 12 {
-    @include build-column($col-xl, $i, $col-width * $i);
+    $width: $col-width * $i;
+    @include build-column-and-offset($col-xl, $i, $width);
   }
 }
