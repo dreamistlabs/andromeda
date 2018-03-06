@@ -10,65 +10,52 @@
 /* thematic/defining variables */
 
 /* referential variables */
-$column-padding:            $default-padding;
+$column-padding:    $default-padding;
 
-$col-xs:      col-xs;
-$col-sm:      col-sm;
-$col-md:      col-md;
-$col-lg:      col-lg;
-$col-width:   8.3333333%;
-
-// array of different column sizes
-$col-sizes: $col-xs $col-sm $col-md $col-lg;
+$col:               grid__col;
+$col-sm:            grid__col-sm;
+$col-md:            grid__col-md;
+$col-lg:            grid__col-lg;
+$col-xl:            grid__col-xl;
+$col-width:         8.3333333%;
 
 @mixin build-column($s, $i, $w) {
-  .#{$s}-#{$i} { width: $w; }
+  .#{$s}--#{$i} { flex: 0 0 $w; }
 }
 
-[class^="col-"] {
-  position: relative;
-  padding: 0 $column-padding;
-  width: 100%;
-  min-height: 1px;
-  overflow: hidden;
-  @include test-border(blue);
+/* Grids are expected to live inside a container */
+.grid {
+  display: flex;
+  margin-left: -$default-padding;
+  margin-right: -$default-padding;
+  @include test-border(gray);
 }
-// iterate through each size and create column classes, ie. col-md-1.
-@each $size in $col-sizes {
+[class^="grid__col"] {
+  flex: 1;
+  padding: 0 $default-padding;
+  @include test-border(green);
+}
+/* Base grid column classes applied to all media sizes */
+@for $i from 1 through 12 {
+  @include build-column($col, $i, $col-width * $i);
+}
+@include for-tablet-portrait-up { 
   @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column($size, $i, $width);
+    @include build-column($col-sm, $i, $col-width * $i);
   }
 }
-@include for-desktop-only { 
+@include for-tablet-landscape-up { 
   @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column($col-lg, $i, $width);
+    @include build-column($col-md, $i, $col-width * $i);
   }
 }
-@include for-tablet-landscape-only { 
+@include for-desktop-up { 
   @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column($col-md, $i, $width);
+    @include build-column($col-lg, $i, $col-width * $i);
   }
 }
-@include for-tablet-portrait-only { 
+@include for-big-desktop-up { 
   @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column($col-sm, $i, $width);
-  }
-}
-@include for-mobile-only { 
-  @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column($col-xs, $i, $width);
-  }
-}
-
-// iterate through each size and create column offset classes, ie. col-md-offset-2.
-@each $size in $col-sizes {
-  @for $i from 1 through 11 {
-    $width: $col-width * $i;
-    .#{$size}-offset-#{$i} { margin-left: $width; }
+    @include build-column($col-xl, $i, $col-width * $i);
   }
 }

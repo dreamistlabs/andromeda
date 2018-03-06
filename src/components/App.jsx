@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="navbar">
+{/*        <div className="navbar">
           <span> Default </span>
           <nav className="navbar__nav">
             <ul className="nav__navlist">
@@ -110,13 +110,13 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-        </div>
+        </div>*/}
         <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-          <p> sometihng</p>
+          <div className="row">
+            <div className="col-lg-12">
+            <p> sometihng</p>
+            </div>
           </div>
-        </div>
 
           {/*<Dashboard component="Cards" />*/}
           {/*<Dashboard component="Buttons" />*/}
@@ -156,7 +156,7 @@ class App extends Component {
 
         {/*<TempButtonCode />*/}
         {/*<BaselinePage />*/}
-        {/*<GridSystemPage />*/}
+        <GridSystemPage />
 
         <Footer />
       </div>

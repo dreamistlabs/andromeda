@@ -157,9 +157,8 @@ $container-fluid-max-width: $default-container-fluid-max-width;
 }
 .row {
   display: flex;
-  flex-flow: row wrap;
-  margin-left: -$container-padding;
-  margin-right: -$container-padding;
+  margin-left: -$default-padding;
+  margin-right: -$default-padding;
   @include test-border($gray-color);
 }
 

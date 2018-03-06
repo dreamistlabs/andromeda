@@ -125,15 +125,31 @@ export default class GridSystemPage extends Component {
             <div className="docs example">
                 <div className="docs card">
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-sm-12">
-                                .col-sm-12
-                                <div className="row">
-                                    <div className="col-sm-4">.col-sm-4</div>
-                                    <div className="col-sm-8">.col-sm-8</div>
-                                </div>
+                        <div className="grid">
+                            <div className="grid__col grid__col-sm-9 grid__col-md-4 grid__col-lg-2">
+                                .grid__col .grid__col-sm-9 .grid__col-md-4 .grid__col-lg-2
                             </div>
-
+                        </div>
+                        <div className="grid">
+                            <div className="grid__col--3">
+                                .grid__col--3
+                            </div>
+                        </div>
+                        <div className="grid">
+                            <div className="grid__col--9">
+                                .grid__col--9
+                            </div>
+                            <div className="grid__col--3">
+                                .grid__col--3
+                            </div>
+                        </div>
+                        <div className="grid">
+                            <div className="grid__col--4">
+                                .grid__col--4
+                            </div>
+                            <div className="grid__col">
+                                .grid__col
+                            </div>
                         </div>
                     </div>
                 </div>
