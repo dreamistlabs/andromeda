@@ -1,41 +1,4 @@
-/**!
- * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
- */
-$karla-font-family:       'Karla', sans-serif;
-$open-sans-font-family:   'Open Sans', Arial, sans-serif;
-$monospace-font-family:   'Droid Sans Mono', 'Courier', monospace;
-
-$default-font-size:     $mobile-font-size;
-$normal-weight:         400;
-$bold-weight:           700;
-
-$base-font-family:      'Droid Sans', 'Helvetica', 'Arial', sans-serif;
-$base-font-size:        1rem;
-$base-font-weight:      $normal-weight;
-$base-line-height:      1.4;
-
-$heading-font-family:   'Droid Serif', 'Georgia', 'Times', serif;
-$heading-font-weight:   $bold-weight;
-
-$mobile-font-size:      16px;
-$tablet-font-size:      18px;
-$desktop-font-size:     20px;
-$big-desktop-font-size: 22px;
-
-$default-padding:       15px;
-$default-padding-lg:    $default-padding * 1.6;
-
-$default-margin:        15px;
-$default-margin-lg:     $default-margin * 1.6;
-
-$gray-color-lighter:    #AFAFAF;
-$gray-color:            #969696;
-
-/* Media Query Breakpoints */
-$mobile-breakpoint:          600px;
-$tablet-breakpoint:          900px;
-$desktop-breakpoint:         1200px;
-$hd-desktop-breakpoint:      1800px;
+@import '../vendors/normalize';
 
 * {
   box-sizing: border-box;
@@ -48,12 +11,12 @@ body {
   font-size:   $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
-  letter-spacing: 0.01rem;
+  letter-spacing: $base-letter-spacing;
 }
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6  {
   margin-top:       0;
   margin-bottom:    $default-margin;
   font-family:      $heading-font-family;
