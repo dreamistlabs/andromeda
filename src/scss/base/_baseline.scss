@@ -3,18 +3,18 @@
  */
 $karla-font-family:       'Karla', sans-serif;
 $open-sans-font-family:   'Open Sans', Arial, sans-serif;
-$monospace-font-family:   monospace;
+$monospace-font-family:   'Droid Sans Mono', 'Courier', monospace;
 
 $default-font-size:     $mobile-font-size;
 $normal-weight:         400;
 $bold-weight:           700;
 
-$base-font-family:      'Arial', sans-serif;
+$base-font-family:      'Droid Sans', 'Helvetica', 'Arial', sans-serif;
 $base-font-size:        1rem;
 $base-font-weight:      $normal-weight;
 $base-line-height:      1.4;
 
-$heading-font-family:   'Georgia', serif;
+$heading-font-family:   'Droid Serif', 'Georgia', 'Times', serif;
 $heading-font-weight:   $bold-weight;
 
 $mobile-font-size:      16px;
@@ -30,7 +30,6 @@ $default-margin-lg:     $default-margin * 1.6;
 
 $gray-color-lighter:    #AFAFAF;
 $gray-color:            #969696;
-$gray-color-darker:     #7d7d7d;
 
 /* Media Query Breakpoints */
 $mobile-breakpoint:          600px;
@@ -67,11 +66,11 @@ h1 {
 }
 h2 {
   font-size: 1.625rem;
-  line-height: 1.15384615em;
+  line-height: 1.154em;
 }
 h3 {
   font-size: 1.375rem;
-  line-height: 1.3636em;
+  line-height: 1.364em;
 }
 h4 {
   font-size: 1.125rem;
@@ -143,7 +142,6 @@ h6 {
 /**
  * Paragraphs
  */
-
 p {
   margin-top: 0;
   margin-bottom: $default-margin-lg;
@@ -161,7 +159,6 @@ ul, ol {
   margin-top: 0;
   margin-bottom: $default-margin-lg;
 }
-
 li > ul,
 li > ol {
   margin-bottom: 0;
@@ -225,7 +222,7 @@ th, td {
 
 caption {
   padding: 0.25rem;
-  color: $gray-color-darker;
+  color: $gray-color;
   text-align: left;
   caption-side: bottom;
 }
