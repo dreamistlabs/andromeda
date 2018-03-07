@@ -37,7 +37,7 @@ export default class ExampleCard extends Component {
 
   render() {
     return (
-      <div className="docs card">
+      <div className="docs__card">
         {this.renderExample()}
       </div>
     );

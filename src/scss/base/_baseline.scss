@@ -5,40 +5,28 @@ $karla-font-family:       'Karla', sans-serif;
 $open-sans-font-family:   'Open Sans', Arial, sans-serif;
 $monospace-font-family:   monospace;
 
-$light-weight:          300;
+$default-font-size:     $mobile-font-size;
 $normal-weight:         400;
-$bold-weight:           600;
+$bold-weight:           700;
 
-$base-font-family:      $open-sans-font-family;
+$base-font-family:      'Arial', sans-serif;
 $base-font-size:        1rem;
 $base-font-weight:      $normal-weight;
-$base-line-height:      1.2;
+$base-line-height:      1.4;
 
-$heading-font-family:   $karla-font-family;
-$heading-font-weight:   $light-weight;
-
-// these should be removed
-$small-font-size:       0.75rem;
-$big-font-size:         1.375rem;
+$heading-font-family:   'Georgia', serif;
+$heading-font-weight:   $bold-weight;
 
 $mobile-font-size:      16px;
 $tablet-font-size:      18px;
 $desktop-font-size:     20px;
 $big-desktop-font-size: 22px;
 
-$default-padding-sm:      0.75rem;
-$default-padding:         15px;
-$default-padding-lg:      1.5rem;
+$default-padding:       15px;
+$default-padding-lg:    $default-padding * 1.6;
 
-$default-margin-sm:     0.75rem;
 $default-margin:        15px;
-$default-margin-lg:     1.5rem;
-
-$default-font-size:      16px;
-
-$light-weight:          300;
-$normal-weight:         400;
-$bold-weight:           600;
+$default-margin-lg:     $default-margin * 1.6;
 
 $gray-color-lighter:    #AFAFAF;
 $gray-color:            #969696;
@@ -61,6 +49,7 @@ body {
   font-size:   $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
+  letter-spacing: 0.01rem;
 }
 /**
  * Headings
@@ -71,23 +60,84 @@ h1, h2, h3, h4, h5, h6 {
   font-family:      $heading-font-family;
   font-weight:      $heading-font-weight;
 }
+
 h1 {
-  font-size: 2.875rem;
+  font-size: 2rem;
+  line-height: 1.25em;
 }
 h2 {
-  font-size: 2.25rem;
+  font-size: 1.625rem;
+  line-height: 1.15384615em;
 }
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.375rem;
+  line-height: 1.3636em;
 }
 h4 {
-  font-size: 1.375rem;
+  font-size: 1.125rem;
+  line-height: 1.111em;
 }
 h5 {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
 }
 h6 {
-  font-size: 1rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  html {
+    font-size: $tablet-font-size;
+  }
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.05em;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 1.25em;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.25em;
+  }
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.222em;
+  }
+  h5 {
+    font-size: 0.875rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  html {
+    font-size: $desktop-font-size;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.05em;
+  }
+  h2 {
+    font-size: 2.25rem;
+    line-height: 1.25em;
+  }
+  h3 {
+    font-size: 1.75rem;
+    line-height: 1.25em;
+  }
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.222em;
+  }
+  h5 {
+    font-size: 0.875rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
 }
 
 /**
@@ -97,6 +147,10 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $default-margin-lg;
+
+  + p {
+    margin-bottom: $default-margin;
+  }
 }
 
 /**
@@ -126,7 +180,7 @@ dt {
 
 dd {
   margin-left: $default-margin;
-  margin-bottom: $default-margin-sm;
+  margin-bottom: $default-margin * 0.8;
 }
 
 /**
@@ -141,7 +195,7 @@ input {
 }
 
 legend {
-  font-size: $big-font-size;
+  font-size: $base-font-size * 1.25;
   font-weight: $bold-weight;
 }
 
@@ -170,7 +224,7 @@ th, td {
 }
 
 caption {
-  padding: $default-padding-sm 0.25rem;
+  padding: 0.25rem;
   color: $gray-color-darker;
   text-align: left;
   caption-side: bottom;
@@ -201,6 +255,6 @@ address {
 }
 
 hr {
-  margin: $default-margin-sm 0;
+  margin: $default-margin 0;
   border: 1px solid $gray-color-lighter;
 }

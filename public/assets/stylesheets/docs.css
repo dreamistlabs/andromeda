@@ -19,10 +19,7 @@ body {
   background-color: #F4F4F4;
   color: #373737; }
 
-p {
-  line-height: 1.6; }
-
-.docs.card {
+.docs__card {
   padding: 1rem;
   width: 100%;
   overflow-x: scroll;

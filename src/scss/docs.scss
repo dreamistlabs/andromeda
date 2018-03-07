@@ -30,9 +30,9 @@ body {
   color: $docs-text-color;
 }
 
-p {
-  line-height: $docs-base-line-height;
-}
+// p {
+//   line-height: $docs-base-line-height;
+// }
 
 @import 'docs/containers';
 @import 'docs/examples';

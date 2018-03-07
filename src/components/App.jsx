@@ -111,17 +111,17 @@ class App extends Component {
             </ul>
           </nav>
         </div>*/}
-        <div className="container">
+        {/*<div className="container">
           <div className="row">
             <div className="col-lg-12">
             <p> sometihng</p>
             </div>
-          </div>
+          </div>*/}
 
           {/*<Dashboard component="Cards" />*/}
           {/*<Dashboard component="Buttons" />*/}
 
-          <div className="tileset">
+          {/*<div className="tileset">
             <div className="tileset__tile">
               <span>icon</span>
               <span>Dashboard</span>
@@ -151,7 +151,7 @@ class App extends Component {
               <span>Dashboard</span>
             </div>
           </div>
-        </div>
+        </div>*/}
 
 
         {/*<TempButtonCode />*/}
