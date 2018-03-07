@@ -20,51 +20,21 @@ export default class GridSystemPage extends Component {
             <div className="docs example">
                 <div className="docs card">
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                            <div className="col-md-1 col-sm-4">.col-md-1 .col-sm-4</div>
-                        </div>
                     </div>
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-sm-3">.col-sm-3</div>
-                            <div className="col-sm-3">.col-sm-3</div>
-                            <div className="col-sm-3">.col-sm-3</div>
-                            <div className="col-sm-3">.col-sm-3</div>
-                        </div>
+                        
                     </div>
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-sm-4">.col-sm-4</div>
-                            <div className="col-sm-6">.col-sm-6</div>
-                            <div className="col-sm-2">.col-sm-2</div>
-                        </div>
+                        
                     </div>
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-sm-2">.col-sm-2</div>
-                            <div className="col-sm-10">.col-sm-10</div>
-                        </div>
+                        
                     </div>
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-sm-12">.col-sm-12</div>
-                        </div>
+                        
                     </div>
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-md-6 col-xs-12">.col-md-6 col-xs-12</div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -82,10 +52,7 @@ export default class GridSystemPage extends Component {
             <div className="docs example">
                 <div className="docs card">
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-xs-4 col-md-3 col-md-offset-2">.col-md-2 .col-md-offset-2</div>
-                            <div className="col-xs-4 col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -103,11 +70,7 @@ export default class GridSystemPage extends Component {
             <div className="docs example">
                 <div className="docs card">
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-sm-12">.col-sm-12</div>
-                            <div className="col-sm-3">.col-sm-3</div>
-                            <div className="col-sm-10">.col-sm-10</div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

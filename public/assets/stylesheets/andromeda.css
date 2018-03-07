@@ -5,11 +5,13 @@
  * Use this section to declare style properties that are specific to your theme.
  */
 /* typography */
-/* Media Queries */
+/* Media Query Breakpoints */
 /* Referential Variables
- * The variables in this section are used throughout the Andromeda framework.
- * DO NOT CHANGE the variable names; doing so will likely break things.
- * Instead, just change the values that are assigned to these variables.
+ * These variables typically refer to a specific component's property and
+ * its value should point to a variable declared under the Theme-Specific Variables
+ * section above. Ideally, referential variables should not have hard-coded values.
+ * IMPORTANT: Do not change the names of these referential variables because they are
+ * used throughout the Andromeda framework. Doing so will likely break things.
  */
 /* container */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -404,27 +406,27 @@ template {
   display: none; }
 
 /**!
- * Baseline builds on top of Normalize.css and
- * is inspired by Twitter Bootstrap's Reboot CSS.
+ * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
  */
+/* Media Query Breakpoints */
 * {
   box-sizing: border-box; }
 
 html {
-  font-size: 10px; }
+  font-size: 16px; }
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.6; }
+  line-height: 1.2; }
 
 /**
-  Headings
+ * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   font-family: "Karla", sans-serif;
   font-weight: 300; }
 
@@ -447,14 +449,14 @@ h6 {
   font-size: 1rem; }
 
 /**
-  Paragraphs
+ * Paragraphs
  */
 p {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
 /**
-  Lists
+ * Lists
  */
 ul, ol {
   margin-top: 0;
@@ -465,7 +467,7 @@ li > ol {
   margin-bottom: 0; }
 
 /**
-  Definitions
+ * Definitions
  */
 dl {
   margin-bottom: 1.5rem; }
@@ -474,14 +476,14 @@ dt {
   font-weight: 600; }
 
 dd {
-  margin-left: 1rem;
+  margin-left: 15px;
   margin-bottom: 0.75rem; }
 
 /**
-  Forms
-*/
+ * Forms
+ */
 form {
-  margin-bottom: 1rem; }
+  margin-bottom: 15px; }
 
 input {
   display: inline-block; }
@@ -496,7 +498,7 @@ fieldset {
 
 pre {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   font-family: monospace; }
 
 code {
@@ -516,22 +518,22 @@ caption {
   caption-side: bottom; }
 
 blockquote {
-  margin: 0 1rem 1rem;
+  margin: 0 15px 15px;
   padding: 0.375rem;
-  padding-left: 1rem;
+  padding-left: 15px;
   border-left: 0.375rem solid #AFAFAF; }
 
 blockquote > *:last-child {
   margin-bottom: 0; }
 
 /**
-  Misc
+ * Misc
  */
 abbr {
   cursor: help; }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   font-style: normal; }
 
 hr {
@@ -552,12 +554,6 @@ hr {
 .container-fluid {
   max-width: 97%; }
 
-.row {
-  display: flex;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  border: 1px solid #969696; }
-
 /**********************************
   GRID SYSTEM (WIP)
  **********************************/
@@ -570,13 +566,13 @@ hr {
 /* Grids are expected to live inside a container */
 .grid {
   display: flex;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: -15px;
+  margin-right: -15px;
   border: 1px solid gray; }
 
 [class^="grid__col"] {
   flex: 1;
-  padding: 0 1.5rem;
+  padding: 0 15px;
   border: 1px solid green; }
 
 /* Base grid column classes applied to all media sizes */
@@ -1344,7 +1340,7 @@ hr {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1em;
   color: #050505;
-  line-height: 1.6;
+  line-height: 1.2;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
@@ -1442,7 +1438,7 @@ hr {
 .navbar {
   position: relative;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: 1px solid green; }
 
 .nav__navlist {

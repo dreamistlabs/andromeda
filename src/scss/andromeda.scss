@@ -14,19 +14,21 @@ $normal-weight:         400;
 $bold-weight:           600;
 
 $base-font-family:      $open-sans-font-family;
-$base-font-size:        1.6rem;
+$base-font-size:        1rem;
 $base-font-weight:      $normal-weight;
-$base-line-height:      1.6;
+$base-line-height:      1.2;
 
 $heading-font-family:   $karla-font-family;
+$heading-font-weight:   $light-weight;
 
+// these should be removed
 $small-font-size:       0.75rem;
 $big-font-size:         1.375rem;
 
-$mobile-font-size:      10px;
-$tablet-font-size:      10px;
-$desktop-font-size:     10px;
-$big-desktop-font-size: 10px;
+$mobile-font-size:      16px;
+$tablet-font-size:      18px;
+$desktop-font-size:     20px;
+$big-desktop-font-size: 22px;
 
 // colors
 $white:                 #FAFAFA;
@@ -78,16 +80,18 @@ $default-link-underline-color:      $text-light;
 $default-container-max-width:       1400px;
 $default-container-fluid-max-width: 97%;
 
-/* Media Queries */
+/* Media Query Breakpoints */
 $mobile:          600px;
 $tablet:          900px;
 $desktop:         1200px;
 $hd-desktop:      1800px;
 
 /* Referential Variables
- * The variables in this section are used throughout the Andromeda framework.
- * DO NOT CHANGE the variable names; doing so will likely break things.
- * Instead, just change the values that are assigned to these variables.
+ * These variables typically refer to a specific component's property and
+ * its value should point to a variable declared under the Theme-Specific Variables
+ * section above. Ideally, referential variables should not have hard-coded values.
+ * IMPORTANT: Do not change the names of these referential variables because they are
+ * used throughout the Andromeda framework. Doing so will likely break things.
  */
 
 $horizontal-spacing:  $spacing-unit;
@@ -154,12 +158,6 @@ $container-fluid-max-width: $default-container-fluid-max-width;
 }
 .container-fluid {
   max-width: $container-fluid-max-width;
-}
-.row {
-  display: flex;
-  margin-left: -$default-padding;
-  margin-right: -$default-padding;
-  @include test-border($gray-color);
 }
 
 @import 'andromeda/grid';

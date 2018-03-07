@@ -1,44 +1,76 @@
 /**!
- * Baseline builds on top of Normalize.css and
- * is inspired by Twitter Bootstrap's Reboot CSS.
+ * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
  */
+$karla-font-family:       'Karla', sans-serif;
+$open-sans-font-family:   'Open Sans', Arial, sans-serif;
+$monospace-font-family:   monospace;
 
- $padding-sm:      0.75rem;
-$padding-reg:     1rem;
-$padding-lg:      1.5rem;
+$light-weight:          300;
+$normal-weight:         400;
+$bold-weight:           600;
 
-$margin-sm:       0.75rem;
-$margin-reg:      1rem;
-$margin-lg:       1.5rem;
+$base-font-family:      $open-sans-font-family;
+$base-font-size:        1rem;
+$base-font-weight:      $normal-weight;
+$base-line-height:      1.2;
 
+$heading-font-family:   $karla-font-family;
+$heading-font-weight:   $light-weight;
 
+// these should be removed
+$small-font-size:       0.75rem;
+$big-font-size:         1.375rem;
+
+$mobile-font-size:      16px;
+$tablet-font-size:      18px;
+$desktop-font-size:     20px;
+$big-desktop-font-size: 22px;
+
+$default-padding-sm:      0.75rem;
+$default-padding:         15px;
+$default-padding-lg:      1.5rem;
+
+$default-margin-sm:     0.75rem;
+$default-margin:        15px;
+$default-margin-lg:     1.5rem;
+
+$default-font-size:      16px;
+
+$light-weight:          300;
+$normal-weight:         400;
+$bold-weight:           600;
+
+$gray-color-lighter:    #AFAFAF;
+$gray-color:            #969696;
+$gray-color-darker:     #7d7d7d;
+
+/* Media Query Breakpoints */
+$mobile-breakpoint:          600px;
+$tablet-breakpoint:          900px;
+$desktop-breakpoint:         1200px;
+$hd-desktop-breakpoint:      1800px;
 
 * {
   box-sizing: border-box;
 }
-
 html {
-  font-size: $mobile-font-size;
+  font-size: $default-font-size;
 }
-
 body {
   font-family: $base-font-family;
   font-size:   $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
 }
-
 /**
-  Headings
+ * Headings
  */
-
 h1, h2, h3, h4, h5, h6 {
   margin-top:       0;
-  margin-bottom:    $margin-reg;
+  margin-bottom:    $default-margin;
   font-family:      $heading-font-family;
-  font-weight:      $light-weight;
+  font-weight:      $heading-font-weight;
 }
-
 h1 {
   font-size: 2.875rem;
 }
@@ -59,21 +91,21 @@ h6 {
 }
 
 /**
-  Paragraphs
+ * Paragraphs
  */
 
 p {
   margin-top: 0;
-  margin-bottom: $margin-lg;
+  margin-bottom: $default-margin-lg;
 }
 
 /**
-  Lists
+ * Lists
  */
 
 ul, ol {
   margin-top: 0;
-  margin-bottom: $margin-lg;
+  margin-bottom: $default-margin-lg;
 }
 
 li > ul,
@@ -82,10 +114,10 @@ li > ol {
 }
 
 /**
-  Definitions
+ * Definitions
  */
 dl {
-  margin-bottom: $margin-lg;
+  margin-bottom: $default-margin-lg;
 }
 
 dt {
@@ -93,15 +125,15 @@ dt {
 }
 
 dd {
-  margin-left: $margin-reg;
-  margin-bottom: $margin-sm;
+  margin-left: $default-margin;
+  margin-bottom: $default-margin-sm;
 }
 
 /**
-  Forms
-*/
+ * Forms
+ */
 form {
-  margin-bottom: $margin-reg;
+  margin-bottom: $default-margin;
 }
 
 input {
@@ -118,10 +150,9 @@ fieldset {
   border: none;
 }
 
-
 pre {
   margin-top: 0;
-  margin-bottom: $margin-reg;
+  margin-bottom: $default-margin;
   font-family: $monospace-font-family;
 }
 
@@ -139,16 +170,16 @@ th, td {
 }
 
 caption {
-  padding: $padding-sm 0.25rem;
+  padding: $default-padding-sm 0.25rem;
   color: $gray-color-darker;
   text-align: left;
   caption-side: bottom;
 }
 
 blockquote {
-  margin: 0 $margin-reg $margin-reg;
+  margin: 0 $default-margin $default-margin;
   padding: 0.375rem;
-  padding-left: $margin-reg;
+  padding-left: $default-margin;
   border-left: 0.375rem solid $gray-color-lighter;
 }
 
@@ -158,18 +189,18 @@ blockquote > *:last-child {
 }
 
 /**
-  Misc
+ * Misc
  */
 abbr {
   cursor: help;
 }
 
 address {
-  margin-bottom: $margin-reg;
+  margin-bottom: $default-margin;
   font-style: normal;
 }
 
 hr {
-  margin: $margin-sm 0;
+  margin: $default-margin-sm 0;
   border: 1px solid $gray-color-lighter;
 }
