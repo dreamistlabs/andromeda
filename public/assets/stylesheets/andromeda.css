@@ -1,7 +1,11 @@
+/**!
+ * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
+ */
+/* Media Query Breakpoints */
 /**********************************
   VARIABLES
  **********************************/
-/* Theme-specific Variables
+/* Theme-Specific Variables
  * Use this section to declare style properties that are specific to your theme.
  */
 /* typography */
@@ -14,6 +18,9 @@
  * used throughout the Andromeda framework. Doing so will likely break things.
  */
 /* container */
+/**!
+ * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
+ */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -405,9 +412,6 @@ template {
 [hidden] {
   display: none; }
 
-/**!
- * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
- */
 /* Media Query Breakpoints */
 * {
   box-sizing: border-box; }
@@ -521,7 +525,7 @@ th, td {
 
 caption {
   padding: 0.25rem;
-  color: #7d7d7d;
+  color: #969696;
   text-align: left;
   caption-side: bottom; }
 
@@ -553,8 +557,8 @@ hr {
  **********************************/
 .container, .container-fluid {
   margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 .container {
   max-width: 1400px; }

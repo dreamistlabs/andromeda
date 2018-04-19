@@ -1,13 +1,16 @@
+@import 'baseline/variables';
+
+// @import 'andromeda/variables';
 /**********************************
   VARIABLES
  **********************************/
 
-/* Theme-specific Variables
+/* Theme-Specific Variables
  * Use this section to declare style properties that are specific to your theme.
  */
-$karla-font-family:       'Karla', sans-serif;
-$open-sans-font-family:   'Open Sans', Arial, sans-serif;
-$monospace-font-family:   monospace;
+$karla-font-family:       'Karla', 'Helvetica', 'Arial', sans-serif;
+$open-sans-font-family:   'Open Sans', 'Helvetica', 'Arial', sans-serif;
+$monospace-font-family:   'Droid Sans Mono', 'Courier', monospace;
 
 $light-weight:          300;
 $normal-weight:         400;
@@ -16,11 +19,11 @@ $bold-weight:           600;
 $base-font-family:      $open-sans-font-family;
 $base-font-size:        1rem;
 $base-font-weight:      $normal-weight;
-$base-line-height:      1.2;
+$base-line-height:      1.4;
+$base-letter-spacing:   initial;
 
 $heading-font-family:   $karla-font-family;
 $heading-font-weight:   $light-weight;
-
 
 $mobile-font-size:      16px;
 $tablet-font-size:      18px;
@@ -43,7 +46,6 @@ $gray-color-lighter:    #AFAFAF;
 $gray-color:            #969696;
 $gray-color-darker:     #7d7d7d;
 
-// @import './andromeda/variables';
 // Colors
 $primary-color:         $violet-eggplant;
 $success-color:         $illuminating-emerald;
@@ -62,9 +64,9 @@ $text-danger:           $danger-color;
 $border-dark:           $mine-shaft;
 
 // spacing
-$default-margin:      1.5rem;
-$default-padding:     1.5rem;
-$spacing-unit:        1rem;
+$default-margin:        1rem;
+$default-padding:       1rem;
+$spacing-unit:          1rem;
 
 /* typography */
 $default-link-color:                $text-color;
@@ -133,13 +135,12 @@ $container-fluid-max-width: $default-container-fluid-max-width;
   @media screen and (min-width: $hd-desktop) { @content; }
 }
 
-@import 'vendors/normalize';
-@import 'base/baseline';
-
 @mixin test-border($color){
   border: 1px solid $color;
 }
 
+
+@import 'baseline/baseline';
 /**********************************
   CONTAINERS (WIP)
  **********************************/
@@ -148,7 +149,6 @@ $container-fluid-max-width: $default-container-fluid-max-width;
   padding-left: $container-padding;
   padding-right: $container-padding;
 }
-
 .container, .container-fluid { @extend %container; }
 .container {
   max-width: $container-max-width;

@@ -2,13 +2,13 @@
  * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
  */
 
- @import './functions';
+@import '../vendors/normalize';
+@import './functions';
 
 // 1.1 TYPOGRAPHY
 $karla-font-family:             'Karla', sans-serif;
 $open-sans-font-family:         'Open Sans', Arial, sans-serif;
 $monospace-font-family:         'Courier New', monospace;
-
 
 $default-font-family:           'Arial', 'Helvetica', 'Verdana', sans-serif;
 $default-heading-font-family:   'Georgia', 'Times New Roman', serif;
@@ -87,7 +87,7 @@ body {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6  {
   margin-top:       0;
   margin-bottom:    $base-margin;
   font-family:      $base-heading-font-family;
@@ -123,7 +123,6 @@ h6 {
 /**
  * Paragraphs
  */
-
 p {
   margin-top: 0;
   margin-bottom: $default-margin-lg;
@@ -141,7 +140,6 @@ ul, ol {
   margin-top: 0;
   margin-bottom: $default-margin-lg;
 }
-
 li > ul,
 li > ol {
   margin-bottom: 0;
@@ -205,7 +203,7 @@ th, td {
 
 caption {
   padding: 0.25rem;
-  color: $gray-color-darker;
+  color: $gray-color;
   text-align: left;
   caption-side: bottom;
 }
