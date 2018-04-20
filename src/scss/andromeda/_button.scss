@@ -9,7 +9,7 @@ $default-round-radius:      5px;
 $default-square-radius:     0;
 
 // soacing
-$default-padding:           0.6em;
+$base-paddingS:           0.6em;
 
 $default-primary-color:     $violet-eggplant;
 $default-color:             $text-dark;
@@ -22,7 +22,7 @@ $default-error-color:       $paradise-pink;
 /* referential variables */
 $button-border-size:        $default-border-size;
 $button-border-style:       $default-border-style;
-$button-padding-size:       $default-padding;
+$button-padding-size:       $base-paddingS;
 
 $button-default-color:      $default-color;
 $button-primary-color:      $default-primary-color;

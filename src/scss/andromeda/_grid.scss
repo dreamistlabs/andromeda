@@ -9,7 +9,7 @@
 /* thematic/defining variables */
 
 /* referential variables */
-$column-padding:    $default-padding;
+$column-padding:    $base-paddingS;
 
 $col:               grid__col;
 $col-sm:            grid__col-sm;
@@ -28,13 +28,13 @@ $col-width:         8.3333333%;
 /* Grids are expected to live inside a container */
 .grid {
   display: flex;
-  margin-left: -$default-padding;
-  margin-right: -$default-padding;
+  margin-left: -$base-paddingS;
+  margin-right: -$base-paddingS;
   @include test-border(gray);
 }
 [class^="grid__col"] {
   flex: 1;
-  padding: 0 $default-padding;
+  padding: 0 $base-paddingS;
   @include test-border(green);
 }
 /* Base grid column classes applied to all media sizes */

@@ -563,8 +563,6 @@ hr {
  * specific variables to any CSS properties. You should only assign them to 
  * Referential Variables.
  */
-/* typography */
-/* Media Query Breakpoints */
 /* Referential Variables
  * These variables typically refer to a specific component's property and
  * its value should point to a variable declared under the Theme-Specific Variables
@@ -572,8 +570,24 @@ hr {
  * IMPORTANT: Do not change the names of these referential variables because they are
  * used throughout the Andromeda framework. Doing so will likely break things.
  */
+/* typography */
 /* Media Query Breakpoints */
 /* container */
+body {
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: initial; }
+
+/*-!
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Catamaran", "Helvetica", "Arial", sans-serif; }
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 2rem; } }
+
 /**********************************
   CONTAINERS (WIP)
  **********************************/
@@ -583,7 +597,7 @@ hr {
   padding-right: 1rem; }
 
 .container {
-  max-width: 1400px; }
+  max-width: 1200px; }
 
 .container-fluid {
   max-width: 97%; }
@@ -1371,7 +1385,7 @@ hr {
   background-color: transparent;
   border: 1px solid #050505;
   border-radius: 0;
-  font-family: "Arial", "Helvetica", "Verdana", sans-serif;
+  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
   color: #050505;
   line-height: 1.414;

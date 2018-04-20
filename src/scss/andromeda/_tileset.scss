@@ -10,7 +10,7 @@ $default-gray-light:      lighten($default-gray, 20);
 
 // spacing
 $default-margin:          1rem;
-$default-padding:         0.8em;
+$base-paddingS:         0.8em;
 
 /* referential variables */
 $tile-border-size:      $default-border-size;
@@ -18,7 +18,7 @@ $tile-border-style:     $default-border-style;
 $tile-border-color:     $default-gray;
 $tile-fill-color:       $default-gray;
 $tile-margin-size:      $default-margin;
-$tile-padding-size:     $default-padding;
+$tile-padding-size:     $base-paddingS;
 
 .tileset {
   display: flex;

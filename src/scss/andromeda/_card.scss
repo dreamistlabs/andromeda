@@ -8,14 +8,14 @@ $default-gray-light:			lighten($default-gray, 20);
 
 // spacing
 $default-margin:					1.6em;
-$default-padding:					0.8em;
+$base-paddingS:					0.8em;
 
 /* referential variables */
 $card-border-size: 			$default-border-size;
 $card-border-color: 		$default-gray;
 $card-fill-color:				$default-gray;
 $card-margin-size:			$default-margin;
-$card-padding-size:			$default-padding;
+$card-padding-size:			$base-paddingS;
 
 
 .card {
