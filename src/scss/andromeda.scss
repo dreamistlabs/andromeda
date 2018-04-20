@@ -1,16 +1,53 @@
-@import 'baseline/variables';
+/*-!
+ * Copyright (c) 2017 Dreamist Labs. Created by Johnny Hu <heyitsjhu@gmail.com>.
+ *
+ * Andromeda CSS.
+ *
+ */
+@import 'baseline/baseline';
 
 // @import 'andromeda/variables';
-/**********************************
-  VARIABLES
- **********************************/
 
-/* Theme-Specific Variables
- * Use this section to declare style properties that are specific to your theme.
+/*!-
+ * Theme-Specific Variables 
+ * Use this section to declare style properties specific to your theme.
+ * A general rule of thumb is to prefix these variables with "default-"
+ * and assign them to Referential Variables, which are prefixed with "base-".
+ *
+ * The idea is that, if you need to make updates to your theme, you simply have
+ * update the theme-specific variable and the change will permeate through the
+ * entire stylesheet via the corresponding referential variable(s). Unless you
+ * absolutely need to, and know what you're doing, you should not assign theme-
+ * specific variables to any CSS properties. You should only assign them to 
+ * Referential Variables.
  */
-$karla-font-family:       'Karla', 'Helvetica', 'Arial', sans-serif;
-$open-sans-font-family:   'Open Sans', 'Helvetica', 'Arial', sans-serif;
-$monospace-font-family:   'Droid Sans Mono', 'Courier', monospace;
+$karla-font-family              : 'Karla', 'Helvetica', 'Arial', sans-serif;
+$open-sans-font-family          : 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+$monospace-font-family          : 'Droid Sans Mono', 'Courier', monospace;
+
+$default-font-family            : 'Arial', 'Helvetica', 'Verdana', sans-serif;
+$default-heading-font-family    : 'Georgia', 'Times New Roman', serif;
+$default-monospace-font-family  : 'Courier New', monospace;
+
+$augmented-fourth-ratio         : 1.414;
+$default-html-font-size         : 10px;
+
+$default-mobile-font-size       : 1.6rem;
+$default-tablet-font-size       : 1.6rem;
+$default-desktop-font-size      : 2rem; 
+$default-hd-desktop-font-size   : 2.2rem;
+
+$default-light-weight           : 300;
+$default-normal-weight          : 400;
+$default-bold-weight            : 600;
+
+$default-line-height            : $augmented-fourth-ratio;
+$default-heading-line-height    : 1.25em;
+$default-letter-spacing         : 0.04em;
+
+$default-spacingS               : 1.5rem;
+$default-spacingM               : 2.4rem;
+$default-spacingL               : 4rem;
 
 $light-weight:          300;
 $normal-weight:         400;
@@ -64,7 +101,7 @@ $text-danger:           $danger-color;
 $border-dark:           $mine-shaft;
 
 // spacing
-$default-margin:        1rem;
+$base-marginS:        1rem;
 $default-padding:       1rem;
 $spacing-unit:          1rem;
 
@@ -92,6 +129,44 @@ $hd-desktop:      1800px;
  * IMPORTANT: Do not change the names of these referential variables because they are
  * used throughout the Andromeda framework. Doing so will likely break things.
  */
+
+ $base-mobile-font-size          : $default-mobile-font-size;
+ $base-tablet-font-size          : $default-tablet-font-size;
+ $base-desktop-font-size         : $default-desktop-font-size;
+ $base-hd-desktop-font-size      : $default-hd-desktop-font-size;
+ 
+ $base-light-weight              : $default-light-weight;
+ $base-normal-weight             : $default-normal-weight;
+ $base-bold-weight               : $default-bold-weight;
+ 
+ $base-font-family               : $default-font-family;
+ $base-font-size                 : $default-mobile-font-size;
+ $base-font-weight               : $default-normal-weight;
+ $base-line-height               : $default-line-height;
+ $base-letter-spacing            : $default-letter-spacing;
+ 
+ $base-heading-font-family       : $default-heading-font-family;
+ $base-heading-font-weight       : $default-bold-weight;
+ $base-heading-line-height       : $default-heading-line-height;
+ 
+ $base-monospace-font-family     : $default-monospace-font-family;
+ 
+ $base-marginS                   : $default-spacingS;
+ $base-marginM                   : $default-spacingM;
+ $base-marginL                   : $default-spacingL;
+ $base-paddingS                  : $default-spacingS;
+ $base-paddingM                  : $default-spacingM;
+ $base-paddingL                  : $default-spacingL;
+ 
+ $gray-color-lighter             :#AFAFAF;
+ $gray-color                     :#969696;
+ $gray-color-darker              :#7d7d7d;
+ 
+ /* Media Query Breakpoints */
+ $mobile-breakpoint              : 600px;
+ $tablet-breakpoint              : 900px;
+ $desktop-breakpoint             : 1200px;
+ $hd-desktop-breakpoint          : 1800px;
 
 $horizontal-spacing:  $spacing-unit;
 $vertical-spacing:    $spacing-unit * 1.5;
@@ -139,8 +214,6 @@ $container-fluid-max-width: $default-container-fluid-max-width;
   border: 1px solid $color;
 }
 
-
-@import 'baseline/baseline';
 /**********************************
   CONTAINERS (WIP)
  **********************************/
