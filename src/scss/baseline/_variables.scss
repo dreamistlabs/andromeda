@@ -1,36 +1,86 @@
 /**!
  * Baseline builds on top of Normalize.css and is inspired by Twitter Bootstrap's Reboot CSS.
  */
-$default-margin:        15px;
-$default-margin-lg:     $default-margin * 1.6;
-$default-padding:       15px;
-$default-padding-lg:    $default-padding * 1.6;
+// 1.1 TYPOGRAPHY
+$karla-font-family              : 'Karla', sans-serif;
+$open-sans-font-family          : 'Open Sans', Arial, sans-serif;
+$monospace-font-family          : 'Courier New', monospace;
 
-$mobile-font-size:      16px;
-$tablet-font-size:      18px;
-$desktop-font-size:     20px;
-$big-desktop-font-size: 22px;
-$default-font-size:     $mobile-font-size;
+$default-font-family            : 'Arial', 'Helvetica', 'Verdana', sans-serif;
+$default-heading-font-family    : 'Georgia', 'Times New Roman', serif;
+$default-monospace-font-family  : 'Courier New', monospace;
 
-$normal-weight:         400;
-$bold-weight:           700;
+$augmented-fourth-ratio         : 1.414;
+$default-html-font-size         : 10px;
 
-$base-font-family:      'Droid Sans', 'Helvetica', 'Arial', sans-serif;
-$base-font-size:        1rem;
-$base-font-weight:      $normal-weight;
-$base-line-height:      1.4;
-$base-letter-spacing: 	0.01rem;
+$default-mobile-font-size       : 1.6rem;
+$default-tablet-font-size       : 1.6rem;
+$default-desktop-font-size      : 2rem; 
+$default-hd-desktop-font-size   : 2.2rem;
 
-$heading-font-family:   'Droid Serif', 'Georgia', 'Times', serif;
-$heading-font-weight:   $bold-weight;
+$default-light-weight           : 300;
+$default-normal-weight          : 400;
+$default-bold-weight            : 600;
 
-$monospace-font-family:   'Droid Sans Mono', 'Courier', monospace;
+$default-line-height            : $augmented-fourth-ratio;
+$default-heading-line-height    : 1.25em;
+$default-letter-spacing         : 0.04em;
 
-$gray-color-lighter:    #AFAFAF;
-$gray-color:            #969696;
+$default-spacingS               : 1.5rem;
+$default-spacingM               : 2.4rem;
+$default-spacingL               : 4rem;
+
+$base-mobile-font-size          : $default-mobile-font-size;
+$base-tablet-font-size          : $default-tablet-font-size;
+$base-desktop-font-size         : $default-desktop-font-size;
+$base-hd-desktop-font-size      : $default-hd-desktop-font-size;
+
+$base-light-weight              : $default-light-weight;
+$base-normal-weight             : $default-normal-weight;
+$base-bold-weight               : $default-bold-weight;
+
+$base-font-family               : $default-font-family;
+$base-font-size                 : $default-mobile-font-size;
+$base-font-weight               : $default-normal-weight;
+$base-line-height               : $default-line-height;
+$base-letter-spacing            : $default-letter-spacing;
+
+$base-heading-font-family       : $default-heading-font-family;
+$base-heading-font-weight       : $default-bold-weight;
+$base-heading-line-height       : $default-heading-line-height;
+
+$base-monospace-font-family     : $default-monospace-font-family;
+
+$base-marginS                   : $default-spacingS;
+$base-marginM                   : $default-spacingM;
+$base-marginL                   : $default-spacingL;
+$base-paddingS                  : $default-spacingS;
+$base-paddingM                  : $default-spacingM;
+$base-paddingL                  : $default-spacingL;
+
+$gray-color-lighter             :#AFAFAF;
+$gray-color                     :#969696;
+$gray-color-darker              :#7d7d7d;
 
 /* Media Query Breakpoints */
-$mobile-breakpoint:          600px;
-$tablet-breakpoint:          900px;
-$desktop-breakpoint:         1200px;
-$hd-desktop-breakpoint:      1800px;
+$mobile-breakpoint              : 600px;
+$tablet-breakpoint              : 900px;
+$desktop-breakpoint             : 1200px;
+$hd-desktop-breakpoint          : 1800px;
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+  @if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}

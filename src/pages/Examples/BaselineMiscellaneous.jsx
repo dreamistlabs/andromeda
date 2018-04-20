@@ -11,6 +11,9 @@ const BaselineMiscellaneous = (props) => {
               <p className="docs section__description">
                   Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged decaffeinated espresso. Americano filter coffee blue mountain, extraction, roast, acerbic filter milk skinny doppio.
               </p>
+              <p className="docs section__description">
+                  Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged decaffeinated espresso. Americano filter coffee blue mountain, extraction, roast, acerbic filter milk skinny doppio.
+              </p>
           </header>
           <div className="docs example">
               <div className="docs example__card">
