@@ -2,20 +2,39 @@ import React, { Component } from 'react';
 // import LoremIpsum from 'lorem-ipsum';
 // import logo from '../logo.svg';
 
-import Dashboard from '../components/Dashboard/Dashboard';
+import Dashboard from '../Components/Dashboard/Dashboard';
 import BaselinePage from '../pages/baseline';
 import TempButtonCode from '../pages/buttons-temp';
 import GridSystemPage from '../pages/grid-system';
 import './app.css';
 
-import Footer from './Footer/Footer';
-
+import Footer from '../docComponents/Footer/Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-{/*        <div className="navbar">
+        <header>
+          <h1>Andromeda</h1>
+        </header>
+        <main className="docs main-content">
+          <aside className="docs sidebar">
+            <nav className="sidebar__nav">
+            <ul>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+            </ul>
+
+            </nav>
+          </aside>
+          <TempButtonCode />
+          {/* <BaselinePage /> */}
+          {/* <GridSystemPage /> */}
+        </main>
+       {/* <div className="navbar">
           <span> Default </span>
           <nav className="navbar__nav">
             <ul className="nav__navlist">
@@ -110,7 +129,7 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-        </div>*/}
+        </div> */}
         {/*<div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -152,11 +171,6 @@ class App extends Component {
             </div>
           </div>
         </div>*/}
-
-
-        {/*<TempButtonCode />*/}
-        {/* <BaselinePage /> */}
-        <GridSystemPage />
 
         <Footer />
       </div>

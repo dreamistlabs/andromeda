@@ -4,7 +4,7 @@ export default class TempButtonCode extends Component {
   render(){
     return (
       <section className="docs section">
-          <div className="container">
+          <div className="container-fluid">
             <div className="section__header">
               <h2 className="section__heading">Buttons</h2>
               <p className="section__description"> Lorem ipsum</p>

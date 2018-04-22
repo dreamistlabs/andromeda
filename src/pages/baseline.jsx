@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Section from './Section/Section';
+import Section from '../docComponents/Section/Section';
 import ExampleCard from './ExampleCard/ExampleCard';
 
 import sections from '../data/baseline-section-content';

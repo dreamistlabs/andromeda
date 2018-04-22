@@ -62,3 +62,13 @@ body {
 .docs.dashboard__example {
   margin-bottom: 2rem;
 }
+
+.docs {
+  &.main-content {
+    display: flex;
+  }
+  &.sidebar {
+    min-width: 200px;
+    border-right: 1px solid #eee;
+  }
+}
