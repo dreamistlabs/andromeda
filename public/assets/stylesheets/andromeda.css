@@ -614,8 +614,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Grids are expected to live inside a container */
 .grid {
   display: flex;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border: 1px solid gray; }
 
 [class^="grid__col"] {

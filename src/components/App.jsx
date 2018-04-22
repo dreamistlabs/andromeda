@@ -155,8 +155,8 @@ class App extends Component {
 
 
         {/*<TempButtonCode />*/}
-        <BaselinePage />
-        {/*<GridSystemPage />*/}
+        {/* <BaselinePage /> */}
+        <GridSystemPage />
 
         <Footer />
       </div>
