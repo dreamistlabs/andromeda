@@ -563,6 +563,8 @@ hr {
  * specific variables to any CSS properties. You should only assign them to 
  * Referential Variables.
  */
+/* font families */
+/* font sizes */
 /* Referential Variables
  * These variables typically refer to a specific component's property and
  * its value should point to a variable declared under the Theme-Specific Variables
@@ -1381,13 +1383,14 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   display: inline-block;
   margin: 0;
-  padding: 0.6em 0.78em;
+  padding: 1em 1.3em;
   background-color: transparent;
-  border: 1px solid #050505;
+  border: 1px solid #515151;
   border-radius: 0;
   font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
-  color: #050505;
+  font-weight: 300;
+  color: #515151;
   line-height: 1.414;
   text-decoration: none;
   vertical-align: middle;
@@ -1395,33 +1398,56 @@ h1, h2, h3, h4, h5, h6 {
   /* button sizes */
   /* button variations */
   /* button styles */ }
-  .btn.btn--sm {
+  .btn:hover {
+    color: #FAFAFA;
+    background-color: #515151; }
+  .btn.btn--small {
     font-size: 0.875em; }
-  .btn.btn--md {
+  .btn.btn--med {
     font-size: 1em; }
-  .btn.btn--lg {
+  .btn.btn--large {
     font-size: 1.125em; }
   .btn.btn--default {
-    border-color: #050505;
-    color: #050505; }
+    border-color: #515151;
+    color: #515151; }
+    .btn.btn--default:hover {
+      background-color: #515151; }
   .btn.btn--primary {
-    border-color: #930B92;
-    color: #930B92; }
+    border-color: #930B92; }
+    .btn.btn--primary:not(:hover) {
+      color: #930B92; }
+    .btn.btn--primary:hover {
+      background-color: #930B92; }
   .btn.btn--success {
-    border-color: #32936F;
-    color: #32936F; }
+    border-color: #32936F; }
+    .btn.btn--success:not(:hover) {
+      color: #32936F; }
+    .btn.btn--success:hover {
+      background-color: #32936F; }
   .btn.btn--secondary {
-    border-color: #050505;
-    color: #050505; }
+    border-color: #515151; }
+    .btn.btn--secondary:not(:hover) {
+      color: #515151; }
+    .btn.btn--secondary:hover {
+      background-color: #515151; }
   .btn.btn--info {
-    border-color: #2274A5;
-    color: #2274A5; }
+    border-color: #2274A5; }
+    .btn.btn--info:not(:hover) {
+      color: #2274A5; }
+    .btn.btn--info:hover {
+      background-color: #2274A5; }
   .btn.btn--warning {
-    border-color: #FFBF00;
-    color: #FFBF00; }
+    border-color: #FFBF00; }
+    .btn.btn--warning:not(:hover) {
+      color: #FFBF00; }
+    .btn.btn--warning:hover {
+      background-color: #FFBF00; }
   .btn.btn--error {
-    border-color: #E83F6F;
-    color: #E83F6F; }
+    border-color: #E83F6F; }
+    .btn.btn--error:not(:hover) {
+      color: #E83F6F; }
+    .btn.btn--error:hover {
+      background-color: #E83F6F; }
   .btn.btn--pill {
     border-radius: 100px; }
   .btn.btn--round {

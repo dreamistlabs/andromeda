@@ -11,10 +11,10 @@ export default class TempButtonCode extends Component {
             </div>
             <div className="docs card">
               <div>
-                <button className="m31 btn btn--lg">Read more</button>
-                <div className="m31 btn btn--lg">Read more</div>
-                <input className="m31 btn btn--lg" type="submit" value="Read more"/>
-                <a href="" className="m31 btn btn--lg">Read more</a>
+                <button className="m31 btn btn--large">Read more</button>
+                <div className="m31 btn btn--large">Read more</div>
+                <input className="m31 btn btn--large" type="submit" value="Read more"/>
+                <a href="#" className="m31 btn btn--large">Read more</a>
               </div>
               &nbsp;
               <div className="section__example">
@@ -24,9 +24,9 @@ export default class TempButtonCode extends Component {
               </div>
               &nbsp;
               <div>
-                <button className="m31 btn btn--sm">Read more</button>
-                <div className="m31 btn btn--sm">Read more</div>
-                <input className="m31 btn btn--sm" type="submit" value="Read more"/>
+                <button className="m31 btn btn--small">Read more</button>
+                <div className="m31 btn btn--small">Read more</div>
+                <input className="m31 btn btn--small" type="submit" value="Read more"/>
               </div>
               &nbsp;
               <div>

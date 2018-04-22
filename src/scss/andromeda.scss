@@ -26,11 +26,13 @@ $heading-font-family            : 'Catamaran', 'Helvetica', 'Arial', sans-serif;
 $monospace-font-family          : 'Droid Sans Mono', 'Courier', monospace;
 $augmented-fourth-ratio         : 1.414;
 
-// font families
+/* font families */
 $default-font-family            : $primary-font-family;
 $default-heading-font-family    : $heading-font-family;
 $default-monospace-font-family  : $monospace-font-family;
-// font sizes
+/* font sizes */
+$default-font-size-small        : 0.875em;
+$default-font-size-large        : 1.125em;
 $default-mobile-font-size       : 1.6rem;
 $default-tablet-font-size       : 1.8rem;
 $default-desktop-font-size      : 2rem; 
@@ -45,25 +47,46 @@ $default-heading-line-height    : 1.25em;
 $default-letter-spacing         : initial;
 
 // color definitions
+$violet-eggplant:       #930B92;
+$illuminating-emerald:  #32936F;
+$lapis-lazuli:          #2274A5;
+$fluorescent-orange:    #FFBF00;
+$paradise-pink:         #E83F6F;
+
 $white:                 #FAFAFA;
 $black:                 #111111;
 $alabaster:             #FAFAFA;
 $mine-shaft:            #515151;
 
-$illuminating-emerald:  #32936F;
-$lapis-lazuli:          #2274A5;
-$fluorescent-orange:    #FFBF00;
-$paradise-pink:         #E83F6F;
-$violet-eggplant:       #930B92;
-
 $gray-color-lighter:    #AFAFAF;
 $gray-color:            #969696;
 $gray-color-darker:     #7d7d7d;
 
+$default-primary-color : $violet-eggplant;
+$default-success-color : $illuminating-emerald;
+$default-info-color    : $lapis-lazuli;
+$default-warning-color : $fluorescent-orange;
+$default-error-color   : $paradise-pink;
+
+$default-text-color   : $mine-shaft;
+$default-text-dark    : darken($default-text-color, 30%);
+$default-text-light   : lighten($default-text-color, 50%);
+$default-text-primary : $default-primary-color;
+$default-text-success : $default-success-color;
+$default-text-info    : $default-info-color;
+$default-text-warning : $default-warning-color;
+$default-text-error   : $default-error-color;
+
+
+$border-dark          : $mine-shaft;
+
 // spacing
-$default-spacingS : 1rem;
-$default-spacingM : 2rem;
-$default-spacingL : 4rem;
+$default-spacingS    : 1rem;
+$default-spacingM    : 2rem;
+$default-spacingL    : 4rem;
+$default-emSpacingS  : 1em;
+$default-emSpacingM  : 2em;
+$default-emSpacingL  : 4em;
 
 // breakpoints
 $default-mobile-bp      : 600px;
@@ -110,30 +133,24 @@ $base-paddingS  : $default-spacingS;
 $base-paddingM  : $default-spacingM;
 $base-paddingL  : $default-spacingL;
 
-// Colors
-$primary-color:         $violet-eggplant;
-$success-color:         $illuminating-emerald;
-$info-color:            $lapis-lazuli;
-$warning-color:         $fluorescent-orange;
-$danger-color:          $paradise-pink;
+$base-emPaddingS  : $default-emSpacingS;
+$base-emPaddingM  : $default-emSpacingM;
+$base-emPaddingL  : $default-emSpacingL;
 
-$text-color:            $mine-shaft;
-$text-dark:             darken($text-color, 30%);
-$text-light:            lighten($text-color, 50%);
-$text-primary:          $primary-color;
-$text-success:          $success-color;
-$text-info:             $info-color;
-$text-warning:          $warning-color;
-$text-danger:           $danger-color;
-$border-dark:           $mine-shaft;
+// Colors
+$base-primary-color : $default-primary-color;
+$base-success-color : $default-success-color;
+$base-info-color    : $default-info-color;
+$base-warning-color : $default-warning-color;
+$base-error-color   : $default-error-color;
 
 /* typography */
-$default-link-color:                $text-color;
-$default-link-hover-color:          $text-info;
+$default-link-color:                $default-text-color;
+$default-link-hover-color:          $default-text-info;
 
 // navbar specific?
 $default-navbar-dark-background-color: $black;
-$default-link-underline-color:      $text-light;
+$default-link-underline-color:      $default-text-light;
 
 $gray-color-lighter             :#AFAFAF;
 $gray-color                     :#969696;
@@ -242,7 +259,7 @@ $nav-link-underline-color:        $default-link-underline-color;
   &.navbar--dark {
     background-color: $navbar-dark-background-color;
     .navlist__link:not(:hover):not(:focus) {
-      color: $text-light;
+      color: $default-text-light;
     }
   }
 }

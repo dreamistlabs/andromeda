@@ -8,90 +8,119 @@ $default-pill-radius:       100px;
 $default-round-radius:      5px;
 $default-square-radius:     0;
 
-// soacing
-$base-paddingS:           0.6em;
-
-$default-primary-color:     $violet-eggplant;
-$default-color:             $text-dark;
-$default-success-color:     $illuminating-emerald;
-$default-info-color:        $lapis-lazuli;
-$default-warning-color:     $fluorescent-orange;
-$default-error-color:       $paradise-pink;
-
-
 /* referential variables */
-$button-border-size:        $default-border-size;
-$button-border-style:       $default-border-style;
-$button-padding-size:       $base-paddingS;
+$button-margin          : 0;
+$button-padding         : $default-emSpacingS;
+$button-border-size     : $default-border-size;
+$button-border-style    : $default-border-style;
+$button-font-family     : $default-font-family;
+$button-font-weight     : $default-normal-weight;
+$button-font-size-small : $default-font-size-small;
+$button-font-size-large : $default-font-size-large;
+$button-line-height     : $default-line-height;
 
-$button-default-color:      $default-color;
-$button-primary-color:      $default-primary-color;
-$button-success-color:      $default-success-color;
-$button-secondary-color:    $default-color;
-$button-info-color:         $default-info-color;
-$button-warning-color:      $default-warning-color;
-$button-error-color:        $default-error-color;
+$button-default-color   : $default-text-color;
+$button-primary-color   : $default-primary-color;
+$button-success-color   : $default-success-color;
+$button-secondary-color : $default-text-color;
+$button-info-color      : $default-info-color;
+$button-warning-color   : $default-warning-color;
+$button-error-color     : $default-error-color;
 
-$button-pill-radius:        $default-pill-radius;
-$button-round-radius:       $default-round-radius;
-$button-square-radius:      $default-square-radius;
-
+$button-pill-radius     : $default-pill-radius;
+$button-round-radius    : $default-round-radius;
+$button-square-radius   : $default-square-radius;
 
 .btn {
   display: inline-block;
-  margin: 0;
-  padding: $button-padding-size $button-padding-size * 1.3;
+  margin: $button-margin;
+  padding: $button-padding $button-padding * 1.3;
   background-color: transparent;
-  border: $button-border-size $default-border-style $button-default-color;
+  border: $button-border-size $button-border-style $button-default-color;
   border-radius: $button-square-radius;
-  font-family: $base-font-family;
+  font-family: $button-font-family;
   font-size: 1em;
+  font-weight: $button-font-weight;
   color: $button-default-color;
-  line-height: $base-line-height;
+  line-height: $button-line-height;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   &:hover {
-
+    color: $white;
+    background-color: $button-default-color;
   }
   /* button sizes */
-  &.btn--sm {
-    font-size: 0.875em;
+  &.btn--small {
+    font-size: $button-font-size-small;
   }
-  &.btn--md {
+  &.btn--med {
     font-size: 1em;
   }
-  &.btn--lg {
-    font-size: 1.125em;
+  &.btn--large {
+    font-size: $button-font-size-large;
   }
   /* button variations */
   &.btn--default {
     border-color: $button-default-color;
     color: $button-default-color;
+    &:hover {
+      background-color: $button-default-color;
+    }
   }
   &.btn--primary {
     border-color: $button-primary-color;
-    color: $button-primary-color;
+    &:not(:hover) {
+      color: $button-primary-color;
+    }
+    &:hover {
+      background-color: $button-primary-color;
+    }
   }
   &.btn--success {
     border-color: $button-success-color;
-    color: $button-success-color;
+    &:not(:hover) {
+      color: $button-success-color;
+    }
+    &:hover {
+      background-color: $button-success-color;
+    }
   }
   &.btn--secondary {
     border-color: $button-secondary-color;
-    color: $button-secondary-color;
+    &:not(:hover) {
+      color: $button-secondary-color;
+    }
+    &:hover {
+      background-color: $button-secondary-color;
+    }
   }
   &.btn--info {
     border-color: $button-info-color;
-    color: $button-info-color;
+    &:not(:hover) {
+      color: $button-info-color;
+    }
+    &:hover {
+      background-color: $button-info-color;
+    }
   }
   &.btn--warning {
     border-color: $button-warning-color;
-    color: $button-warning-color;
+    &:not(:hover) {
+      color: $button-warning-color;
+    }
+    &:hover {
+      background-color: $button-warning-color;
+    }
   }
   &.btn--error {
     border-color: $button-error-color;
-    color: $button-error-color;
+    &:not(:hover) {
+      color: $button-error-color;
+    }
+    &:hover {
+      background-color: $button-error-color;
+    }
   }
   /* button styles */
   &.btn--pill {
