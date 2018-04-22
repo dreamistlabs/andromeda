@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Section from '../docComponents/Section/Section';
-import ExampleCard from './ExampleCard/ExampleCard';
+import Section from '../../docComponents/Section/Section';
+import ExampleCard from '../ExampleCard/ExampleCard';
 
-import sections from '../data/baseline-section-content';
+import sections from '../../data/baseline-section-content';
 
 export default class BaselinePage extends Component {
   renderSections() {

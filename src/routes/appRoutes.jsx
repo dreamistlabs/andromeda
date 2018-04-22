@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import BaselinePage from '../pages/baseline';
-import GridSystemPage from '../pages/grid-system';
-import TempButtonCode from '../pages/buttons-temp';
+import BaselinePage from '../docPages/Baseline';
+import GridSystemPage from '../docPages/GridSystem';
+import ButtonsPage from '../docPages/Buttons';
 
 
 class AppRoutes extends Component {
@@ -12,7 +12,7 @@ class AppRoutes extends Component {
       <div>
         <Route path="/p/baseline"     component={BaselinePage} />
         <Route path="/p/grid-system"  component={GridSystemPage} />
-        <Route path="/p/buttons"      component={TempButtonCode} />
+        <Route path="/p/buttons"      component={ButtonsPage} />
       </div>
     )
   }

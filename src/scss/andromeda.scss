@@ -160,8 +160,6 @@ $container-fluid-max-width: $default-container-fluid-max-width;
   border: 1px solid $color;
 }
 
-
-
 body {
   font-family     : $base-font-family;
   font-weight     : $base-font-weight;
@@ -177,7 +175,7 @@ h1, h2, h3, h4, h5, h6  {
 
 @include for-desktop-up {
   body {
-    font-size : $base-desktop-font-size;
+    font-size : $base-tablet-font-size;
   }
 }
 
