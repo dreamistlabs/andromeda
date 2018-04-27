@@ -9,13 +9,13 @@ $default-round-radius:      5px;
 $default-square-radius:     0;
 
 /* referential variables */
-$button-margin          : 0;
+$button-margin          : $zero;
 $button-padding         : $default-emSpacingS;
 $button-border-size     : $default-border-size;
 $button-border-style    : $default-border-style;
 $button-font-family     : $default-font-family;
 $button-font-weight     : $default-normal-weight;
-$button-font-size-small : $default-font-size-small;
+$button-font-size-small : $default-font-size-small; 
 $button-font-size-large : $default-font-size-large;
 $button-line-height     : $default-line-height;
 

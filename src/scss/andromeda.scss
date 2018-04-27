@@ -4,7 +4,7 @@
  * Andromeda CSS.
  *
  */
-@import 'baseline/baseline';
+@import "baseline/baseline";
 
 // @import 'andromeda/variables';
 
@@ -21,81 +21,84 @@
  * specific variables to any CSS properties. You should only assign them to 
  * Referential Variables.
  */
-$primary-font-family            : 'Merriweather Sans', 'Helvetica', 'Arial', sans-serif;
-$heading-font-family            : 'Catamaran', 'Helvetica', 'Arial', sans-serif;
-$monospace-font-family          : 'Droid Sans Mono', 'Courier', monospace;
-$augmented-fourth-ratio         : 1.414;
+$primary-font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+$heading-font-family: $primary-font-family;
+$monospace-font-family: "Courier", monospace;
+$augmented-fourth-ratio: 1.414;
 
 /* font families */
-$default-font-family            : $primary-font-family;
-$default-heading-font-family    : $heading-font-family;
-$default-monospace-font-family  : $monospace-font-family;
+$default-font-family: $primary-font-family;
+$default-heading-font-family: $heading-font-family;
+$default-monospace-font-family: $monospace-font-family;
 /* font sizes */
-$default-font-size-small        : 0.875em;
-$default-font-size-large        : 1.125em;
-$default-mobile-font-size       : 1.6rem;
-$default-tablet-font-size       : 1.8rem;
-$default-desktop-font-size      : 2rem; 
-$default-hd-desktop-font-size   : 2.2rem;
+$default-font-size-small: 0.875em;
+$default-font-size-large: 1.125em;
+$default-mobile-font-size: 1.6rem;
+$default-tablet-font-size: 1.8rem;
+$default-desktop-font-size: 2rem;
+$default-hd-desktop-font-size: 2.2rem;
 // font weights
-$default-light-weight           : 300;
-$default-normal-weight          : $default-light-weight;
-$default-bold-weight            : 600;
+$default-light-weight: 300;
+$default-normal-weight: 400;
+$default-bold-weight: 600;
 // font spacing
-$default-line-height            : $augmented-fourth-ratio;
-$default-heading-line-height    : 1.25em;
-$default-letter-spacing         : initial;
+$default-line-height: $augmented-fourth-ratio;
+$default-heading-line-height: 1.25em;
+$default-letter-spacing: initial;
 
 // color definitions
-$violet-eggplant:       #930B92;
-$illuminating-emerald:  #32936F;
-$lapis-lazuli:          #2274A5;
-$fluorescent-orange:    #FFBF00;
-$paradise-pink:         #E83F6F;
+$violet-eggplant: #930b92;
+$illuminating-emerald: #32936f;
+$lapis-lazuli: #2274a5;
+$fluorescent-orange: #ffbf00;
+$paradise-pink: #e83f6f;
 
-$white:                 #FAFAFA;
-$black:                 #111111;
-$alabaster:             #FAFAFA;
-$mine-shaft:            #515151;
+$white: #fafafa;
+$black: #111111;
+$alabaster: #fafafa;
+$mine-shaft: #313131;
 
-$gray-color-lighter:    #AFAFAF;
-$gray-color:            #969696;
-$gray-color-darker:     #7d7d7d;
+$gray-color-lighter: #afafaf;
+$gray-color: #969696;
+$gray-color-darker: #7d7d7d;
 
-$default-primary-color : $violet-eggplant;
-$default-success-color : $illuminating-emerald;
-$default-info-color    : $lapis-lazuli;
-$default-warning-color : $fluorescent-orange;
-$default-error-color   : $paradise-pink;
+$default-primary-color: $violet-eggplant;
+$default-success-color: $illuminating-emerald;
+$default-info-color: $lapis-lazuli;
+$default-warning-color: $fluorescent-orange;
+$default-error-color: $paradise-pink;
 
-$default-text-color   : $mine-shaft;
-$default-text-dark    : darken($default-text-color, 30%);
-$default-text-light   : lighten($default-text-color, 50%);
-$default-text-primary : $default-primary-color;
-$default-text-success : $default-success-color;
-$default-text-info    : $default-info-color;
-$default-text-warning : $default-warning-color;
-$default-text-error   : $default-error-color;
+$default-text-color: $mine-shaft;
+$default-text-dark: darken($default-text-color, 30%);
+$default-text-light: lighten($default-text-color, 50%);
+$default-text-primary: $default-primary-color;
+$default-text-success: $default-success-color;
+$default-text-info: $default-info-color;
+$default-text-warning: $default-warning-color;
+$default-text-error: $default-error-color;
 
-
-$border-dark          : $mine-shaft;
+$border-dark: $mine-shaft;
 
 // spacing
-$default-spacingS    : 1rem;
-$default-spacingM    : 2rem;
-$default-spacingL    : 4rem;
-$default-emSpacingS  : 1em;
-$default-emSpacingM  : 2em;
-$default-emSpacingL  : 4em;
+$default-spacingS: 1rem;
+$default-spacingM: 2rem;
+$default-spacingL: 4rem;
+$default-emSpacingS: 1em;
+$default-emSpacingM: 2em;
+$default-emSpacingL: 4em;
 
 // breakpoints
-$default-mobile-bp      : 600px;
-$default-tablet-bp      : 900px;
-$default-desktop-bp     : 1200px;
-$default-hd-desktop-bp  : 1800px;
+$default-mobile-bp: 600px;
+$default-tablet-bp: 900px;
+$default-desktop-bp: 1200px;
+$default-hd-desktop-bp: 1800px;
 
-$default-container-max-width        : 1200px;
-$default-container-fluid-max-width  : 97%;
+$default-container-max-width: 1200px;
+$default-container-fluid-max-width: 97%;
+
+/* miscellaneous */
+$none: none;
+$zero: 0;
 
 /* Referential Variables
  * These variables typically refer to a specific component's property and
@@ -105,94 +108,99 @@ $default-container-fluid-max-width  : 97%;
  * used throughout the Andromeda framework. Doing so will likely break things.
  */
 
-$base-mobile-font-size      : $default-mobile-font-size;
-$base-tablet-font-size      : $default-tablet-font-size;
-$base-desktop-font-size     : $default-desktop-font-size;
-$base-hd-desktop-font-size  : $default-hd-desktop-font-size;
+$base-mobile-font-size: $default-mobile-font-size;
+$base-tablet-font-size: $default-tablet-font-size;
+$base-desktop-font-size: $default-desktop-font-size;
+$base-hd-desktop-font-size: $default-hd-desktop-font-size;
 
-$base-light-weight          : $default-light-weight;
-$base-normal-weight         : $default-normal-weight;
-$base-bold-weight           : $default-bold-weight;
+$base-light-weight: $default-light-weight;
+$base-normal-weight: $default-normal-weight;
+$base-bold-weight: $default-bold-weight;
 
-$base-font-family           : $default-font-family;
-$base-font-size             : $default-mobile-font-size;
-$base-font-weight           : $default-normal-weight;
-$base-line-height           : $default-line-height;
-$base-letter-spacing        : $default-letter-spacing;
+$base-font-family: $default-font-family;
+$base-font-size: $default-mobile-font-size;
+$base-font-weight: $default-normal-weight;
+$base-line-height: $default-line-height;
+$base-letter-spacing: $default-letter-spacing;
 
-$base-heading-font-family   : $default-heading-font-family;
-$base-heading-font-weight   : $default-bold-weight;
-$base-heading-line-height   : $default-heading-line-height;
+$base-heading-font-family: $default-heading-font-family;
+$base-heading-font-weight: $default-bold-weight;
+$base-heading-line-height: $default-heading-line-height;
 
-$base-monospace-font-family : $default-monospace-font-family;
+$base-monospace-font-family: $default-monospace-font-family;
 
-$base-marginS   : $default-spacingS;
-$base-marginM   : $default-spacingM;
-$base-marginL   : $default-spacingL;
-$base-paddingS  : $default-spacingS;
-$base-paddingM  : $default-spacingM;
-$base-paddingL  : $default-spacingL;
+$base-marginS: $default-spacingS;
+$base-marginM: $default-spacingM;
+$base-marginL: $default-spacingL;
+$base-paddingS: $default-spacingS;
+$base-paddingM: $default-spacingM;
+$base-paddingL: $default-spacingL;
 
-$base-emPaddingS  : $default-emSpacingS;
-$base-emPaddingM  : $default-emSpacingM;
-$base-emPaddingL  : $default-emSpacingL;
+$base-emPaddingS: $default-emSpacingS;
+$base-emPaddingM: $default-emSpacingM;
+$base-emPaddingL: $default-emSpacingL;
 
 // Colors
-$base-primary-color : $default-primary-color;
-$base-success-color : $default-success-color;
-$base-info-color    : $default-info-color;
-$base-warning-color : $default-warning-color;
-$base-error-color   : $default-error-color;
+$base-primary-color: $default-primary-color;
+$base-success-color: $default-success-color;
+$base-info-color: $default-info-color;
+$base-warning-color: $default-warning-color;
+$base-error-color: $default-error-color;
 
 /* typography */
-$default-link-color:                $default-text-color;
-$default-link-hover-color:          $default-text-info;
+$default-link-color: $default-text-color;
+$default-link-hover-color: $default-text-info;
 
 // navbar specific?
 $default-navbar-dark-background-color: $black;
-$default-link-underline-color:      $default-text-light;
+$default-link-underline-color: $default-text-light;
 
-$gray-color-lighter             :#AFAFAF;
-$gray-color                     :#969696;
-$gray-color-darker              :#7d7d7d;
+$gray-color-lighter: #afafaf;
+$gray-color: #969696;
+$gray-color-darker: #7d7d7d;
 
 /* Media Query Breakpoints */
-$base-mobile-bp              : $default-mobile-bp;
-$base-tablet-bp              : $default-tablet-bp;
-$base-desktop-bp             : $default-desktop-bp;
-$base-hd-desktop-bp          : $default-hd-desktop-bp;
+$base-mobile-bp: $default-mobile-bp;
+$base-tablet-bp: $default-tablet-bp;
+$base-desktop-bp: $default-desktop-bp;
+$base-hd-desktop-bp: $default-hd-desktop-bp;
 
-$horizontal-spacing:  $base-paddingS;
-$vertical-spacing:    $base-paddingS * 1.5;
+$horizontal-spacing: $base-paddingS;
+$vertical-spacing: $base-paddingS * 1.5;
 
 /* container */
-$container-padding:         $base-paddingS;
-$container-max-width:       $default-container-max-width;
+$container-padding: $base-paddingS;
+$container-max-width: $default-container-max-width;
 $container-fluid-max-width: $default-container-fluid-max-width;
 
-@import 'andromeda/mixins';
+@import "andromeda/mixins";
 
 // misc dev-related styles
-@mixin test-border($color){
+@mixin test-border($color) {
   border: 1px solid $color;
 }
 
 body {
-  font-family     : $base-font-family;
-  font-weight     : $base-font-weight;
-  letter-spacing  : $base-letter-spacing;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  letter-spacing: $base-letter-spacing;
 }
 
 /*-!
  * Headings
  */
-h1, h2, h3, h4, h5, h6  {
-  font-family     : $base-heading-font-family;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $base-heading-font-family;
 }
 
 @include for-desktop-up {
   body {
-    font-size : $base-tablet-font-size;
+    font-size: $base-tablet-font-size;
   }
 }
 
@@ -204,7 +212,10 @@ h1, h2, h3, h4, h5, h6  {
   padding-left: $container-padding;
   padding-right: $container-padding;
 }
-.container, .container-fluid { @extend %container; }
+.container,
+.container-fluid {
+  @extend %container;
+}
 .container {
   max-width: $container-max-width;
 }
@@ -212,18 +223,17 @@ h1, h2, h3, h4, h5, h6  {
   max-width: $container-fluid-max-width;
 }
 
-@import 'andromeda/grid';
-@import 'andromeda/utilities';
-@import 'andromeda/button';
-@import 'andromeda/card';
-@import 'andromeda/tileset';
-@import 'andromeda/media';
+@import "andromeda/grid";
+@import "andromeda/utilities";
+@import "andromeda/button";
+@import "andromeda/card";
+@import "andromeda/tileset";
+@import "andromeda/media";
 
-
-$navbar-dark-background-color:    $default-navbar-dark-background-color;
-$nav-link-color:                  $default-link-color;
-$nav-link-hover-color:            $default-link-hover-color;
-$nav-link-underline-color:        $default-link-underline-color;
+$navbar-dark-background-color: $default-navbar-dark-background-color;
+$nav-link-color: $default-link-color;
+$nav-link-hover-color: $default-link-hover-color;
+$nav-link-underline-color: $default-link-underline-color;
 
 .navbar {
   position: relative;

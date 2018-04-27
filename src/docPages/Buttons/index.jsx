@@ -12,7 +12,7 @@ export default class TempButtonCode extends Component {
             <p className="section__description"> Lorem ipsum</p>
           </div>
 
-          <Button size={'large'} style={'pill'} className={'so-custom'} />
+          <Button />
 
           <div className="docs card">
             <div>

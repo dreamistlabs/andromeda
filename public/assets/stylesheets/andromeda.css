@@ -565,6 +565,7 @@ hr {
  */
 /* font families */
 /* font sizes */
+/* miscellaneous */
 /* Referential Variables
  * These variables typically refer to a specific component's property and
  * its value should point to a variable declared under the Theme-Specific Variables
@@ -576,15 +577,20 @@ hr {
 /* Media Query Breakpoints */
 /* container */
 body {
-  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
   letter-spacing: initial; }
 
 /*-!
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Catamaran", "Helvetica", "Arial", sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif; }
 
 @media screen and (min-width: 1200px) {
   body {
@@ -593,7 +599,8 @@ h1, h2, h3, h4, h5, h6 {
 /**********************************
   CONTAINERS (WIP)
  **********************************/
-.container, .container-fluid {
+.container,
+.container-fluid {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem; }
@@ -1385,12 +1392,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 1em 1.3em;
   background-color: transparent;
-  border: 1px solid #515151;
+  border: 1px solid #313131;
   border-radius: 0;
-  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
-  font-weight: 300;
-  color: #515151;
+  font-weight: 400;
+  color: #313131;
   line-height: 1.414;
   text-decoration: none;
   vertical-align: middle;
@@ -1399,8 +1406,8 @@ h1, h2, h3, h4, h5, h6 {
   /* button variations */
   /* button styles */ }
   .btn:hover {
-    color: #FAFAFA;
-    background-color: #515151; }
+    color: #fafafa;
+    background-color: #313131; }
   .btn.btn--small {
     font-size: 0.875em; }
   .btn.btn--med {
@@ -1408,46 +1415,46 @@ h1, h2, h3, h4, h5, h6 {
   .btn.btn--large {
     font-size: 1.125em; }
   .btn.btn--default {
-    border-color: #515151;
-    color: #515151; }
+    border-color: #313131;
+    color: #313131; }
     .btn.btn--default:hover {
-      background-color: #515151; }
+      background-color: #313131; }
   .btn.btn--primary {
-    border-color: #930B92; }
+    border-color: #930b92; }
     .btn.btn--primary:not(:hover) {
-      color: #930B92; }
+      color: #930b92; }
     .btn.btn--primary:hover {
-      background-color: #930B92; }
+      background-color: #930b92; }
   .btn.btn--success {
-    border-color: #32936F; }
+    border-color: #32936f; }
     .btn.btn--success:not(:hover) {
-      color: #32936F; }
+      color: #32936f; }
     .btn.btn--success:hover {
-      background-color: #32936F; }
+      background-color: #32936f; }
   .btn.btn--secondary {
-    border-color: #515151; }
+    border-color: #313131; }
     .btn.btn--secondary:not(:hover) {
-      color: #515151; }
+      color: #313131; }
     .btn.btn--secondary:hover {
-      background-color: #515151; }
+      background-color: #313131; }
   .btn.btn--info {
-    border-color: #2274A5; }
+    border-color: #2274a5; }
     .btn.btn--info:not(:hover) {
-      color: #2274A5; }
+      color: #2274a5; }
     .btn.btn--info:hover {
-      background-color: #2274A5; }
+      background-color: #2274a5; }
   .btn.btn--warning {
-    border-color: #FFBF00; }
+    border-color: #ffbf00; }
     .btn.btn--warning:not(:hover) {
-      color: #FFBF00; }
+      color: #ffbf00; }
     .btn.btn--warning:hover {
-      background-color: #FFBF00; }
+      background-color: #ffbf00; }
   .btn.btn--error {
-    border-color: #E83F6F; }
+    border-color: #e83f6f; }
     .btn.btn--error:not(:hover) {
-      color: #E83F6F; }
+      color: #e83f6f; }
     .btn.btn--error:hover {
-      background-color: #E83F6F; }
+      background-color: #e83f6f; }
   .btn.btn--pill {
     border-radius: 100px; }
   .btn.btn--round {
@@ -1528,15 +1535,15 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     padding: 0.5em;
     text-decoration: none;
-    color: #515151; }
+    color: #313131; }
     .nav__navlist .navlist__link:hover, .nav__navlist .navlist__link:focus {
-      color: #2274A5; }
+      color: #2274a5; }
 
 /* modifier classes */
 .navbar.navbar--dark {
   background-color: #111111; }
   .navbar.navbar--dark .navlist__link:not(:hover):not(:focus) {
-    color: #d1d1d1; }
+    color: #b1b1b1; }
 
 .nav__navlist.navlist--hover-1 .navlist__link:before {
   content: "";
@@ -1545,10 +1552,10 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0.5em;
   transform: translateX(-50%);
   width: 0%;
-  border-bottom: 2px solid #d1d1d1;
+  border-bottom: 2px solid #b1b1b1;
   transition: width 0.2s ease-out; }
 
 .nav__navlist.navlist--hover-1 .navlist__link:hover, .nav__navlist.navlist--hover-1 .navlist__link:focus {
-  color: #515151; }
+  color: #313131; }
   .nav__navlist.navlist--hover-1 .navlist__link:hover:before, .nav__navlist.navlist--hover-1 .navlist__link:focus:before {
     width: 100%; }
