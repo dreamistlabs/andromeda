@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 // import LoremIpsum from 'lorem-ipsum';
 // import logo from '../logo.svg';
 
 import AppRoutes from '../routes/appRoutes';
 
-import Dashboard from '../Components/Dashboard/Dashboard';
+// import Dashboard from '../Components/Dashboard/Dashboard';
 import Footer from '../docComponents/Footer/Footer';
 
 import './app.css';
@@ -21,20 +21,26 @@ class App extends Component {
           <main className="docs main-content">
             <aside className="docs sidebar">
               <nav className="sidebar__nav">
-              <ul>
-                <li><Link to={'/p/baseline'}>Baseline</Link></li>
-                <li><Link to={'/p/grid-system'}>Grid System</Link></li>
-                <li><Link to={'/p/buttons'}>Buttons</Link></li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-                <li>Item 1</li>
-              </ul>
-
+                <ul>
+                  <li>
+                    <Link to={'/p/baseline'}>Baseline</Link>
+                  </li>
+                  <li>
+                    <Link to={'/p/grid-system'}>Grid System</Link>
+                  </li>
+                  <li>
+                    <Link to={'/p/buttons'}>Buttons</Link>
+                  </li>
+                  <li>Item 1</li>
+                  <li>Item 1</li>
+                  <li>Item 1</li>
+                </ul>
               </nav>
             </aside>
+
             <AppRoutes />
           </main>
-        {/* <div className="navbar">
+          {/* <div className="navbar">
             <span> Default </span>
             <nav className="navbar__nav">
               <ul className="nav__navlist">
@@ -137,10 +143,7 @@ class App extends Component {
               </div>
             </div>*/}
 
-            {/*<Dashboard component="Cards" />*/}
-            {/*<Dashboard component="Buttons" />*/}
-
-            {/*<div className="tileset">
+          {/*<div className="tileset">
               <div className="tileset__tile">
                 <span>icon</span>
                 <span>Dashboard</span>
@@ -172,7 +175,7 @@ class App extends Component {
             </div>
           </div>*/}
 
-          <Footer />  
+          <Footer />
         </div>
       </Router>
     );
