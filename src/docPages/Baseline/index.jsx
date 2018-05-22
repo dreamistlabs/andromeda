@@ -13,8 +13,7 @@ export default class BaselinePage extends Component {
   renderSections() {
     return baselineData.sections.map((section, i) => {
       return (
-        <Section
-          className={'section'}  
+        <Section  
           name={section.name}
           key={'section-' + i}
         >
@@ -32,18 +31,18 @@ export default class BaselinePage extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <h1 className="docs heading">Baseline</h1>
-        <p>
+      <Section className="container-fluid" name={'baseline'}>
+        <Heading>Baseline</Heading>
+        <Text>
           Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged
           decaffeinated espresso. Americano filter coffee blue mountain,
           extraction, roast, acerbic filter milk skinny doppio. Mocha pumpkin
           spice percolator, filter carajillo, black sugar cortado caramelization
           so instant.
-        </p>
+        </Text>
 
         {this.renderSections()}
-      </div>
+      </Section>
     );
   }
 }
