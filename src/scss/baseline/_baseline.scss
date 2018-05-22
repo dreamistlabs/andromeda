@@ -1,19 +1,20 @@
-/*-!
- * Copyright (c) 2017 Dreamist Labs. Created by Johnny Hu <heyitsjhu@gmail.com>.
+/**
+ * Copyright (c) 2017-2018 Dreamist Labs. 
+ * Created by Johnny Hu <johnny@dreamistlabs.com>
  *
- * Baseline is inspired by Twitter Bootstrap's Reboot CSS and builds on top of Nicolas Gallagher's Normalize.css.
+ * Baseline builds on top of Nicolas Gallagher's Normalize.css
+ * and is inspired by Twitter Bootstrap's Reboot CSS and.
  *
  */
-
 @import '../vendors/normalize';
 
+$default-box-sizing             : border-box;
 $default-font-family            : Helvetica, Verdana, Arial, sans-serif;
 $default-heading-font-family    : Garamond, Georgia, 'Times New Roman', serif;
 $default-monospace-font-family  : 'Courier New', monospace;
 
 $augmented-fourth-ratio         : 1.414;
 $default-html-font-size         : 10px;
-
 $default-mobile-font-size       : 1.6rem;
 $default-tablet-font-size       : 1.6rem;
 $default-desktop-font-size      : 2rem; 
@@ -27,47 +28,59 @@ $default-line-height            : $augmented-fourth-ratio;
 $default-heading-line-height    : 1.25em;
 $default-letter-spacing         : 0.04em;
 
+$default-no-spacing             : 0;
+$default-spacingXS              : 0.4rem;
 $default-spacingS               : 1.5rem;
 $default-spacingM               : 2.4rem;
 $default-spacingL               : 4rem;
 
-$base-mobile-font-size          : $default-mobile-font-size;
-$base-tablet-font-size          : $default-tablet-font-size;
-$base-desktop-font-size         : $default-desktop-font-size;
-$base-hd-desktop-font-size      : $default-hd-desktop-font-size;
-
-$base-light-weight              : $default-light-weight;
-$base-normal-weight             : $default-normal-weight;
-$base-bold-weight               : $default-bold-weight;
-
-$base-font-family               : $default-font-family;
-$base-font-size                 : $default-mobile-font-size;
-$base-font-weight               : $default-normal-weight;
-$base-line-height               : $default-line-height;
-$base-letter-spacing            : $default-letter-spacing;
-
-$base-heading-font-family       : $default-heading-font-family;
-$base-heading-font-weight       : $default-bold-weight;
-$base-heading-line-height       : $default-heading-line-height;
-
-$base-monospace-font-family     : $default-monospace-font-family;
-
-$base-marginS                   : $default-spacingS;
-$base-marginM                   : $default-spacingM;
-$base-marginL                   : $default-spacingL;
-$base-paddingS                  : $default-spacingS;
-$base-paddingM                  : $default-spacingM;
-$base-paddingL                  : $default-spacingL;
-
-$gray-color-lighter             :#AFAFAF;
-$gray-color                     :#969696;
-$gray-color-darker              :#7d7d7d;
+$gray-color                     : #969696;
+$gray-color-darker              : #7d7d7d;
+$gray-color-lighter             : #AFAFAF;
 
 /* Media Query Breakpoints */
 $mobile-breakpoint              : 600px;
 $tablet-breakpoint              : 900px;
 $desktop-breakpoint             : 1200px;
 $hd-desktop-breakpoint          : 1800px;
+
+/* Referential Variables
+ * These variables typically refer to a specific component's property and
+ * its value should point to a variable declared under the Theme-Specific Variables
+ * section above. Ideally, referential variables should not have hard-coded values.
+ * IMPORTANT: Do not change the names of these referential variables because they are
+ * used throughout the Andromeda framework. Doing so will likely break things.
+ */
+
+//-- miscellaneous
+$base-box-sizing                : $default-box-sizing;
+//-- typography
+$base-mobile-font-size          : $default-mobile-font-size;
+$base-tablet-font-size          : $default-tablet-font-size;
+$base-desktop-font-size         : $default-desktop-font-size;
+$base-hd-desktop-font-size      : $default-hd-desktop-font-size;
+$base-light-weight              : $default-light-weight;
+$base-normal-weight             : $default-normal-weight;
+$base-bold-weight               : $default-bold-weight;
+$base-font-family               : $default-font-family;
+$base-font-size                 : $default-mobile-font-size;
+$base-font-weight               : $default-normal-weight;
+$base-line-height               : $default-line-height;
+$base-letter-spacing            : $default-letter-spacing;
+$base-heading-font-family       : $default-heading-font-family;
+$base-heading-font-weight       : $default-bold-weight;
+$base-heading-line-height       : $default-heading-line-height;
+$base-monospace-font-family     : $default-monospace-font-family;
+//-- spacing
+$base-no-spacing                : $default-no-spacing;
+$base-spacingXS                 : $default-spacingXS;
+$base-spacingS                  : $default-spacingS;
+$base-spacingM                  : $default-spacingM;
+$base-spacingL                  : $default-spacingL;
+//-- color
+$base-neutral-color             : $gray-color;
+$base-neutral-color-darker      : $gray-color-darker;
+$base-neutral-color-lighter     : $gray-color-lighter;
 
 @function pow($number, $exponent) {
   $value: 1;
@@ -87,7 +100,7 @@ $hd-desktop-breakpoint          : 1800px;
 }
 
 * {
-  box-sizing:     border-box;
+  box-sizing:     $base-box-sizing;
 }
 
 html {
@@ -102,12 +115,12 @@ body {
   letter-spacing: $base-letter-spacing;
 }
 
-/*-!
+/**
  * Headings
  */
 h1, h2, h3, h4, h5, h6  {
-  margin-top:       0;
-  margin-bottom:    $base-marginS;
+  margin-top:       $base-no-spacing;
+  margin-bottom:    $base-spacingS;
   font-family:      $base-heading-font-family;
   font-weight:      $base-heading-font-weight;
   line-height:      $base-heading-line-height;
@@ -138,36 +151,36 @@ h6 {
   }
 }
 
-/*-!
+/**
  * Paragraphs
  */
 p {
-  margin-top: 0;
-  margin-bottom: $base-marginM;
+  margin-top: $base-no-spacing;
+  margin-bottom: $base-spacingS;
 
-  + p {
-    margin-bottom: $base-marginS;
+  + p:last-child {
+    margin-bottom: $base-spacingM;
   }
 }
 
-/*-!
+/**
  * Lists
  */
 
 ul, ol {
-  margin-top: 0;
-  margin-bottom: $base-marginM;
+  margin-top: $base-no-spacing;
+  margin-bottom: $base-spacingM;
 }
 li > ul,
 li > ol {
-  margin-bottom: 0;
+  margin-bottom: $base-no-spacing;
 }
 
-/*-!
+/**
  * Definitions
  */
 dl {
-  margin-bottom: $base-marginM;
+  margin-bottom: $base-spacingM
 }
 
 dt {
@@ -175,15 +188,15 @@ dt {
 }
 
 dd {
-  margin-left: $base-marginS;
-  margin-bottom: $base-marginS * 0.8;
+  margin-left: $base-spacingS;
+  margin-bottom: $base-spacingS * 0.8;
 }
 
-/*-!
+/**
  * Forms
  */
 form {
-  margin-bottom: $base-marginS;
+  margin-bottom: $base-spacingS;
 }
 
 input {
@@ -196,16 +209,16 @@ legend {
 }
 
 fieldset {
-  margin: 0;
+  margin: $base-no-spacing;
   border: none;
 }
 
-/*-!
+/**
  * Preformatted / Code
  */
 pre {
-  margin-top: 0;
-  margin-bottom: $base-marginS;
+  margin-top: $base-no-spacing;
+  margin-bottom: $base-spacingS;
   font-family: $base-monospace-font-family;
 }
 
@@ -213,40 +226,40 @@ code {
   font-family: $base-monospace-font-family;
 }
 
-/*-!
+/**
  * Tables
  */
 table {
-  border-spacing: 0;
+  border-spacing: $base-no-spacing;
 }
 
 th, td {
-  padding: 0.4rem;
+  padding: $base-spacingXS;
   text-align: left;
 }
 
 caption {
-  padding: 0.4rem;
-  color: $gray-color;
+  padding: $base-spacingXS;
+  color: $base-neutral-color;
   text-align: left;
   caption-side: bottom;
 }
 
-/*-!
+/**
  * Blockquotes
  */
 blockquote {
-  margin: 0 $base-marginS $base-marginS;
+  margin: $base-no-spacing $base-spacingS $base-spacingS;
   padding: 0.6rem;
-  padding-left: $base-paddingS;
-  border-left: 0.6rem solid $gray-color-lighter;
+  padding-left: $base-spacingS;
+  border-left: 0.6rem solid $base-neutral-color-lighter;
 }
 
 blockquote > *:last-child {
-  margin-bottom: 0;
+  margin-bottom: $base-no-spacing;
 }
 
-/*-!
+/**
  * Misc
  */
 abbr {
@@ -254,11 +267,11 @@ abbr {
 }
 
 address {
-  margin-bottom: $base-marginS;
-  font-style: normal;
+  margin-bottom: $base-spacingS;
+  font-style: $base-font-weight;
 }
 
 hr {
-  margin: $base-marginS 0;
-  border: 1px solid $gray-color-lighter;
+  margin: $base-spacingS $base-no-spacing;
+  border: 1px solid $base-neutral-color-lighter;
 }
