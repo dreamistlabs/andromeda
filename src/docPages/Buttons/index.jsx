@@ -23,7 +23,7 @@ export default class TempButtonCode extends Component {
                 type="submit"
                 value="Read more"
               />
-              <a href="#" className="m31 btn btn--large">
+              <a href="/" className="m31 btn btn--large">
                 Read more
               </a>
             </div>

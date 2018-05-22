@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-
-import Section from '../../docComponents/Section/Section';
+//-- documentation components
+import Heading from 'docComponents/Heading';
+import Section from 'docComponents/Section';
+import Text from 'docComponents/Text';
 import ExampleCard from '../ExampleCard/ExampleCard';
-
-import sections from '../../data/baseline-section-content';
+//-- data
+import baselineData from '_data/documentation/baselineData';
+//-- helpers
+import * as h from 'helpers';
 
 export default class BaselinePage extends Component {
   renderSections() {
-    return Object.keys(sections).map((section, i) => {
+    return baselineData.sections.map((section, i) => {
       return (
-        <Section name={section} key={i}>
-          <p className="docs section__description">
-            {sections[section].description}
-          </p>
-
-          <ExampleCard section={section} />
+        <Section
+          className={'section'}  
+          name={section.name}
+          key={'section-' + i}
+        >
+          <Heading as={'h2'}>
+            {h.formatHeading(section.name)}
+          </Heading>  
+          <Text className={'section__description'}>
+            {section.description}
+          </Text>
+          <ExampleCard section={section.name} />
         </Section>
       );
     });

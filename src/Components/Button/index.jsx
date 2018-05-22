@@ -22,8 +22,8 @@ class Button extends Component {
         props: nextProps,
       };
     }
-    return null;
     console.log('yes - matched!!', nextProps, prevState);
+    return null;
   }
 
   renderButton() {
