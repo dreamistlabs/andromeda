@@ -3,23 +3,19 @@
  * Copyright 2017 Dreamist Labs
  */
 /**
-  VARIABLES
+ * VARIABLES
  */
-/*********************************************
-  MIXINS
- *********************************************/
-/*********************************************
-  STYLES
- *********************************************/
 /**
-  Global Styles
-  -- incl. only styles that differ from Andromeda's baseline CSS
+ * -- MIXINS
+ */
+/**
+ * -- STYLES
  */
 body {
-  background-color: #F4F4F4;
-  color: #373737; }
+  background-color: #FCFCFC;
+  color: #313131; }
 
-.docs__card {
+.docs.panel {
   padding: 1rem;
   width: 100%;
   overflow-x: scroll;
@@ -34,7 +30,7 @@ body {
   top: 0;
   right: -1px;
   padding: 6px 8px;
-  background-color: #F4F4F4;
+  background-color: #FCFCFC;
   border: 1px solid #CBCACA;
   border-bottom-left-radius: 5px;
   font-size: 0.75em; }
@@ -50,7 +46,7 @@ body {
     color: inherit; }
   100% {
     background-color: #C0B283;
-    color: #F4F4F4; } }
+    color: #FCFCFC; } }
 
 .docs.example__code-block {
   margin-bottom: 0;
