@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import AppRoutes from '../routes/appRoutes';
 
 // import Dashboard from '../Components/Dashboard/Dashboard';
-import Footer from '../docComponents/Footer/Footer';
+import Footer from '@doc-components/Footer/Footer';
 
 import './app.css';
 

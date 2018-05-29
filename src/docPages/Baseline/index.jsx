@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 //-- documentation components
-import Heading from 'docComponents/Heading';
-import Panel from 'docComponents/Panel';
-import Section from 'docComponents/Section';
-import Text from 'docComponents/Text';
+import Heading from '@doc-components/Heading';
+import Panel from '@doc-components/Panel';
+import Section from '@doc-components/Section';
+import Text from '@doc-components/Text';
 //-- data
-import baselineData from '_data/documentation/baselineData';
+import baselineData from '@data/documentation/baselineData';
 //-- examples
-import BaselineHeading from 'docPages/Baseline/Examples/BaselineHeading';
-import BaselineLists from 'docPages/Baseline/Examples/BaselineLists';
-import BaselineForms from 'docPages/Baseline/Examples/BaselineForms';
-import BaselineDefinitionLists from 'docPages/Baseline/Examples/BaselineDefinitionLists';
-import BaselinePreformattedText from 'docPages/Baseline/Examples/BaselinePreformattedText';
-import BaselineTables from 'docPages/Baseline/Examples/BaselineTables';
-import BaselineBlockquotes from 'docPages/Baseline/Examples/BaselineBlockquotes';
-import BaselineMiscellaneous from 'docPages/Baseline/Examples/BaselineMiscellaneous';
+import BaselineHeading from '@baseline-examples/BaselineHeading';
+import BaselineLists from '@baseline-examples/BaselineLists';
+import BaselineForms from '@baseline-examples/BaselineForms';
+import BaselineDefinitionLists from '@baseline-examples/BaselineDefinitionLists';
+import BaselinePreformattedText from '@baseline-examples/BaselinePreformattedText';
+import BaselineTables from '@baseline-examples/BaselineTables';
+import BaselineBlockquotes from '@baseline-examples/BaselineBlockquotes';
+import BaselineMiscellaneous from '@baseline-examples/BaselineMiscellaneous';
 //-- helpers
 import * as h from 'helpers';
 

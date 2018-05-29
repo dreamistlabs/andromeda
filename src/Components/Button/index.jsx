@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { ButtonSchema } from '_schema';
+import { ButtonSchema } from '@schema';
 
 class Button extends Component {
   constructor(props) {
