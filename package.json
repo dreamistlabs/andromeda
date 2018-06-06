@@ -57,7 +57,7 @@
     "build-assets": "npm-run-all -p build-all-css build-andromeda-js",
     "build-app": "npm run build-assets && npm run build",
     "build-all-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/",
-    "dist-baseline-css": "node-sass-chokidar src/scss/baseline/_baseline.scss dist/baseline.css --source-map true",
+    "dist-baseline-css": "node-sass-chokidar src/scss/baseline/_baseline.scss dist/andromeda-baseline.css --source-map true",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build-app",
     "start": "npm run watch-all",
