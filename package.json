@@ -5,7 +5,7 @@
   "homepage": "http://dreamistlabs.github.io/andromeda",
   "scripts": {
     "build": "node scripts/build.js",
-    "build-andromeda-js": "npx babel src/js/*.js --out-dir public/assets/js/*.js --source-maps",
+    "build-andromeda-js": "npx babel src/js/*.js --out-file public/assets/js/*.js --source-maps",
     "build-assets": "npm-run-all -p build-all-css build-andromeda-js",
     "build-app": "npm run build-assets && npm run build",
     "build-all-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/",
@@ -15,10 +15,12 @@
     "start": "npm run watch-all",
     "start-js": "node scripts/start.js",
     "watch-andromeda-css": "node-sass-chokidar src/scss/ -o public/assets/stylesheets/ --watch --recursive",
-    "watch-andromeda-js": "npx babel src/js/*.js --out-dir public/assets/js/*.js --watch",
+    "watch-andromeda-js": "npx babel src/js/andromeda.js -o public/assets/js/andromeda.js --watch",
     "watch-andromeda-all": "npm-run-all -p watch-andromeda-js watch-andromeda-css",
     "watch-docs-css": "node-sass-chokidar src/components/ -o src/components/ --watch --recursive",
-    "watch-all": "npm-run-all -p watch-andromeda-all watch-docs-css start-js",
+    "watch-docs-js": "npx babel src/js/docs.js -o public/assets/js/docs.js --watch",
+    "watch-docs-all": "npm-run-all -p watch-docs-js watch-docs-css",
+    "watch-all": "npm-run-all -p watch-andromeda-all watch-docs-all start-js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {

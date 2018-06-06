@@ -23,6 +23,9 @@ body {
   background-color: $docs-background-color;
   color: $docs-text-color;
 }
+p {
+  letter-spacing: 0.4px;
+}
 
 @import 'docs/containers';
 @import 'docs/panels';
@@ -32,14 +35,23 @@ body {
   position: relative;
 
   &.scrolled {
-    .header h1 {
+    header h1 {
+      margin: 1rem auto;
       font-size: $text--large;
+    }
+    footer p {
+      opacity: 1;
+    }
+    .overlay--border {
+      border: $default-spacingL solid rgba(255,255,255,0.98);
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     }
   }
 }
 
 header {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 10;
   h1 {
@@ -48,23 +60,36 @@ header {
     font-size: $text--xlarge;
     text-align: center;
     line-height: 1;
+    transition: all 0.5s ease-in;
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  p {
+    margin: 1.2rem;
+    font-size: $text--xsmall;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease-in 0.2s;
   }
 }
 
 .main-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 6rem;
-  &:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 60px solid $white;
-  }
+  margin: 6rem;
+}
+.overlay--border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 6rem solid $white;
+  box-shadow: inset 0 0 0 rgba(0,0,0,0);
+  overflow-y: scroll;
+  transition: all 0.5s ease-in;
 }
 
 .docs.section {

@@ -6,13 +6,13 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import AppRoutes from '../routes/appRoutes';
 
 // import Dashboard from '../Components/Dashboard/Dashboard';
-import Footer from '@doc-components/Footer/Footer';
+import Footer from '@doc-components/Footer';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div id="andromeda" className="app">
+        <div id="andromeda-documentation" className="app">
           <header id="site-header">
             <h1>Andromeda</h1>
           </header>
@@ -172,7 +172,8 @@ class App extends Component {
               </div>
             </div>
           </div>*/}
-
+          
+          <div className="overlay--border"></div>
           <Footer />
         </div>
       </Router>

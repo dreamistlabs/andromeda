@@ -4,7 +4,7 @@ const BaselineMiscellaneous = (props) => {
   return(
     <div>
       <section className="docs section" name="address">
-          <header className="docs section__header">
+          <div className="docs section__header">
               <h3 className="docs section__title">
                   Address
               </h3>
@@ -14,7 +14,7 @@ const BaselineMiscellaneous = (props) => {
               <p className="docs section__description">
                   Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged decaffeinated espresso. Americano filter coffee blue mountain, extraction, roast, acerbic filter milk skinny doppio.
               </p>
-          </header>
+          </div>
           <div className="docs example">
               <div className="docs example__card">
                   <address>
@@ -28,14 +28,14 @@ const BaselineMiscellaneous = (props) => {
       </section>
 
       <section className="docs section" name="abbreviations">
-          <header className="docs section__header">
+          <div className="docs section__header">
               <h3 className="docs section__title">
                   Abbreviations
               </h3>
               <p className="docs section__description">
                   Sit, ristretto, body, cinnamon, cup con panna, bar robust doppio aged decaffeinated espresso. Americano filter coffee blue mountain, extraction, roast, acerbic filter milk skinny doppio.
               </p>
-          </header>
+          </div>
           <div className="docs example">
               <div className="docs example__card">
                    <p>Greetings from <abbr title="The Andromeda Galaxy">M31</abbr>.</p>
