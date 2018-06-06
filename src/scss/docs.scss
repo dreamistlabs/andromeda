@@ -1,6 +1,7 @@
-/**
+/**!
  * Andromeda Documentation
- * Copyright 2017 Dreamist Labs
+ * Copyright 2017-2018 Dreamist Labs
+ * Created by Johnny Hu <johnny@dreamistlabs.com>
  */
 @import 'docs/variables';
 
@@ -27,9 +28,47 @@ body {
 @import 'docs/panels';
 @import 'docs/examples';
 
+.app {
+  position: relative;
+
+  &.scrolled {
+    .header h1 {
+      font-size: $text--large;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  h1 {
+    display: block;
+    margin: 1.8rem auto;
+    font-size: $text--xlarge;
+    text-align: center;
+    line-height: 1;
+  }
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 6rem;
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 60px solid $white;
+  }
+}
 
 .docs.section {
-  margin-bottom: $docs-spacing-unit;
+  margin-bottom: $default-spacingS;
   width: 100%;
 
   .section__flex__container {
@@ -54,9 +93,9 @@ body {
 }
 
 .docs {
-  &.main-content {
-    display: flex;
-  }
+  // &.main-content {
+  //   display: flex;
+  // }
   &.sidebar {
     min-width: 200px;
     border-right: 1px solid #eee;

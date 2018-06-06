@@ -8,17 +8,15 @@ import AppRoutes from '../routes/appRoutes';
 // import Dashboard from '../Components/Dashboard/Dashboard';
 import Footer from '@doc-components/Footer/Footer';
 
-import './app.css';
-
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <header>
+        <div id="andromeda" className="app">
+          <header id="site-header">
             <h1>Andromeda</h1>
           </header>
-          <main className="docs main-content">
+          <main className="main-content">
             <aside className="docs sidebar">
               <nav className="sidebar__nav">
                 <ul>

@@ -16,7 +16,7 @@ import BaselineTables from '@baseline-examples/BaselineTables';
 import BaselineBlockquotes from '@baseline-examples/BaselineBlockquotes';
 import BaselineMiscellaneous from '@baseline-examples/BaselineMiscellaneous';
 //-- helpers
-import * as h from 'helpers';
+import * as h from '@helpers';
 
 export default class BaselinePage extends Component {
   

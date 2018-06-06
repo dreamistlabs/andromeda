@@ -1,9 +1,18 @@
-/**
+/**!
  * Andromeda Documentation
- * Copyright 2017 Dreamist Labs
+ * Copyright 2017-2018 Dreamist Labs
+ * Created by Johnny Hu <johnny@dreamistlabs.com>
  */
 /**
  * VARIABLES
+ */
+/* Media Query Breakpoints */
+/* Referential Variables
+ * These variables typically refer to a specific component's property and
+ * its value should point to a variable declared under the Theme-Specific Variables
+ * section above. Ideally, referential variables should not have hard-coded values.
+ * IMPORTANT: Do not change the names of these referential variables because they are
+ * used throughout the Andromeda framework. Doing so will likely break things.
  */
 /**
  * -- MIXINS
@@ -54,6 +63,36 @@ body {
   background-color: #DCD0C0;
   color: docs-gray-color-dark; }
 
+.app {
+  position: relative; }
+  .app.scrolled .header h1 {
+    font-size: 2rem; }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10; }
+  header h1 {
+    display: block;
+    margin: 1.8rem auto;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 1; }
+
+.main-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 6rem; }
+  .main-content:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 60px solid #ffffff; }
+
 .docs.section {
   margin-bottom: 1.5rem;
   width: 100%; }
@@ -72,9 +111,6 @@ body {
 
 .docs.dashboard__example {
   margin-bottom: 2rem; }
-
-.docs.main-content {
-  display: flex; }
 
 .docs.sidebar {
   min-width: 200px;

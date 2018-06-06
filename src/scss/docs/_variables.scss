@@ -2,10 +2,18 @@
  * VARIABLES
  */
 $docs-text-size:             1.6rem;
+$text--xsmall:               1.2rem;
+$text--small:                1.6rem;
+$text--medium:               1.8rem;
+$text--large:                2rem;
+$text--xlarge:               2.4rem;
 $docs-text-size-small:       0.875em;
 $docs-text-size-smaller:     0.75em;
 $docs-base-line-height:      1.6;
 
+//-- Colors
+$black:                      #000000;
+$white:                      #ffffff;
 $docs-pale-gold:             #C0B283;
 $docs-silk:                  #DCD0C0;
 $docs-paper:                 #FCFCFC;
@@ -21,14 +29,87 @@ $docs-text-color:            $docs-charcoal;
 $docs-text-color-light:      $docs-paper;
 $docs-brand-color:           $docs-pale-gold;
 
-$docs-spacing-unit:          1.5rem;
-$docs-spacing-unit-small:    1rem;
 $docs-radius-size:           5px;
 
 $docs-container-width-small: 95%;
 $docs-container-width-large: 93%;
 
+$default-box-sizing             : border-box;
+$default-font-family            : Helvetica, Verdana, Arial, sans-serif;
+$default-heading-font-family    : Garamond, Georgia, 'Times New Roman', serif;
+$default-monospace-font-family  : 'Courier New', monospace;
+
+$augmented-fourth-ratio         : 1.414;
+$default-html-font-size         : 10px;
+$default-mobile-font-size       : 1.6rem;
+$default-tablet-font-size       : 1.6rem;
+$default-desktop-font-size      : 2rem; 
+$default-hd-desktop-font-size   : 2.2rem;
+
+$default-light-weight           : 300;
+$default-normal-weight          : 400;
+$default-bold-weight            : 600;
+
+$default-line-height            : $augmented-fourth-ratio;
+$default-heading-line-height    : 1.25em;
+$default-letter-spacing         : 0.04em;
+
+$default-no-spacing             : 0;
+$default-spacingXS              : 0.4rem;
+$default-spacingS               : 1.5rem;
+$default-spacingM               : 2.4rem;
+$default-spacingL               : 4rem;
+
+$gray-color                     : #969696;
+$gray-color-darker              : #7d7d7d;
+$gray-color-lighter             : #AFAFAF;
+
+/* Media Query Breakpoints */
+$mobile-breakpoint              : 600px;
+$tablet-breakpoint              : 900px;
+$desktop-breakpoint             : 1200px;
+$hd-desktop-breakpoint          : 1800px;
+
+
 $docs-breakpoint-tablet:           600px;
 $docs-breakpoint-laptop:           900px;
 $docs-breakpoint-desktop:          1200px;
 $docs-breakpoint-desktop-hd:       1800px;
+
+/* Referential Variables
+ * These variables typically refer to a specific component's property and
+ * its value should point to a variable declared under the Theme-Specific Variables
+ * section above. Ideally, referential variables should not have hard-coded values.
+ * IMPORTANT: Do not change the names of these referential variables because they are
+ * used throughout the Andromeda framework. Doing so will likely break things.
+ */
+
+//-- miscellaneous
+$base-box-sizing                : $default-box-sizing;
+//-- typography
+$base-mobile-font-size          : $default-mobile-font-size;
+$base-tablet-font-size          : $default-tablet-font-size;
+$base-desktop-font-size         : $default-desktop-font-size;
+$base-hd-desktop-font-size      : $default-hd-desktop-font-size;
+$base-light-weight              : $default-light-weight;
+$base-normal-weight             : $default-normal-weight;
+$base-bold-weight               : $default-bold-weight;
+$base-font-family               : $default-font-family;
+$base-font-size                 : $default-mobile-font-size;
+$base-font-weight               : $default-normal-weight;
+$base-line-height               : $default-line-height;
+$base-letter-spacing            : $default-letter-spacing;
+$base-heading-font-family       : $default-heading-font-family;
+$base-heading-font-weight       : $default-bold-weight;
+$base-heading-line-height       : $default-heading-line-height;
+$base-monospace-font-family     : $default-monospace-font-family;
+//-- spacing
+$base-no-spacing                : $default-no-spacing;
+$base-spacingXS                 : $default-spacingXS;
+$base-spacingS                  : $default-spacingS;
+$base-spacingM                  : $default-spacingM;
+$base-spacingL                  : $default-spacingL;
+//-- color
+$base-neutral-color             : $gray-color;
+$base-neutral-color-darker      : $gray-color-darker;
+$base-neutral-color-lighter     : $gray-color-lighter;
