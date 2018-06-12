@@ -14,10 +14,16 @@ $docs-base-line-height:      1.6;
 //-- Colors
 $black:                      #000000;
 $white:                      #ffffff;
+
+$default-primary-color:      #569780;
+
+
+$text--dark:                 #2e2e2e;
+$text--light:                #FAFAFA;
 $docs-pale-gold:             #C0B283;
 $docs-silk:                  #DCD0C0;
-$docs-paper:                 #FCFCFC;
-$docs-charcoal:              #313131;
+$docs-paper:                 #FAFAFA;
+$docs-charcoal:              #2e2e2e;
 
 $docs-gray-color:            #9B9B9B;
 $docs-gray-color-dark:       #6E6E6E;
@@ -56,9 +62,10 @@ $default-letter-spacing         : 0.04em;
 
 $default-no-spacing             : 0;
 $default-spacingXS              : 0.4rem;
-$default-spacingS               : 1.5rem;
-$default-spacingM               : 2.4rem;
+$default-spacingS               : 1rem;
+$default-spacingM               : 2rem;
 $default-spacingL               : 4rem;
+$default-spacingXL              : 6rem;
 
 $gray-color                     : #969696;
 $gray-color-darker              : #7d7d7d;

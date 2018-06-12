@@ -3,16 +3,19 @@
  * Copyright 2017-2018 Dreamist Labs
  * Created by Johnny Hu <johnny@dreamistlabs.com>
  */
-@import 'docs/variables';
 
+@import 'docs/variables';
+$navToggleTransition: all 0.3s ease-in-out;
 /**
  * -- MIXINS
  */
+
 @mixin media-query-at($size) {
   @media screen and (min-width: $size) {
     @content;
   }
 }
+
 /**
  * -- STYLES
  */
@@ -21,30 +24,30 @@
 //-- incl. only styles that differ from Andromeda's Baseline CSS
 body {
   background-color: $docs-background-color;
-  color: $docs-text-color;
+  color: $text--dark;
 }
+
 p {
   letter-spacing: 0.4px;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+a:visited {
+  color: $text--dark;
+  text-decoration: none;
 }
 
 @import 'docs/containers';
 @import 'docs/panels';
 @import 'docs/examples';
-
 .app {
   position: relative;
-
   &.scrolled {
-    header h1 {
-      margin: 1rem auto;
-      font-size: $text--large;
-    }
     footer p {
       opacity: 1;
-    }
-    .overlay--border {
-      border: $default-spacingL solid rgba(255,255,255,0.98);
-      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     }
   }
 }
@@ -56,13 +59,14 @@ header {
   z-index: 10;
   h1 {
     display: block;
-    margin: 1.8rem auto;
-    font-size: $text--xlarge;
+    margin: 1rem auto;
+    font-size: $text--medium;
     text-align: center;
     line-height: 1;
     transition: all 0.5s ease-in;
   }
 }
+
 footer {
   position: fixed;
   bottom: 0;
@@ -73,40 +77,128 @@ footer {
     font-size: $text--xsmall;
     text-align: center;
     opacity: 0;
-    transition: all 0.5s ease-in 0.2s;
+    transition: all 1s ease-in;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -24rem;
+  padding: $default-spacingL 0;
+  height: 100%;
+  background-color: $text--dark;
+  transition: all .3s ease-in;
+  z-index: 10;
+  &.visible {
+    left: 0;
+  }
+}
+
+.sidebar__nav {
+  height: inherit;
+  font-size: $text--small;
+  color: $text--light;
+  .nav__list {
+    padding-left: 0;
+    height: inherit;
+    width: 24rem;
+    list-style: none;
+  }
+  .nav__item {
+    padding: 0.6rem $default-spacingM;
+  }
+  .nav__link {
+    position: relative;
+    display: block;
+    color: inherit;
+    line-height: 1;
+    transition: all 0.3s ease-in;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -0.4rem;
+      height: 100%;
+      width: 0.3rem;
+      background-color: $default-primary-color;
+      transition: inherit;
+      opacity: 0;
+    }
+    &:hover,
+    &.active {
+      padding-left: $default-spacingS;
+      &:before {
+        left: 0;
+        opacity: 1;
+      }
+    }
+    &.active {
+      font-weight: 600;
+    }
+  }
+}
+
+.nav__toggle {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: $white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 5px rgba(0, 0, 0, 0.1);
+  transition: $navToggleTransition;
+  &:hover {
+    background-color: $default-primary-color;
+    cursor: pointer;
+    span {
+      background-color: $text--light;
+    }
+  }
+  span {
+    display: inline-block;
+    width: 2.5rem;
+    min-height: 0.3rem;
+    background-color: $black;
+    transition: $navToggleTransition;
+    &:nth-of-type(2) {
+      margin: 0.6rem 0;
+    }
   }
 }
 
 .main-content {
-  margin: 6rem;
-}
-.overlay--border {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 6rem solid $white;
-  box-shadow: inset 0 0 0 rgba(0,0,0,0);
-  overflow-y: scroll;
-  transition: all 0.5s ease-in;
+  position: relative;
+  margin: 12rem 10rem;
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: $default-spacingL solid rgba(255, 255, 255, 0.98);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .docs.section {
   margin-bottom: $default-spacingS;
   width: 100%;
-
   .section__flex__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
   }
-
   .section__flex__child {
     width: 33%;
   }
 }
+
 .playground {
   margin: 0 auto;
   padding: 1em;
