@@ -102,23 +102,29 @@ export default class GridSystemPage extends Component {
                   </div>
                   <div className="grid__col-2">.grid__coldsfsfsdfds</div>
                   <div className="grid__col-3">.grid__col</div>
-                  <div className="grid__col-start-10 grid__col">.grid__col</div>
+                  <div className="grid__col-offset-10 grid__col">
+                    .grid__col
+                  </div>
                   <div className="grid__col">.grid__col</div>
-                  <div className="grid__col-start-4 grid__col-2">
+                  <div className="grid__col-offset-4 grid__col-2">
                     .grid__col
                   </div>
                   <div className="grid__col-9">.grid__col</div>
                   <div className="grid__col">.grid__col</div>
                   <div className="grid__col-6">.grid__col</div>
                   <div className="grid__col">.grid__col</div>
-                  <div className="grid__col">.grid__col</div>
+                  <div className="grid__col-md-offset-9 grid__col-md-3">
+                    .grid__col
+                  </div>
                   <div className="grid__col-5">.grid__col</div>
                   <div className="grid__col-2">.grid__col</div>
                   <div className="grid__col">.grid__col</div>
-                  <div className="grid__col-start-2 grid__col-6">
+                  <div className="grid__col-offset-2 grid__col-6">
                     .grid__col
                   </div>
-                  <div className="grid__col-start-12 grid__col">.grid__col</div>
+                  <div className="grid__col-offset-11 grid__col">
+                    .grid__col
+                  </div>
                 </div>
               </div>
             </div>

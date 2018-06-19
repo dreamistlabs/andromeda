@@ -9,101 +9,161 @@
 
 /* thematic/defining variables */
 
+$default-grid-column-count: 12;
+$default-grid-column-width: (100 / $default-grid-column-count) * 1%;
+$default-grid-column-gap: $base-marginM;
+$default-grid-row-gap: $base-marginM;
+$default-grid-column-class: grid__col;
+/* do we need an xs size? */
+
+$default-grid-column-class-sm: grid__col-sm;
+$default-grid-column-class-md: grid__col-md;
+$default-grid-column-class-lg: grid__col-lg;
+$default-grid-column-class-xl: grid__col-xl;
 /* referential variables */
 
+$grid-column-count: $default-grid-column-count;
+$grid-column-gap: $default-grid-column-gap;
 $grid-column-margin: $base-marginS;
 $grid-column-padding: $base-paddingS;
-$col: grid__col;
-$col-sm: grid__col-sm;
-$col-md: grid__col-md;
-$col-lg: grid__col-lg;
-$col-xl: grid__col-xl;
-$col-width: 8.3333333%;
-@mixin build-column-and-offset($s, $i, $w) {
-  .#{$s}-#{$i} {
-    flex: 0 0 $w;
+$grid-column-width: $default-grid-column-width;
+$grid-row-gap: $default-grid-row-gap;
+$grid-column-class: $default-grid-column-class;
+$grid-column-class-sm: $default-grid-column-class-sm;
+$grid-column-class-md: $default-grid-column-class-md;
+$grid-column-class-lg: $default-grid-column-class-lg;
+$grid-column-class-xl: $default-grid-column-class-xl;
+/* 
+ * Mixin for building grid columns and offset classes.
+ * @param {$s} [string] CSS prefix with size declaration (e.g. grid__col-sm-4)
+ * @param {$i} [number] Index value passed in from a loop operation
+ * @param {$w} [percentage] The width of the column
+ * @param {$g} [boolean] If true, build using CSS Grid properties
+ */
+
+@mixin build-column-and-offset($s, $i, $w, $g) {
+  @if $g {
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .#{$s}-#{$i} {
+        grid-column-end: span #{$i};
+      }
+      @if $i < $grid-column-count {
+        .#{$s}-offset-#{$i} {
+          grid-column-start: col-start #{$i + 1};
+          margin-left: 0;
+        }
+      }
+    }
   }
-  @if $i < 12 {
-    .#{$s}-offset-#{$i} {
-      margin-left: $w;
+  @else {
+    /* Using Flexbox properties */
+    .#{$s}-#{$i} {
+      flex: 0 0 $w;
+    }
+    @if $i < $grid-column-count {
+      .#{$s}-offset-#{$i} {
+        margin-left: $w;
+      }
     }
   }
 }
 
+/* Grid system using Flexbox */
+
 .grid {
   display: flex;
+  flex-flow: row wrap;
   @include test-border(gray);
 }
 
-[class^="#{$col}"] {
-  // flex: 1;
-  // padding: 0 $grid-column-padding;
+[class^="#{$grid-column-class}"] {
+  flex: 1;
+  padding: 0 $grid-column-padding;
   @include test-border(green);
 }
 
-/* Base grid column classes applied to all media sizes */
+/* Generate CSS class for grid system columns and offsets
+ * based on different media query breakpoints, leveraging
+ * CSS's top down hierarchy to set prioritization.
+ */
 
-@for $i from 1 through 12 {
-  $width: $col-width * $i;
-  @include build-column-and-offset($col, $i, $width);
+@for $i from 1 through $grid-column-count {
+  $width: $grid-column-width * $i;
+  @include build-column-and-offset($grid-column-class, $i, $width, false);
 }
 
 @include for-tablet-portrait-up {
-  @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column-and-offset($col-sm, $i, $width);
+  @for $i from 1 through $grid-column-count {
+    $width: $grid-column-width * $i;
+    @include build-column-and-offset($grid-column-class-sm, $i, $width, false);
   }
 }
 
 @include for-tablet-landscape-up {
-  @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column-and-offset($col-md, $i, $width);
+  @for $i from 1 through $grid-column-count {
+    $width: $grid-column-width * $i;
+    @include build-column-and-offset($grid-column-class-md, $i, $width, false);
   }
 }
 
 @include for-desktop-up {
-  @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column-and-offset($col-lg, $i, $width);
+  @for $i from 1 through $grid-column-count {
+    $width: $grid-column-width * $i;
+    @include build-column-and-offset($grid-column-class-lg, $i, $width, false);
   }
 }
 
 @include for-big-desktop-up {
-  @for $i from 1 through 12 {
-    $width: $col-width * $i;
-    @include build-column-and-offset($col-xl, $i, $width);
+  @for $i from 1 through $grid-column-count {
+    $width: $grid-column-width * $i;
+    @include build-column-and-offset($grid-column-class-xl, $i, $width, false);
   }
 }
 
-/* Grid System using CSS Grids */
+/* Grid system using CSS Grids with support check */
 
-$default-grid-column-count: 16;
-$default-grid-column-gap: 2rem;
-$default-grid-row-gap: 2rem;
-$base-grid-column-count: $default-grid-column-count;
-$base-grid-column-gap: $default-grid-column-gap;
-$base-grid-row-gap: $default-grid-row-gap;
 @supports (display: grid) {
   .grid {
     display: grid;
-    grid-column-gap: $base-grid-column-gap;
+    grid-column-gap: $grid-column-gap;
+    @for $i from 1 through $grid-column-count {
+      &.grid--#{$i} {
+        grid-template-columns: repeat(#{$i}, [col-start] minmax(0, 1fr));
+      }
+    }
   }
-  .grid__col {
-    grid-column: span 1;
+  [class^="#{$grid-column-class}"] {
+    padding: 0;
+    grid-column-end: span 1;
     overflow: hidden;
   }
-  @for $i from 1 through $base-grid-column-count {
-    .grid.grid--#{$i} {
-      grid-template-columns: repeat(#{$i}, [col-start] minmax(0, 1fr));
+  @for $i from 1 through $grid-column-count {
+    $width: $grid-column-width * $i;
+    @include build-column-and-offset($grid-column-class, $i, $width, true);
+  }
+  @include for-tablet-portrait-up {
+    @for $i from 1 through $grid-column-count {
+      $width: $grid-column-width * $i;
+      @include build-column-and-offset($grid-column-class-sm, $i, $width, true);
     }
   }
-  @for $i from 1 through $base-grid-column-count {
-    .grid__col-start-#{$i} {
-      grid-column-start: col-start #{$i};
+  @include for-tablet-landscape-up {
+    @for $i from 1 through $grid-column-count {
+      $width: $grid-column-width * $i;
+      @include build-column-and-offset($grid-column-class-md, $i, $width, true);
     }
-    .grid__col-#{$i} {
-      grid-column-end: span #{$i};
+  }
+  @include for-desktop-up {
+    @for $i from 1 through $grid-column-count {
+      $width: $grid-column-width * $i;
+      @include build-column-and-offset($grid-column-class-lg, $i, $width, true);
+    }
+  }
+  @include for-big-desktop-up {
+    @for $i from 1 through $grid-column-count {
+      $width: $grid-column-width * $i;
+      @include build-column-and-offset($grid-column-class-xl, $i, $width, true);
     }
   }
 }

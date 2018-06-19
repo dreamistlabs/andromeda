@@ -623,380 +623,793 @@ h1, h2, h3, h4, h5, h6 {
  * TODO:
  */
 /* thematic/defining variables */
+/* do we need an xs size? */
 /* referential variables */
+/* 
+ * Mixin for building grid columns and offset classes.
+ * @param {$s} [string] CSS prefix with size declaration (e.g. grid__col-sm-4)
+ * @param {$i} [number] Index value passed in from a loop operation
+ * @param {$w} [percentage] The width of the column
+ * @param {$g} [boolean] If true, build using CSS Grid properties
+ */
+/* Grid system using Flexbox */
 .grid {
   display: flex;
+  flex-flow: row wrap;
   border: 1px solid gray; }
 
 [class^="grid__col"] {
+  flex: 1;
+  padding: 0 1rem;
   border: 1px solid green; }
 
-/* Base grid column classes applied to all media sizes */
+/* Generate CSS class for grid system columns and offsets
+ * based on different media query breakpoints, leveraging
+ * CSS's top down hierarchy to set prioritization.
+ */
+/* Using Flexbox properties */
 .grid__col-1 {
   flex: 0 0 8.33333%; }
 
 .grid__col-offset-1 {
   margin-left: 8.33333%; }
 
+/* Using Flexbox properties */
 .grid__col-2 {
   flex: 0 0 16.66667%; }
 
 .grid__col-offset-2 {
   margin-left: 16.66667%; }
 
+/* Using Flexbox properties */
 .grid__col-3 {
-  flex: 0 0 25.0%; }
+  flex: 0 0 25%; }
 
 .grid__col-offset-3 {
-  margin-left: 25.0%; }
+  margin-left: 25%; }
 
+/* Using Flexbox properties */
 .grid__col-4 {
   flex: 0 0 33.33333%; }
 
 .grid__col-offset-4 {
   margin-left: 33.33333%; }
 
+/* Using Flexbox properties */
 .grid__col-5 {
   flex: 0 0 41.66667%; }
 
 .grid__col-offset-5 {
   margin-left: 41.66667%; }
 
+/* Using Flexbox properties */
 .grid__col-6 {
-  flex: 0 0 50.0%; }
+  flex: 0 0 50%; }
 
 .grid__col-offset-6 {
-  margin-left: 50.0%; }
+  margin-left: 50%; }
 
+/* Using Flexbox properties */
 .grid__col-7 {
   flex: 0 0 58.33333%; }
 
 .grid__col-offset-7 {
   margin-left: 58.33333%; }
 
+/* Using Flexbox properties */
 .grid__col-8 {
   flex: 0 0 66.66667%; }
 
 .grid__col-offset-8 {
   margin-left: 66.66667%; }
 
+/* Using Flexbox properties */
 .grid__col-9 {
-  flex: 0 0 75.0%; }
+  flex: 0 0 75%; }
 
 .grid__col-offset-9 {
-  margin-left: 75.0%; }
+  margin-left: 75%; }
 
+/* Using Flexbox properties */
 .grid__col-10 {
   flex: 0 0 83.33333%; }
 
 .grid__col-offset-10 {
   margin-left: 83.33333%; }
 
+/* Using Flexbox properties */
 .grid__col-11 {
   flex: 0 0 91.66667%; }
 
 .grid__col-offset-11 {
   margin-left: 91.66667%; }
 
+/* Using Flexbox properties */
 .grid__col-12 {
-  flex: 0 0 100.0%; }
+  flex: 0 0 100%; }
 
 @media screen and (min-width: 600px) {
+  /* Using Flexbox properties */
   .grid__col-sm-1 {
     flex: 0 0 8.33333%; }
   .grid__col-sm-offset-1 {
     margin-left: 8.33333%; }
+  /* Using Flexbox properties */
   .grid__col-sm-2 {
     flex: 0 0 16.66667%; }
   .grid__col-sm-offset-2 {
     margin-left: 16.66667%; }
+  /* Using Flexbox properties */
   .grid__col-sm-3 {
-    flex: 0 0 25.0%; }
+    flex: 0 0 25%; }
   .grid__col-sm-offset-3 {
-    margin-left: 25.0%; }
+    margin-left: 25%; }
+  /* Using Flexbox properties */
   .grid__col-sm-4 {
     flex: 0 0 33.33333%; }
   .grid__col-sm-offset-4 {
     margin-left: 33.33333%; }
+  /* Using Flexbox properties */
   .grid__col-sm-5 {
     flex: 0 0 41.66667%; }
   .grid__col-sm-offset-5 {
     margin-left: 41.66667%; }
+  /* Using Flexbox properties */
   .grid__col-sm-6 {
-    flex: 0 0 50.0%; }
+    flex: 0 0 50%; }
   .grid__col-sm-offset-6 {
-    margin-left: 50.0%; }
+    margin-left: 50%; }
+  /* Using Flexbox properties */
   .grid__col-sm-7 {
     flex: 0 0 58.33333%; }
   .grid__col-sm-offset-7 {
     margin-left: 58.33333%; }
+  /* Using Flexbox properties */
   .grid__col-sm-8 {
     flex: 0 0 66.66667%; }
   .grid__col-sm-offset-8 {
     margin-left: 66.66667%; }
+  /* Using Flexbox properties */
   .grid__col-sm-9 {
-    flex: 0 0 75.0%; }
+    flex: 0 0 75%; }
   .grid__col-sm-offset-9 {
-    margin-left: 75.0%; }
+    margin-left: 75%; }
+  /* Using Flexbox properties */
   .grid__col-sm-10 {
     flex: 0 0 83.33333%; }
   .grid__col-sm-offset-10 {
     margin-left: 83.33333%; }
+  /* Using Flexbox properties */
   .grid__col-sm-11 {
     flex: 0 0 91.66667%; }
   .grid__col-sm-offset-11 {
     margin-left: 91.66667%; }
+  /* Using Flexbox properties */
   .grid__col-sm-12 {
-    flex: 0 0 100.0%; } }
+    flex: 0 0 100%; } }
 
 @media screen and (min-width: 900px) {
+  /* Using Flexbox properties */
   .grid__col-md-1 {
     flex: 0 0 8.33333%; }
   .grid__col-md-offset-1 {
     margin-left: 8.33333%; }
+  /* Using Flexbox properties */
   .grid__col-md-2 {
     flex: 0 0 16.66667%; }
   .grid__col-md-offset-2 {
     margin-left: 16.66667%; }
+  /* Using Flexbox properties */
   .grid__col-md-3 {
-    flex: 0 0 25.0%; }
+    flex: 0 0 25%; }
   .grid__col-md-offset-3 {
-    margin-left: 25.0%; }
+    margin-left: 25%; }
+  /* Using Flexbox properties */
   .grid__col-md-4 {
     flex: 0 0 33.33333%; }
   .grid__col-md-offset-4 {
     margin-left: 33.33333%; }
+  /* Using Flexbox properties */
   .grid__col-md-5 {
     flex: 0 0 41.66667%; }
   .grid__col-md-offset-5 {
     margin-left: 41.66667%; }
+  /* Using Flexbox properties */
   .grid__col-md-6 {
-    flex: 0 0 50.0%; }
+    flex: 0 0 50%; }
   .grid__col-md-offset-6 {
-    margin-left: 50.0%; }
+    margin-left: 50%; }
+  /* Using Flexbox properties */
   .grid__col-md-7 {
     flex: 0 0 58.33333%; }
   .grid__col-md-offset-7 {
     margin-left: 58.33333%; }
+  /* Using Flexbox properties */
   .grid__col-md-8 {
     flex: 0 0 66.66667%; }
   .grid__col-md-offset-8 {
     margin-left: 66.66667%; }
+  /* Using Flexbox properties */
   .grid__col-md-9 {
-    flex: 0 0 75.0%; }
+    flex: 0 0 75%; }
   .grid__col-md-offset-9 {
-    margin-left: 75.0%; }
+    margin-left: 75%; }
+  /* Using Flexbox properties */
   .grid__col-md-10 {
     flex: 0 0 83.33333%; }
   .grid__col-md-offset-10 {
     margin-left: 83.33333%; }
+  /* Using Flexbox properties */
   .grid__col-md-11 {
     flex: 0 0 91.66667%; }
   .grid__col-md-offset-11 {
     margin-left: 91.66667%; }
+  /* Using Flexbox properties */
   .grid__col-md-12 {
-    flex: 0 0 100.0%; } }
+    flex: 0 0 100%; } }
 
 @media screen and (min-width: 1200px) {
+  /* Using Flexbox properties */
   .grid__col-lg-1 {
     flex: 0 0 8.33333%; }
   .grid__col-lg-offset-1 {
     margin-left: 8.33333%; }
+  /* Using Flexbox properties */
   .grid__col-lg-2 {
     flex: 0 0 16.66667%; }
   .grid__col-lg-offset-2 {
     margin-left: 16.66667%; }
+  /* Using Flexbox properties */
   .grid__col-lg-3 {
-    flex: 0 0 25.0%; }
+    flex: 0 0 25%; }
   .grid__col-lg-offset-3 {
-    margin-left: 25.0%; }
+    margin-left: 25%; }
+  /* Using Flexbox properties */
   .grid__col-lg-4 {
     flex: 0 0 33.33333%; }
   .grid__col-lg-offset-4 {
     margin-left: 33.33333%; }
+  /* Using Flexbox properties */
   .grid__col-lg-5 {
     flex: 0 0 41.66667%; }
   .grid__col-lg-offset-5 {
     margin-left: 41.66667%; }
+  /* Using Flexbox properties */
   .grid__col-lg-6 {
-    flex: 0 0 50.0%; }
+    flex: 0 0 50%; }
   .grid__col-lg-offset-6 {
-    margin-left: 50.0%; }
+    margin-left: 50%; }
+  /* Using Flexbox properties */
   .grid__col-lg-7 {
     flex: 0 0 58.33333%; }
   .grid__col-lg-offset-7 {
     margin-left: 58.33333%; }
+  /* Using Flexbox properties */
   .grid__col-lg-8 {
     flex: 0 0 66.66667%; }
   .grid__col-lg-offset-8 {
     margin-left: 66.66667%; }
+  /* Using Flexbox properties */
   .grid__col-lg-9 {
-    flex: 0 0 75.0%; }
+    flex: 0 0 75%; }
   .grid__col-lg-offset-9 {
-    margin-left: 75.0%; }
+    margin-left: 75%; }
+  /* Using Flexbox properties */
   .grid__col-lg-10 {
     flex: 0 0 83.33333%; }
   .grid__col-lg-offset-10 {
     margin-left: 83.33333%; }
+  /* Using Flexbox properties */
   .grid__col-lg-11 {
     flex: 0 0 91.66667%; }
   .grid__col-lg-offset-11 {
     margin-left: 91.66667%; }
+  /* Using Flexbox properties */
   .grid__col-lg-12 {
-    flex: 0 0 100.0%; } }
+    flex: 0 0 100%; } }
 
 @media screen and (min-width: 1800px) {
+  /* Using Flexbox properties */
   .grid__col-xl-1 {
     flex: 0 0 8.33333%; }
   .grid__col-xl-offset-1 {
     margin-left: 8.33333%; }
+  /* Using Flexbox properties */
   .grid__col-xl-2 {
     flex: 0 0 16.66667%; }
   .grid__col-xl-offset-2 {
     margin-left: 16.66667%; }
+  /* Using Flexbox properties */
   .grid__col-xl-3 {
-    flex: 0 0 25.0%; }
+    flex: 0 0 25%; }
   .grid__col-xl-offset-3 {
-    margin-left: 25.0%; }
+    margin-left: 25%; }
+  /* Using Flexbox properties */
   .grid__col-xl-4 {
     flex: 0 0 33.33333%; }
   .grid__col-xl-offset-4 {
     margin-left: 33.33333%; }
+  /* Using Flexbox properties */
   .grid__col-xl-5 {
     flex: 0 0 41.66667%; }
   .grid__col-xl-offset-5 {
     margin-left: 41.66667%; }
+  /* Using Flexbox properties */
   .grid__col-xl-6 {
-    flex: 0 0 50.0%; }
+    flex: 0 0 50%; }
   .grid__col-xl-offset-6 {
-    margin-left: 50.0%; }
+    margin-left: 50%; }
+  /* Using Flexbox properties */
   .grid__col-xl-7 {
     flex: 0 0 58.33333%; }
   .grid__col-xl-offset-7 {
     margin-left: 58.33333%; }
+  /* Using Flexbox properties */
   .grid__col-xl-8 {
     flex: 0 0 66.66667%; }
   .grid__col-xl-offset-8 {
     margin-left: 66.66667%; }
+  /* Using Flexbox properties */
   .grid__col-xl-9 {
-    flex: 0 0 75.0%; }
+    flex: 0 0 75%; }
   .grid__col-xl-offset-9 {
-    margin-left: 75.0%; }
+    margin-left: 75%; }
+  /* Using Flexbox properties */
   .grid__col-xl-10 {
     flex: 0 0 83.33333%; }
   .grid__col-xl-offset-10 {
     margin-left: 83.33333%; }
+  /* Using Flexbox properties */
   .grid__col-xl-11 {
     flex: 0 0 91.66667%; }
   .grid__col-xl-offset-11 {
     margin-left: 91.66667%; }
+  /* Using Flexbox properties */
   .grid__col-xl-12 {
-    flex: 0 0 100.0%; } }
+    flex: 0 0 100%; } }
 
-/* Grid System using CSS Grids */
+/* Grid system using CSS Grids with support check */
 @supports (display: grid) {
   .grid {
     display: grid;
     grid-column-gap: 2rem; }
-  .grid__col {
-    grid-column: span 1;
+    .grid.grid--1 {
+      grid-template-columns: repeat(1, [col-start] minmax(0, 1fr)); }
+    .grid.grid--2 {
+      grid-template-columns: repeat(2, [col-start] minmax(0, 1fr)); }
+    .grid.grid--3 {
+      grid-template-columns: repeat(3, [col-start] minmax(0, 1fr)); }
+    .grid.grid--4 {
+      grid-template-columns: repeat(4, [col-start] minmax(0, 1fr)); }
+    .grid.grid--5 {
+      grid-template-columns: repeat(5, [col-start] minmax(0, 1fr)); }
+    .grid.grid--6 {
+      grid-template-columns: repeat(6, [col-start] minmax(0, 1fr)); }
+    .grid.grid--7 {
+      grid-template-columns: repeat(7, [col-start] minmax(0, 1fr)); }
+    .grid.grid--8 {
+      grid-template-columns: repeat(8, [col-start] minmax(0, 1fr)); }
+    .grid.grid--9 {
+      grid-template-columns: repeat(9, [col-start] minmax(0, 1fr)); }
+    .grid.grid--10 {
+      grid-template-columns: repeat(10, [col-start] minmax(0, 1fr)); }
+    .grid.grid--11 {
+      grid-template-columns: repeat(11, [col-start] minmax(0, 1fr)); }
+    .grid.grid--12 {
+      grid-template-columns: repeat(12, [col-start] minmax(0, 1fr)); }
+  [class^="grid__col"] {
+    padding: 0;
+    grid-column-end: span 1;
     overflow: hidden; }
-  .grid.grid--1 {
-    grid-template-columns: repeat(1, [col-start] minmax(0, 1fr)); }
-  .grid.grid--2 {
-    grid-template-columns: repeat(2, [col-start] minmax(0, 1fr)); }
-  .grid.grid--3 {
-    grid-template-columns: repeat(3, [col-start] minmax(0, 1fr)); }
-  .grid.grid--4 {
-    grid-template-columns: repeat(4, [col-start] minmax(0, 1fr)); }
-  .grid.grid--5 {
-    grid-template-columns: repeat(5, [col-start] minmax(0, 1fr)); }
-  .grid.grid--6 {
-    grid-template-columns: repeat(6, [col-start] minmax(0, 1fr)); }
-  .grid.grid--7 {
-    grid-template-columns: repeat(7, [col-start] minmax(0, 1fr)); }
-  .grid.grid--8 {
-    grid-template-columns: repeat(8, [col-start] minmax(0, 1fr)); }
-  .grid.grid--9 {
-    grid-template-columns: repeat(9, [col-start] minmax(0, 1fr)); }
-  .grid.grid--10 {
-    grid-template-columns: repeat(10, [col-start] minmax(0, 1fr)); }
-  .grid.grid--11 {
-    grid-template-columns: repeat(11, [col-start] minmax(0, 1fr)); }
-  .grid.grid--12 {
-    grid-template-columns: repeat(12, [col-start] minmax(0, 1fr)); }
-  .grid.grid--13 {
-    grid-template-columns: repeat(13, [col-start] minmax(0, 1fr)); }
-  .grid.grid--14 {
-    grid-template-columns: repeat(14, [col-start] minmax(0, 1fr)); }
-  .grid.grid--15 {
-    grid-template-columns: repeat(15, [col-start] minmax(0, 1fr)); }
-  .grid.grid--16 {
-    grid-template-columns: repeat(16, [col-start] minmax(0, 1fr)); }
-  .grid__col-start-1 {
-    grid-column-start: col-start 1; }
-  .grid__col-1 {
-    grid-column-end: span 1; }
-  .grid__col-start-2 {
-    grid-column-start: col-start 2; }
-  .grid__col-2 {
-    grid-column-end: span 2; }
-  .grid__col-start-3 {
-    grid-column-start: col-start 3; }
-  .grid__col-3 {
-    grid-column-end: span 3; }
-  .grid__col-start-4 {
-    grid-column-start: col-start 4; }
-  .grid__col-4 {
-    grid-column-end: span 4; }
-  .grid__col-start-5 {
-    grid-column-start: col-start 5; }
-  .grid__col-5 {
-    grid-column-end: span 5; }
-  .grid__col-start-6 {
-    grid-column-start: col-start 6; }
-  .grid__col-6 {
-    grid-column-end: span 6; }
-  .grid__col-start-7 {
-    grid-column-start: col-start 7; }
-  .grid__col-7 {
-    grid-column-end: span 7; }
-  .grid__col-start-8 {
-    grid-column-start: col-start 8; }
-  .grid__col-8 {
-    grid-column-end: span 8; }
-  .grid__col-start-9 {
-    grid-column-start: col-start 9; }
-  .grid__col-9 {
-    grid-column-end: span 9; }
-  .grid__col-start-10 {
-    grid-column-start: col-start 10; }
-  .grid__col-10 {
-    grid-column-end: span 10; }
-  .grid__col-start-11 {
-    grid-column-start: col-start 11; }
-  .grid__col-11 {
-    grid-column-end: span 11; }
-  .grid__col-start-12 {
-    grid-column-start: col-start 12; }
-  .grid__col-12 {
-    grid-column-end: span 12; }
-  .grid__col-start-13 {
-    grid-column-start: col-start 13; }
-  .grid__col-13 {
-    grid-column-end: span 13; }
-  .grid__col-start-14 {
-    grid-column-start: col-start 14; }
-  .grid__col-14 {
-    grid-column-end: span 14; }
-  .grid__col-start-15 {
-    grid-column-start: col-start 15; }
-  .grid__col-15 {
-    grid-column-end: span 15; }
-  .grid__col-start-16 {
-    grid-column-start: col-start 16; }
-  .grid__col-16 {
-    grid-column-end: span 16; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-1 {
+      grid-column-end: span 1; }
+    .grid__col-offset-1 {
+      grid-column-start: col-start 2;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-2 {
+      grid-column-end: span 2; }
+    .grid__col-offset-2 {
+      grid-column-start: col-start 3;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-3 {
+      grid-column-end: span 3; }
+    .grid__col-offset-3 {
+      grid-column-start: col-start 4;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-4 {
+      grid-column-end: span 4; }
+    .grid__col-offset-4 {
+      grid-column-start: col-start 5;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-5 {
+      grid-column-end: span 5; }
+    .grid__col-offset-5 {
+      grid-column-start: col-start 6;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-6 {
+      grid-column-end: span 6; }
+    .grid__col-offset-6 {
+      grid-column-start: col-start 7;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-7 {
+      grid-column-end: span 7; }
+    .grid__col-offset-7 {
+      grid-column-start: col-start 8;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-8 {
+      grid-column-end: span 8; }
+    .grid__col-offset-8 {
+      grid-column-start: col-start 9;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-9 {
+      grid-column-end: span 9; }
+    .grid__col-offset-9 {
+      grid-column-start: col-start 10;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-10 {
+      grid-column-end: span 10; }
+    .grid__col-offset-10 {
+      grid-column-start: col-start 11;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-11 {
+      grid-column-end: span 11; }
+    .grid__col-offset-11 {
+      grid-column-start: col-start 12;
+      margin-left: 0; } }
+  /* Using CSS Grid properties */
+  @supports (display: grid) {
+    .grid__col-12 {
+      grid-column-end: span 12; } }
+  @media screen and (min-width: 600px) {
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-1 {
+        grid-column-end: span 1; }
+      .grid__col-sm-offset-1 {
+        grid-column-start: col-start 2;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-2 {
+        grid-column-end: span 2; }
+      .grid__col-sm-offset-2 {
+        grid-column-start: col-start 3;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-3 {
+        grid-column-end: span 3; }
+      .grid__col-sm-offset-3 {
+        grid-column-start: col-start 4;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-4 {
+        grid-column-end: span 4; }
+      .grid__col-sm-offset-4 {
+        grid-column-start: col-start 5;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-5 {
+        grid-column-end: span 5; }
+      .grid__col-sm-offset-5 {
+        grid-column-start: col-start 6;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-6 {
+        grid-column-end: span 6; }
+      .grid__col-sm-offset-6 {
+        grid-column-start: col-start 7;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-7 {
+        grid-column-end: span 7; }
+      .grid__col-sm-offset-7 {
+        grid-column-start: col-start 8;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-8 {
+        grid-column-end: span 8; }
+      .grid__col-sm-offset-8 {
+        grid-column-start: col-start 9;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-9 {
+        grid-column-end: span 9; }
+      .grid__col-sm-offset-9 {
+        grid-column-start: col-start 10;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-10 {
+        grid-column-end: span 10; }
+      .grid__col-sm-offset-10 {
+        grid-column-start: col-start 11;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-11 {
+        grid-column-end: span 11; }
+      .grid__col-sm-offset-11 {
+        grid-column-start: col-start 12;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-sm-12 {
+        grid-column-end: span 12; } } }
+  @media screen and (min-width: 900px) {
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-1 {
+        grid-column-end: span 1; }
+      .grid__col-md-offset-1 {
+        grid-column-start: col-start 2;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-2 {
+        grid-column-end: span 2; }
+      .grid__col-md-offset-2 {
+        grid-column-start: col-start 3;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-3 {
+        grid-column-end: span 3; }
+      .grid__col-md-offset-3 {
+        grid-column-start: col-start 4;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-4 {
+        grid-column-end: span 4; }
+      .grid__col-md-offset-4 {
+        grid-column-start: col-start 5;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-5 {
+        grid-column-end: span 5; }
+      .grid__col-md-offset-5 {
+        grid-column-start: col-start 6;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-6 {
+        grid-column-end: span 6; }
+      .grid__col-md-offset-6 {
+        grid-column-start: col-start 7;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-7 {
+        grid-column-end: span 7; }
+      .grid__col-md-offset-7 {
+        grid-column-start: col-start 8;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-8 {
+        grid-column-end: span 8; }
+      .grid__col-md-offset-8 {
+        grid-column-start: col-start 9;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-9 {
+        grid-column-end: span 9; }
+      .grid__col-md-offset-9 {
+        grid-column-start: col-start 10;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-10 {
+        grid-column-end: span 10; }
+      .grid__col-md-offset-10 {
+        grid-column-start: col-start 11;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-11 {
+        grid-column-end: span 11; }
+      .grid__col-md-offset-11 {
+        grid-column-start: col-start 12;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-md-12 {
+        grid-column-end: span 12; } } }
+  @media screen and (min-width: 1200px) {
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-1 {
+        grid-column-end: span 1; }
+      .grid__col-lg-offset-1 {
+        grid-column-start: col-start 2;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-2 {
+        grid-column-end: span 2; }
+      .grid__col-lg-offset-2 {
+        grid-column-start: col-start 3;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-3 {
+        grid-column-end: span 3; }
+      .grid__col-lg-offset-3 {
+        grid-column-start: col-start 4;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-4 {
+        grid-column-end: span 4; }
+      .grid__col-lg-offset-4 {
+        grid-column-start: col-start 5;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-5 {
+        grid-column-end: span 5; }
+      .grid__col-lg-offset-5 {
+        grid-column-start: col-start 6;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-6 {
+        grid-column-end: span 6; }
+      .grid__col-lg-offset-6 {
+        grid-column-start: col-start 7;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-7 {
+        grid-column-end: span 7; }
+      .grid__col-lg-offset-7 {
+        grid-column-start: col-start 8;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-8 {
+        grid-column-end: span 8; }
+      .grid__col-lg-offset-8 {
+        grid-column-start: col-start 9;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-9 {
+        grid-column-end: span 9; }
+      .grid__col-lg-offset-9 {
+        grid-column-start: col-start 10;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-10 {
+        grid-column-end: span 10; }
+      .grid__col-lg-offset-10 {
+        grid-column-start: col-start 11;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-11 {
+        grid-column-end: span 11; }
+      .grid__col-lg-offset-11 {
+        grid-column-start: col-start 12;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-lg-12 {
+        grid-column-end: span 12; } } }
+  @media screen and (min-width: 1800px) {
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-1 {
+        grid-column-end: span 1; }
+      .grid__col-xl-offset-1 {
+        grid-column-start: col-start 2;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-2 {
+        grid-column-end: span 2; }
+      .grid__col-xl-offset-2 {
+        grid-column-start: col-start 3;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-3 {
+        grid-column-end: span 3; }
+      .grid__col-xl-offset-3 {
+        grid-column-start: col-start 4;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-4 {
+        grid-column-end: span 4; }
+      .grid__col-xl-offset-4 {
+        grid-column-start: col-start 5;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-5 {
+        grid-column-end: span 5; }
+      .grid__col-xl-offset-5 {
+        grid-column-start: col-start 6;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-6 {
+        grid-column-end: span 6; }
+      .grid__col-xl-offset-6 {
+        grid-column-start: col-start 7;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-7 {
+        grid-column-end: span 7; }
+      .grid__col-xl-offset-7 {
+        grid-column-start: col-start 8;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-8 {
+        grid-column-end: span 8; }
+      .grid__col-xl-offset-8 {
+        grid-column-start: col-start 9;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-9 {
+        grid-column-end: span 9; }
+      .grid__col-xl-offset-9 {
+        grid-column-start: col-start 10;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-10 {
+        grid-column-end: span 10; }
+      .grid__col-xl-offset-10 {
+        grid-column-start: col-start 11;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-11 {
+        grid-column-end: span 11; }
+      .grid__col-xl-offset-11 {
+        grid-column-start: col-start 12;
+        margin-left: 0; } }
+    /* Using CSS Grid properties */
+    @supports (display: grid) {
+      .grid__col-xl-12 {
+        grid-column-end: span 12; } } } }
 
 /**********************************
   UTILITIES (WIP)
