@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 /* Generic / Common Schemas */
 const STATES = [
   'default',
@@ -7,13 +9,22 @@ const STATES = [
   'info',
   'warning',
   'error',
+  'wire'
 ];
 
 /* Component Schemas */
-const ButtonSchema = {
+export const ButtonSchema = {
   sizes: ['small', 'medium', 'large', 'xlarge'],
   states: STATES,
-  styles: ['pill', 'round', 'square'],
+  styles: ['pill', 'round', 'square']
 };
 
-export { ButtonSchema };
+export const CommonPropTypes = {
+  as: PropTypes.string,
+  className: PropTypes.string
+};
+
+export const CommonDefaultProps = {
+  as: 'div',
+  className: ''
+};
